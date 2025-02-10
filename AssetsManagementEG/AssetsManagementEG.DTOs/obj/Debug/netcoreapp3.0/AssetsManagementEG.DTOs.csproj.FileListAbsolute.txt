@@ -1,0 +1,34 @@
+D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.deps.json
+D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.dll
+D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.pdb
+D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.GeneratedMSBuildEditorConfig.editorconfig
+D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.AssemblyInfoInputs.cache
+D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.AssemblyInfo.cs
+D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.csproj.CoreCompileInputs.cache
+D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.sourcelink.json
+D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.dll
+D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.pdb
+D:\EG Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.deps.json
+D:\EG Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.dll
+D:\EG Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.pdb
+D:\EG Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.AssemblyInfoInputs.cache
+D:\EG Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.AssemblyInfo.cs
+D:\EG Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.dll
+D:\EG Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.pdb
+D:\EG Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.csprojAssemblyReference.cache
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.deps.json
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.dll
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.pdb
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.csprojAssemblyReference.cache
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.AssemblyInfoInputs.cache
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.AssemblyInfo.cs
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.dll
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.pdb
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.deps.json
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.dll
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.pdb
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.AssemblyInfoInputs.cache
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.AssemblyInfo.cs
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.dll
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.pdb
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.csprojAssemblyReference.cache
