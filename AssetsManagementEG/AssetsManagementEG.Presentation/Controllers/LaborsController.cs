@@ -16,9 +16,13 @@ namespace AssetsManagementEG.Presentation.Controllers
         LaborsRepository LaborsRepository;
         DistrictRepository DistrictRepository;
         MDistrictLaborsRepo mDistrictLaborsRepo;
-        public LaborsController(LaborsRepository laborsRepository)
+        public LaborsController(LaborsRepository laborsRepository, 
+            DistrictRepository _districtRepository, MDistrictLaborsRepo _mDistrictLaborsRepo)
         {
             LaborsRepository = laborsRepository;
+            DistrictRepository = _districtRepository;
+            mDistrictLaborsRepo = _mDistrictLaborsRepo;
+
         }
 
         [HttpGet]
@@ -38,6 +42,15 @@ namespace AssetsManagementEG.Presentation.Controllers
         [HttpPost]
         public IActionResult Create(CreateOrUpdateLaborsDTO c)
         {
+            // Step 1: Get District
+            var district = DistrictRepository.districts()
+                .FirstOrDefault(d => d.Name == c.DistrictName);
+            if (district == null)
+            {
+                return BadRequest($"The district with name {c.DistrictName} does not exist.");
+            }
+
+            // Step 2: Create labor then save it
             Labors labors = new Labors()
             {
                 FullName = c.FullName,
@@ -46,13 +59,13 @@ namespace AssetsManagementEG.Presentation.Controllers
                 IsAvailable=true,
                 IsInService = true,
             };
-            var district = DistrictRepository.districts()
-               .FirstOrDefault(d => d.Name == c.DisrtictName);
-
-            if (district == null)
+            var result = LaborsRepository.Create(labors);
+            if (!result)
             {
-                return BadRequest($"The district with name {c.DisrtictName} does not exist.");
+                return BadRequest("Failed to create the labor.");
             }
+
+            // Step 3: Now Create DistrictLabor Using the Saved LaboesId and district 
             DistrictLabors districtLabors = new DistrictLabors()
             {
                 DistrictId = district.DistrictId,
@@ -60,10 +73,8 @@ namespace AssetsManagementEG.Presentation.Controllers
                 StartDate = c.StartDate
             };
 
-
-            LaborsRepository.Create(labors);
             mDistrictLaborsRepo.Create(districtLabors);
-            return Ok("The Worker was created successfully");
+            return Ok($"The Worker was created successfully and assigned to district {district.Name}");
         }
 
         [HttpPut]

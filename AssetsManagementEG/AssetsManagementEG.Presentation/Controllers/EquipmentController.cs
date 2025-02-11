@@ -41,28 +41,39 @@ namespace AssetsManagementEG.Presentation.Controllers
         [HttpPost]
         public IActionResult Create(CreateOrUpdateEquipmentDTO c)
         {
+            // Step 1: Get District
+            var district = DistrictRepository.districts()
+                .FirstOrDefault(d => d.Name == c.DistrictName);
+
+            if(district == null)
+            {
+                return BadRequest($"The district with name {c.DistrictName} does not exist.");
+            }
+            // Step 2: Create equipment then save it 
             Equipment equipment = new Equipment()
             { 
                 Name = c.Name,
                 Type = c.Type,
-                IsAvailable = true
+                IsAvailable = true,
+                IsInService=true,
+
             };
-            var district = DistrictRepository.districts()
-                .FirstOrDefault(d => d.Name == c.DistrictName);
-            if (district == null)
+
+            var result = EquipmentRepository.Create(equipment);
+            if (!result)
             {
-                return BadRequest($"The district with name {c.DistrictName} does not exist.");
+                return BadRequest("Failed to create the Equipment.");
             }
-            DistrictEquibment districtEquibment=new DistrictEquibment()
+
+            // Step 3: Now Create DistrictEquipment Using the Saved CarId and district 
+            DistrictEquibment districtEquibment =new DistrictEquibment()
             {
                 EquipmentId = equipment.EquipmentId,
                 DistrictId = district.DistrictId,
                 StartDate = c.StartDate
             };
-
-            EquipmentRepository.Create(equipment);
             mDistrictEquipmentRepo.Create(districtEquibment);
-            return Ok("The equipment was created successfully");
+            return Ok($"The equipment was created successfully and assigned to district {district.Name}");
         }
 
         [HttpPut]

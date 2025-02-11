@@ -46,7 +46,15 @@ namespace AssetsManagementEG.Presentation.Controllers
         [HttpPost]
         public IActionResult Create(CreateOrUpdateCarsDTO c)
         {
-            // Step 1: Create and Save Car First
+            // Step 1: Get District
+            var district = DistrictRepository.districts()
+                .FirstOrDefault(d => d.Name == c.DistrictName);
+
+            if (district == null)
+            {
+                return BadRequest($"The district with name {c.DistrictName} does not exist.");
+            }
+            // Step 2: Create car then save it
             Car car = new Car()
             {
                 Type = c.Type,
@@ -62,33 +70,16 @@ namespace AssetsManagementEG.Presentation.Controllers
                 return BadRequest("Failed to create the car.");
             }
 
-            // 🔹 Step 2: Get the newly created CarId
-            var savedCar = CarRepository.FindOneForUdpdateOrDelete(car.CarId); // Find the saved car
 
-            if (savedCar == null)
-            {
-                return BadRequest("Car was not saved properly.");
-            }
-
-            // Step 3: Get District
-            var district = DistrictRepository.districts()
-                .FirstOrDefault(d => d.Name == c.DistrictName);
-
-            if (district == null)
-            {
-                return BadRequest($"The district with name {c.DistrictName} does not exist.");
-            }
-
-            // Step 4: Now Create DistrictCar Using the Saved CarId
+            // Step 3: Now Create DistrictCar Using the Saved CarId and district 
             DistrictCar districtCar = new DistrictCar()
             {
-                CarId = savedCar.CarId,  // ✅ Now CarId is valid
+                CarId = car.CarId,  // ✅ Now CarId is valid
                 DistrictId = district.DistrictId,
                 StartDate = c.StartDate
             };
 
             mDistrictCarRepo.Create(districtCar);
-
             return Ok($"The car was created successfully and assigned to district {district.Name}");
         }
 

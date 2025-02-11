@@ -57,69 +57,101 @@ namespace ECommerce.Presentation.Controllers
 			return Ok("Created Successfully");
 		}
 
-		[HttpPost("Login")]
-		public async Task<IActionResult> Login(RegisterAndLoginDTO registerAndLoginDTO)
-		{
-			var ExistingUserLog = await userManager.FindByNameAsync(registerAndLoginDTO.Username);
-			if (ExistingUserLog == null)
-			{
-				return Unauthorized("you need to register first");
-			}
-			var CkeckPass = await userManager.CheckPasswordAsync(ExistingUserLog, registerAndLoginDTO.Password);
-			if (CkeckPass == false)
-			{
-				return Unauthorized("The username or password is incorrect");
-			}
+        [HttpPost("Login")]
+
+        public async Task<IActionResult> Login(RegisterAndLoginDTO registerAndLoginDTO)
+
+        {
+
+            var ExistingUserLog = await userManager.FindByNameAsync(registerAndLoginDTO.Username);
+
+            if (ExistingUserLog == null)
+
+            {
+                return Unauthorized("you need to register first");
+            }
+
+            var CkeckPass = await userManager.CheckPasswordAsync(ExistingUserLog, registerAndLoginDTO.Password);
+
+            if (CkeckPass == false)
+
+            {
+                return Unauthorized("The username or password is incorrect");
+            }
+
             var roles = await userManager.GetRolesAsync(ExistingUserLog);
+
             var userRole = roles.FirstOrDefault() ?? "User";
 
             var Claims = new List<Claim>()
-			{
-				new Claim (ClaimTypes.Name, ExistingUserLog.UserName)
+            {
+            new Claim (ClaimTypes.Name, ExistingUserLog.UserName)
             };
-			var SecretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["jwt:key"]));
-			var SetToken = new JwtSecurityToken(
-				expires: DateTime.Now.AddHours(2),
-				claims: Claims,
-				signingCredentials: new SigningCredentials(SecretKey, SecurityAlgorithms.HmacSha256)
-				);
-			var Token = new JwtSecurityTokenHandler().WriteToken(SetToken);
+
+            var SecretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["jwt:key"]));
+
+            var SetToken = new JwtSecurityToken(
+
+            expires: DateTime.Now.AddHours(2),
+
+            claims: Claims,
+
+            signingCredentials: new SigningCredentials(SecretKey, SecurityAlgorithms.HmacSha256) );
+
+            
+            var Token = new JwtSecurityTokenHandler().WriteToken(SetToken);
+            //getting district id 
+            UsersDistrict _UserDistrict = context.UsersDistrict.FirstOrDefault(ud => ud.ApplicationUserId == ExistingUserLog.ID);
+
+            if (_UserDistrict == null)
+            {
+                return BadRequest("this user has no district (not assigned)");
+            }
+
+            
             
             return Ok(new
             {
                 token = Token,
                 role = userRole,
-				Username = ExistingUserLog.UserName
+                Username = ExistingUserLog.UserName,
+                UserDistrict = _UserDistrict.DistrictId,
             });
         }
 
-		[HttpPost("AssignDistricts")]
-		public async Task<IActionResult> AssignDistrictToUser(AssignDistrictsToUsersDTO assignDistrictsToUsersDTO)
-		{
+        [HttpPost("AssignDistricts")]
+        public async Task<IActionResult> AssignDistrictToUser(AssignDistrictsToUsersDTO assignDistrictsToUsersDTO)
+        {
+            
+            //getting the user
             var user = await userManager.Users
                 .Include(u => u.UsersDistricts)
                 .FirstOrDefaultAsync(u => u.UserName == assignDistrictsToUsersDTO.Username);
             if (user == null)
-			{
-				return NotFound("User not found");
-			}
+            {
+                return NotFound("User not found");
+            }
 
-			var role = await userManager.GetRolesAsync(user);
+            //getting the role of the user
+            var role = await userManager.GetRolesAsync(user);
 
-			if (role.Contains("Super Admin"))
-			{
+            //Here below if the role of user >> Admin
+            //assign all district to him
+            if (role.Contains("Admin"))
+            {
                 var allDistricts = await context.District.ToListAsync();
-				user.UsersDistricts = allDistricts.Select(d => new UsersDistrict
-				{
-					ApplicationUserId = user.Id,
-					DistrictId = d.DistrictId
-				}).ToList();
-	
-				await context.SaveChangesAsync();
-				return Ok($"All districts have been assigned to the admin '{user.UserName}'.");
-			}
+                user.UsersDistricts = allDistricts.Select(d => new UsersDistrict
+                {
+                    ApplicationUserId = user.Id,
+                    DistrictId = d.DistrictId
+                }).ToList();
+
+                await context.SaveChangesAsync();
+                return Ok($"All districts have been assigned to the admin '{user.UserName}'.");
+            }
             else
             {
+                //if this user role is (User or superUser) then assign only one district 
                 var district = await context.District
                     .FirstOrDefaultAsync(d => d.Name == assignDistrictsToUsersDTO.DistrictName);
 
@@ -139,6 +171,6 @@ namespace ECommerce.Presentation.Controllers
                 await context.SaveChangesAsync();
                 return Ok($"District '{district.Name}' has been assigned to '{user.UserName}'.");
             }
-        }	
-	}
+        }
+    }
 }
