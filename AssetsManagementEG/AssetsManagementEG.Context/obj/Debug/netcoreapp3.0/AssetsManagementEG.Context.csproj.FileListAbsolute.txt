@@ -88,3 +88,20 @@ C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.csproj.CopyComplete
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.dll
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.pdb
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\bin\Debug\netcoreapp3.0\AssetsManagementEG.Context.deps.json
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\bin\Debug\netcoreapp3.0\AssetsManagementEG.Context.runtimeconfig.json
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\bin\Debug\netcoreapp3.0\AssetsManagementEG.Context.runtimeconfig.dev.json
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\bin\Debug\netcoreapp3.0\AssetsManagementEG.Context.dll
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\bin\Debug\netcoreapp3.0\AssetsManagementEG.Context.pdb
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.dll
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.pdb
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.csproj.AssemblyReference.cache
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.AssemblyInfoInputs.cache
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.AssemblyInfo.cs
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.csproj.CoreCompileInputs.cache
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.sourcelink.json
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsMa.6C096F7C.Up2Date
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.dll
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.pdb
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.genruntimeconfig.cache

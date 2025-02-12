@@ -57,3 +57,14 @@ C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.dll
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.pdb
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.csprojAssemblyReference.cache
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.deps.json
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.dll
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.pdb
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.csproj.AssemblyReference.cache
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.AssemblyInfoInputs.cache
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.AssemblyInfo.cs
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.csproj.CoreCompileInputs.cache
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.sourcelink.json
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.dll
+C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.pdb
