@@ -12,5 +12,9 @@ namespace AssetsManagementEG.DTOs.Tasks
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public bool IsCompleted { get; set; }
+
+        public List<string> carsNames { get; set; }
+        public List<string> equipmentsNames { get; set; }
+        public List<string> laborsNames { get; set; }
     }
 }

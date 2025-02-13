@@ -24,7 +24,7 @@ namespace AssetsManagementEG.Repositories.Repositories
         public bool Create(T Entity)
         {
             dbset.Add(Entity);
-            //context.SaveChanges();
+            context.SaveChanges();
             return true;
 
         }

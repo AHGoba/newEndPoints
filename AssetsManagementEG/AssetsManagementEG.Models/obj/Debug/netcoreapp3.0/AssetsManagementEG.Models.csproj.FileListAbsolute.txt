@@ -68,3 +68,11 @@ C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)
 C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.sourcelink.json
 C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.dll
 C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.pdb
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.deps.json
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.dll
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.pdb
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.csprojAssemblyReference.cache
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.AssemblyInfoInputs.cache
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.AssemblyInfo.cs
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.dll
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.pdb

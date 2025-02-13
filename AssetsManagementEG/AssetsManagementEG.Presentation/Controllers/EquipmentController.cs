@@ -50,6 +50,8 @@ namespace AssetsManagementEG.Presentation.Controllers
                 return BadRequest($"The district with name {c.DistrictName} does not exist.");
             }
             // Step 2: Create equipment then save it 
+            //check if exist 
+
             Equipment equipment = new Equipment()
             { 
                 Name = c.Name,

@@ -8,15 +8,9 @@
       "TRACE",
       "DEBUG",
       "NETCOREAPP",
-      "NETCOREAPP3_0",
-      "NETCOREAPP1_0_OR_GREATER",
-      "NETCOREAPP1_1_OR_GREATER",
-      "NETCOREAPP2_0_OR_GREATER",
-      "NETCOREAPP2_1_OR_GREATER",
-      "NETCOREAPP2_2_OR_GREATER",
-      "NETCOREAPP3_0_OR_GREATER"
+      "NETCOREAPP3_0"
     ],
-    "languageVersion": "8.0",
+    "languageVersion": "",
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
@@ -2291,20 +2285,6 @@
       "System.Security.Cryptography.Pkcs/4.5.0": {
         "dependencies": {
           "System.Security.Cryptography.Cng": "4.5.0"
-        },
-        "runtime": {
-          "lib/netcoreapp2.1/System.Security.Cryptography.Pkcs.dll": {
-            "assemblyVersion": "4.0.3.0",
-            "fileVersion": "4.6.26515.6"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp2.1/System.Security.Cryptography.Pkcs.dll": {
-            "rid": "win",
-            "assetType": "runtime",
-            "assemblyVersion": "4.0.3.0",
-            "fileVersion": "4.6.26515.6"
-          }
         }
       },
       "System.Security.Cryptography.Primitives/4.3.0": {
@@ -2517,10 +2497,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.32"
         },
         "runtime": {
-          "AssetsManagementEG.Context.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "AssetsManagementEG.Context.dll": {}
         },
         "compile": {
           "AssetsManagementEG.Context.dll": {}
@@ -2528,10 +2505,7 @@
       },
       "AssetsManagementEG.DTOs/1.0.0": {
         "runtime": {
-          "AssetsManagementEG.DTOs.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "AssetsManagementEG.DTOs.dll": {}
         },
         "compile": {
           "AssetsManagementEG.DTOs.dll": {}
@@ -2542,10 +2516,7 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.32"
         },
         "runtime": {
-          "AssetsManagementEG.Models.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "AssetsManagementEG.Models.dll": {}
         },
         "compile": {
           "AssetsManagementEG.Models.dll": {}
@@ -2556,10 +2527,7 @@
           "AssetsManagementEG.Context": "1.0.0"
         },
         "runtime": {
-          "AssetsManagementEG.Repositories.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "AssetsManagementEG.Repositories.dll": {}
         },
         "compile": {
           "AssetsManagementEG.Repositories.dll": {}
