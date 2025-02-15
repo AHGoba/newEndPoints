@@ -91,6 +91,7 @@ namespace AssetsManagementEG.Presentation.Controllers
             existingEquipment.Name = c.Name;
             existingEquipment.Type = c.Type;
             existingEquipment.IsAvailable = c.IsAvailable;
+            existingEquipment.IsInService = c.IsInService;
 
             EquipmentRepository.Update(existingEquipment);
             return Ok("The equipment was updated successfully");

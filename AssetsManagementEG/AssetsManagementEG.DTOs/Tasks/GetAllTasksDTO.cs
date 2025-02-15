@@ -16,5 +16,7 @@ namespace AssetsManagementEG.DTOs.Tasks
         public List<string> carsNames { get; set; }
         public List<string> equipmentsNames { get; set; }
         public List<string> laborsNames { get; set; }
+
+  
     }
 }

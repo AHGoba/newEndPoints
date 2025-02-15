@@ -78,6 +78,8 @@ namespace AssetsManagementEG.Presentation.Controllers
         //    }).ToList();
         //    return Ok(query);
         //}
+
+        // this end point is for the (Admin)  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -96,6 +98,7 @@ namespace AssetsManagementEG.Presentation.Controllers
 
             var taskLabors = context.TaskLabors.ToList() ?? new List<TaskLabors>();
             var labors = context.Labors.ToList() ?? new List<Labors>();
+            
 
             var query = tasks.Where(task => task != null).Select(task => new GetAllTasksDTO
             {
@@ -105,6 +108,7 @@ namespace AssetsManagementEG.Presentation.Controllers
                 IsCompleted = task.IsCompleted,
                 StartDate = task.StartDate,
                 EndDate = task.EndDate,
+                
 
                 // Get cars related to this task
                 carsNames = taskCars.Where(tc => tc.TaskId == task.TaskId)
@@ -127,7 +131,30 @@ namespace AssetsManagementEG.Presentation.Controllers
         }
 
 
+        // this end point is for the Users >>>>>>>>>>>>>>>>>>>>>>>>> get the tasks with state >>is (ongoing)<<<<<<<<<<<<<<
 
+        [HttpGet("GetOnGoingTasks/{Id}")]
+        public IActionResult Get(int Id)
+        {
+            //get the district 
+            var district = context.District.FirstOrDefault(d => d.DistrictId == Id);
+            if (district == null)
+            {
+                return NotFound("District not found");
+            }
+
+            //get all tasks related to this district 
+            var tasks = context.Tassk
+                .Where(t => t.DistrictId == district.DistrictId && t.IsCompleted == false)
+                .Select( t=> new
+                {
+                    taskId= t.TaskId,
+                    taskName = t.Name,
+                    taskStartDate = t.StartDate
+                })
+                .ToList();                     
+            return Ok(tasks);
+        }
 
 
         [HttpPost]
@@ -149,7 +176,7 @@ namespace AssetsManagementEG.Presentation.Controllers
             {
                 foreach (var id in c.CarsId)
                 {
-                    //first
+                    //first get the car 
                     var car = context.Car.FirstOrDefault(c => c.CarId == id);
                     // or var car = await _context.Cars.FindAsync(carId);
                     //second
@@ -162,7 +189,11 @@ namespace AssetsManagementEG.Presentation.Controllers
                     task.TaskCars.Add(new TaskCar { CarId = id });
                     //TaskCar taskCar = new TaskCar() { TaskId = Task.TaskId, CarId = car.CarId };
                     //forth
-                    car.IsAvailable = false;
+                    // this if related to if the car is وسيلة مواصلات عاديه 
+                    if(car.PlateNum != "1111")
+                    {
+                        car.IsAvailable = false;
+                    }
                 }
             }
 

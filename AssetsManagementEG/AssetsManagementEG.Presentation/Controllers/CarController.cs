@@ -70,7 +70,7 @@ namespace AssetsManagementEG.Presentation.Controllers
                 return BadRequest("Failed to create the car.");
             }
 
-
+            // relate the car with it's district 
             // Step 3: Now Create DistrictCar Using the Saved CarId and district 
             DistrictCar districtCar = new DistrictCar()
             {

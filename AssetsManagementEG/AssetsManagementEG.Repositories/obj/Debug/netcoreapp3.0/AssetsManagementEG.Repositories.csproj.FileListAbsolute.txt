@@ -1,45 +1,3 @@
-D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.deps.json
-D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.dll
-D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.pdb
-D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Context.dll
-D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.dll
-D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Context.pdb
-D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.pdb
-D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.csproj.AssemblyReference.cache
-D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.GeneratedMSBuildEditorConfig.editorconfig
-D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.AssemblyInfoInputs.cache
-D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.AssemblyInfo.cs
-D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.csproj.CoreCompileInputs.cache
-D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.sourcelink.json
-D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsMa.BD90966F.Up2Date
-D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.dll
-D:\EG AssetsManagement Project\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.pdb
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.deps.json
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.dll
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.pdb
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Context.dll
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.dll
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Context.pdb
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.pdb
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.csprojAssemblyReference.cache
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.AssemblyInfoInputs.cache
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.AssemblyInfo.cs
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.csproj.CopyComplete
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.dll
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\API Backend AssetsManagement\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.pdb
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.deps.json
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.dll
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.pdb
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Context.dll
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.dll
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Context.pdb
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.pdb
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.csprojAssemblyReference.cache
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.AssemblyInfoInputs.cache
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.AssemblyInfo.cs
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.csproj.CopyComplete
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.dll
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\Assets 2-10-2025\AssetsManagement2019\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.pdb
 C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.deps.json
 C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.dll
 C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.pdb
@@ -56,16 +14,3 @@ C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)
 C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsMa.BD90966F.Up2Date
 C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.dll
 C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.pdb
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.deps.json
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.dll
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.pdb
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Context.dll
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.dll
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Context.pdb
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.pdb
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.csprojAssemblyReference.cache
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.AssemblyInfoInputs.cache
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.AssemblyInfo.cs
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.csproj.CopyComplete
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.dll
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 13-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.pdb

@@ -90,6 +90,7 @@ namespace AssetsManagementEG.Presentation.Controllers
             existingWorker.FullName = c.FullName;
             existingWorker.PhoneNumber = c.PhoneNumber;
             existingWorker.Position = c.Position;
+            existingWorker.IsInService = c.IsInService;
 
             LaborsRepository.Update(existingWorker);
             return Ok("The Worker was updated successfully");

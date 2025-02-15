@@ -1099,7 +1099,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.32"
         },
         "runtime": {
-          "AssetsManagementEG.Context.dll": {}
+          "AssetsManagementEG.Context.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "AssetsManagementEG.Models/1.0.0": {
@@ -1107,7 +1110,10 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.32"
         },
         "runtime": {
-          "AssetsManagementEG.Models.dll": {}
+          "AssetsManagementEG.Models.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

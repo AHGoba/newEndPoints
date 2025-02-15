@@ -1,0 +1,10 @@
+role : user 
+district : Almaza    
+
+
+{
+  "username": "ahmedgoba",
+  "password": "0159@Hgoba"
+}
+
+
