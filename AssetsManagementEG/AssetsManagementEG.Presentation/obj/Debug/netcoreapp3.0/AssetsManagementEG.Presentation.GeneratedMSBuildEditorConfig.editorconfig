@@ -1,5 +1,8 @@
 is_global = true
 build_property.RootNamespace = AssetsManagementEG.Presentation
-build_property.ProjectDir = C:\Users\A-H\Desktop\EGYPT GAS\WPF Project for Dsign Department\BackendAPI(.NET)\newEndPoints\AssetsManagementEG\AssetsManagementEG.Presentation\
+build_property.ProjectDir = C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 16-2-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Presentation\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

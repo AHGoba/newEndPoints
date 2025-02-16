@@ -115,6 +115,7 @@ namespace ECommerce.Presentation.Controllers
                 token = Token,
                 role = userRole,
                 Username = ExistingUserLog.UserName,
+                UserId= ExistingUserLog.Id,
                 DistrictID = _UserDistrict.DistrictId,
             });
         }

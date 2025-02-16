@@ -7,6 +7,7 @@ using AssetsManagementEG.Repositories.Repositories;
 using AssetsManagementEG.DTOs.Districts;
 using AssetsManagementEG.DTOs.Tasks;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace AssetsManagementEG.Presentation.Controllers
 {
@@ -103,6 +104,7 @@ namespace AssetsManagementEG.Presentation.Controllers
             var query = tasks.Where(task => task != null).Select(task => new GetAllTasksDTO
             {
                 TaskId = task.TaskId,
+                DistrictId = task.DistrictId,
                 Name = task.Name,
                 Description = task.Description,
                 IsCompleted = task.IsCompleted,
@@ -131,8 +133,62 @@ namespace AssetsManagementEG.Presentation.Controllers
         }
 
 
-        // this end point is for the Users >>>>>>>>>>>>>>>>>>>>>>>>> get the tasks with state >>is (ongoing)<<<<<<<<<<<<<<
+        // this end point is for the SuperUsers >>>> get the tasks related to specific (district) with it's (state)
+        [HttpGet("GetDistrictTasks/{Id}")]
+        public IActionResult GetSuper(int Id)
+        {
+            //Get the district 
+            var district = context.District.FirstOrDefault(d=> d.DistrictId == Id);
+            if(district == null)
+            {
+                return NotFound("District not found");
+            }
 
+
+            var taskCars = context.TaskCar.ToList() ?? new List<TaskCar>();
+            var cars = context.Car.ToList() ?? new List<Car>();
+
+            var taskEquipments = context.TaskEquipment.ToList() ?? new List<TaskEquipment>();
+            var equipments = context.Equipment.ToList() ?? new List<Equipment>();
+
+            var taskLabors = context.TaskLabors.ToList() ?? new List<TaskLabors>();
+            var labors = context.Labors.ToList() ?? new List<Labors>();
+
+            //get tasks 
+            var query = context.Tassk.Where(task => task.DistrictId== district.DistrictId)
+                .Select(task => new GetAllTasksDTO
+            {
+                TaskId = task.TaskId,
+                DistrictId = task.DistrictId,
+                Name = task.Name,
+                Description = task.Description,
+                IsCompleted = task.IsCompleted,
+                StartDate = task.StartDate,
+                EndDate = task.EndDate,
+
+
+                // Get cars related to this task
+                carsNames = taskCars.Where(tc => tc.TaskId == task.TaskId)
+                                   .Join(cars, tc => tc.CarId, c => c.CarId, (tc, c) => c.PlateNum)
+                                   .ToList() ?? new List<string>(),
+
+                // Get equipment related to this task
+                equipmentsNames = taskEquipments.Where(te => te.TaskId == task.TaskId)
+                                               .Join(equipments, te => te.EquipmentId, e => e.EquipmentId, (te, e) => e.Name)
+                                               .ToList() ?? new List<string>(),
+
+                // Get labors related to this task
+                laborsNames = taskLabors.Where(tl => tl.TaskId == task.TaskId)
+                                       .Join(labors, tl => tl.LaborsId, l => l.LaborsId, (tl, l) => l.FullName)
+                                       .ToList() ?? new List<string>()
+
+            }).ToList();
+
+            return Ok(query);
+        }
+
+
+        // this end point is for the Users >>>>get the tasks with state >>is (ongoing) and related to (districtId)<<<<<<<<<<<<<<
         [HttpGet("GetOnGoingTasks/{Id}")]
         public IActionResult Get(int Id)
         {

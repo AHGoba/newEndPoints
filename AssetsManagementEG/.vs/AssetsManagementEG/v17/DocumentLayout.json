@@ -1,26 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\A-H\\Desktop\\EGYPT GAS\\WPF Project for Dsign Department\\BackendAPI(.NET)\\newEndPoints\\AssetsManagementEG\\",
+  "WorkspaceRootPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 16-2-2025\\newEndPoints\\AssetsManagementEG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|c:\\users\\a-h\\desktop\\egypt gas\\wpf project for dsign department\\backendapi(.net)\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.presentation\\controllers\\laborscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|solutionrelative:assetsmanagementeg.presentation\\controllers\\laborscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|c:\\users\\a-h\\desktop\\egypt gas\\wpf project for dsign department\\backendapi(.net)\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.presentation\\controllers\\tasskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 16-2-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.presentation\\controllers\\tasskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|solutionrelative:assetsmanagementeg.presentation\\controllers\\tasskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7059DF0C-6662-4DBF-B8F9-D31E5B508919}|AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj|c:\\users\\a-h\\desktop\\egypt gas\\wpf project for dsign department\\backendapi(.net)\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.dtos\\tasks\\getalltasksdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 16-2-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.presentation\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|solutionrelative:assetsmanagementeg.presentation\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7059DF0C-6662-4DBF-B8F9-D31E5B508919}|AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 16-2-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.dtos\\tasks\\getalltasksdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7059DF0C-6662-4DBF-B8F9-D31E5B508919}|AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj|solutionrelative:assetsmanagementeg.dtos\\tasks\\getalltasksdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|c:\\users\\a-h\\desktop\\egypt gas\\wpf project for dsign department\\backendapi(.net)\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.presentation\\controllers\\equipmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|solutionrelative:assetsmanagementeg.presentation\\controllers\\equipmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|c:\\users\\a-h\\desktop\\egypt gas\\wpf project for dsign department\\backendapi(.net)\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.presentation\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|solutionrelative:assetsmanagementeg.presentation\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,65 +28,37 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "GetAllTasksDTO.cs",
-              "DocumentMoniker": "C:\\Users\\A-H\\Desktop\\EGYPT GAS\\WPF Project for Dsign Department\\BackendAPI(.NET)\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\Tasks\\GetAllTasksDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 16-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\Tasks\\GetAllTasksDTO.cs",
               "RelativeDocumentMoniker": "AssetsManagementEG.DTOs\\Tasks\\GetAllTasksDTO.cs",
-              "ToolTip": "C:\\Users\\A-H\\Desktop\\EGYPT GAS\\WPF Project for Dsign Department\\BackendAPI(.NET)\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\Tasks\\GetAllTasksDTO.cs",
+              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 16-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\Tasks\\GetAllTasksDTO.cs",
               "RelativeToolTip": "AssetsManagementEG.DTOs\\Tasks\\GetAllTasksDTO.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA3wBMAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T19:39:46.432Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T12:13:52.008Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TasskController.cs",
-              "DocumentMoniker": "C:\\Users\\A-H\\Desktop\\EGYPT GAS\\WPF Project for Dsign Department\\BackendAPI(.NET)\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\TasskController.cs",
-              "RelativeDocumentMoniker": "AssetsManagementEG.Presentation\\Controllers\\TasskController.cs",
-              "ToolTip": "C:\\Users\\A-H\\Desktop\\EGYPT GAS\\WPF Project for Dsign Department\\BackendAPI(.NET)\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\TasskController.cs",
-              "RelativeToolTip": "AssetsManagementEG.Presentation\\Controllers\\TasskController.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAYwGYAAABbAAAAAAAAAA==",
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 16-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "AssetsManagementEG.Presentation\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 16-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "AssetsManagementEG.Presentation\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAcwHgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T15:48:34.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T11:38:49.862Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LaborsController.cs",
-              "DocumentMoniker": "C:\\Users\\A-H\\Desktop\\EGYPT GAS\\WPF Project for Dsign Department\\BackendAPI(.NET)\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\LaborsController.cs",
-              "RelativeDocumentMoniker": "AssetsManagementEG.Presentation\\Controllers\\LaborsController.cs",
-              "ToolTip": "C:\\Users\\A-H\\Desktop\\EGYPT GAS\\WPF Project for Dsign Department\\BackendAPI(.NET)\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\LaborsController.cs",
-              "RelativeToolTip": "AssetsManagementEG.Presentation\\Controllers\\LaborsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFwAAAA3AAAAAAAAAA==",
+              "Title": "TasskController.cs",
+              "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 16-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\TasskController.cs",
+              "RelativeDocumentMoniker": "AssetsManagementEG.Presentation\\Controllers\\TasskController.cs",
+              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 16-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\TasskController.cs",
+              "RelativeToolTip": "AssetsManagementEG.Presentation\\Controllers\\TasskController.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAgwBAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T15:46:19.767Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EquipmentController.cs",
-              "DocumentMoniker": "C:\\Users\\A-H\\Desktop\\EGYPT GAS\\WPF Project for Dsign Department\\BackendAPI(.NET)\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\EquipmentController.cs",
-              "RelativeDocumentMoniker": "AssetsManagementEG.Presentation\\Controllers\\EquipmentController.cs",
-              "ToolTip": "C:\\Users\\A-H\\Desktop\\EGYPT GAS\\WPF Project for Dsign Department\\BackendAPI(.NET)\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\EquipmentController.cs",
-              "RelativeToolTip": "AssetsManagementEG.Presentation\\Controllers\\EquipmentController.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAgwF0AAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T15:46:19.032Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CarController.cs",
-              "DocumentMoniker": "C:\\Users\\A-H\\Desktop\\EGYPT GAS\\WPF Project for Dsign Department\\BackendAPI(.NET)\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\CarController.cs",
-              "RelativeDocumentMoniker": "AssetsManagementEG.Presentation\\Controllers\\CarController.cs",
-              "ToolTip": "C:\\Users\\A-H\\Desktop\\EGYPT GAS\\WPF Project for Dsign Department\\BackendAPI(.NET)\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\CarController.cs",
-              "RelativeToolTip": "AssetsManagementEG.Presentation\\Controllers\\CarController.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAgwGAAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T15:45:17.889Z",
+              "WhenOpened": "2025-02-15T15:48:34.831Z",
               "EditorCaption": ""
             }
           ]
