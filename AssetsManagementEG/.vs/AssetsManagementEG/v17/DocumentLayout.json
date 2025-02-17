@@ -11,6 +11,14 @@
       "RelativeMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|solutionrelative:assetsmanagementeg.presentation\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 16-2-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|solutionrelative:assetsmanagementeg.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 16-2-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.presentation\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|solutionrelative:assetsmanagementeg.presentation\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7059DF0C-6662-4DBF-B8F9-D31E5B508919}|AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 16-2-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.dtos\\tasks\\getalltasksdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7059DF0C-6662-4DBF-B8F9-D31E5B508919}|AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj|solutionrelative:assetsmanagementeg.dtos\\tasks\\getalltasksdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -22,11 +30,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 16-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Startup.cs",
+              "RelativeDocumentMoniker": "AssetsManagementEG.Presentation\\Startup.cs",
+              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 16-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Startup.cs",
+              "RelativeToolTip": "AssetsManagementEG.Presentation\\Startup.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACYAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T07:41:25.559Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 16-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\appsettings.json",
+              "RelativeDocumentMoniker": "AssetsManagementEG.Presentation\\appsettings.json",
+              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 16-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\appsettings.json",
+              "RelativeToolTip": "AssetsManagementEG.Presentation\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-17T07:41:18.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "GetAllTasksDTO.cs",
               "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 16-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\Tasks\\GetAllTasksDTO.cs",
               "RelativeDocumentMoniker": "AssetsManagementEG.DTOs\\Tasks\\GetAllTasksDTO.cs",
@@ -44,7 +76,7 @@
               "RelativeDocumentMoniker": "AssetsManagementEG.Presentation\\Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 16-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\AccountController.cs",
               "RelativeToolTip": "AssetsManagementEG.Presentation\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAcwHgAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAcwEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-16T11:38:49.862Z"
             },
@@ -56,7 +88,7 @@
               "RelativeDocumentMoniker": "AssetsManagementEG.Presentation\\Controllers\\TasskController.cs",
               "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 16-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\TasskController.cs",
               "RelativeToolTip": "AssetsManagementEG.Presentation\\Controllers\\TasskController.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAgwBAAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-15T15:48:34.831Z",
               "EditorCaption": ""
