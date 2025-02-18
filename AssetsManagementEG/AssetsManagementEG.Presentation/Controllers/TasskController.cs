@@ -8,6 +8,7 @@ using AssetsManagementEG.DTOs.Districts;
 using AssetsManagementEG.DTOs.Tasks;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System;
 
 namespace AssetsManagementEG.Presentation.Controllers
 {
@@ -138,13 +139,20 @@ namespace AssetsManagementEG.Presentation.Controllers
         public IActionResult GetSuper(int Id)
         {
             //Get the district 
-            var district = context.District.FirstOrDefault(d=> d.DistrictId == Id);
-            if(district == null)
+            var district = context.District.FirstOrDefault(d => d.DistrictId == Id);
+            if (district == null)
             {
                 return NotFound("District not found");
             }
 
+            var tasks = context.Tassk?.Where(t=> t.DistrictId== district.DistrictId)
+                .ToList() ?? new List<Tassk>();
 
+
+            // Load all related data safely                 
+            // ودا عن طريق ان لو مرجعش حاجه من الداتا بيز فى اى مرحله 
+            // اديله حاجه فاضيه 
+            //
             var taskCars = context.TaskCar.ToList() ?? new List<TaskCar>();
             var cars = context.Car.ToList() ?? new List<Car>();
 
@@ -154,9 +162,8 @@ namespace AssetsManagementEG.Presentation.Controllers
             var taskLabors = context.TaskLabors.ToList() ?? new List<TaskLabors>();
             var labors = context.Labors.ToList() ?? new List<Labors>();
 
-            //get tasks 
-            var query = context.Tassk.Where(task => task.DistrictId== district.DistrictId)
-                .Select(task => new GetAllTasksDTO
+
+            var query = tasks.Where(task => task != null).Select(task => new GetAllTasksDTO
             {
                 TaskId = task.TaskId,
                 DistrictId = task.DistrictId,
@@ -169,18 +176,18 @@ namespace AssetsManagementEG.Presentation.Controllers
 
                 // Get cars related to this task
                 carsNames = taskCars.Where(tc => tc.TaskId == task.TaskId)
-                                   .Join(cars, tc => tc.CarId, c => c.CarId, (tc, c) => c.PlateNum)
-                                   .ToList() ?? new List<string>(),
+                                    .Join(cars, tc => tc.CarId, c => c.CarId, (tc, c) => c.PlateNum)
+                                    .ToList() ?? new List<string>(),
 
                 // Get equipment related to this task
                 equipmentsNames = taskEquipments.Where(te => te.TaskId == task.TaskId)
-                                               .Join(equipments, te => te.EquipmentId, e => e.EquipmentId, (te, e) => e.Name)
-                                               .ToList() ?? new List<string>(),
+                                                .Join(equipments, te => te.EquipmentId, e => e.EquipmentId, (te, e) => e.Name)
+                                                .ToList() ?? new List<string>(),
 
                 // Get labors related to this task
                 laborsNames = taskLabors.Where(tl => tl.TaskId == task.TaskId)
-                                       .Join(labors, tl => tl.LaborsId, l => l.LaborsId, (tl, l) => l.FullName)
-                                       .ToList() ?? new List<string>()
+                                        .Join(labors, tl => tl.LaborsId, l => l.LaborsId, (tl, l) => l.FullName)
+                                        .ToList() ?? new List<string>()
 
             }).ToList();
 
@@ -219,7 +226,7 @@ namespace AssetsManagementEG.Presentation.Controllers
             Tassk task = new Tassk()
             {
                 Name = c.Name,
-                StartDate = c.StartDate,
+                StartDate = DateTime.Now,
                 Description = c.Description,
                 DistrictId = c.DistrictId,
                 IsCompleted= false,
