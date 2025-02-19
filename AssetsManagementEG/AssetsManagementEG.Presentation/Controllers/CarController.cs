@@ -76,7 +76,7 @@ namespace AssetsManagementEG.Presentation.Controllers
             {
                 CarId = car.CarId,  // ✅ Now CarId is valid
                 DistrictId = district.DistrictId,
-                StartDate = c.StartDate
+                StartDate = DateTime.Now
             };
 
             mDistrictCarRepo.Create(districtCar);

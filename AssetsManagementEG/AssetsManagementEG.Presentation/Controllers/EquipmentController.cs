@@ -5,6 +5,7 @@ using AssetsManagementEG.Repositories.Many_ManyRepo;
 using AssetsManagementEG.Repositories.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Linq;
 
 namespace AssetsManagementEG.Presentation.Controllers
@@ -72,7 +73,7 @@ namespace AssetsManagementEG.Presentation.Controllers
             {
                 EquipmentId = equipment.EquipmentId,
                 DistrictId = district.DistrictId,
-                StartDate = c.StartDate
+                StartDate = DateTime.Now
             };
             mDistrictEquipmentRepo.Create(districtEquibment);
             return Ok($"The equipment was created successfully and assigned to district {district.Name}");

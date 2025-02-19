@@ -5,6 +5,7 @@ using AssetsManagementEG.Repositories.Many_ManyRepo;
 using AssetsManagementEG.Repositories.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Linq;
 
 namespace AssetsManagementEG.Presentation.Controllers
@@ -70,7 +71,7 @@ namespace AssetsManagementEG.Presentation.Controllers
             {
                 DistrictId = district.DistrictId,
                 LaborsId = labors.LaborsId,
-                StartDate = c.StartDate
+                StartDate = DateTime.Now
             };
 
             mDistrictLaborsRepo.Create(districtLabors);

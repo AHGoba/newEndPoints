@@ -38,9 +38,9 @@
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 16-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "AssetsManagementEG.Presentation\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 16-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\AccountController.cs*",
-              "RelativeToolTip": "AssetsManagementEG.Presentation\\Controllers\\AccountController.cs*",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAcwHoAAAAsAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 16-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "AssetsManagementEG.Presentation\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAYwHoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T11:05:41.803Z",
               "EditorCaption": ""
@@ -91,8 +91,7 @@
               "RelativeToolTip": "AssetsManagementEG.Presentation\\Controllers\\TasskController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T15:48:34.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T15:48:34.831Z"
             }
           ]
         }
