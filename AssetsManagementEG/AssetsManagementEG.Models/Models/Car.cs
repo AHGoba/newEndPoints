@@ -12,7 +12,9 @@ namespace AssetsManagementEG.Models.Models
         public string Type { get; set; }
         public string PlateNum { get; set; }
         public bool IsAvailable { get; set; }
+        // تبع الشركه ولا ايجار
         public bool IsCompanyOwned { get; set; }
+        // لو مثلا عربيه اتشالت ممسحهاش لازم تبقا موجوده عندى فى الداتا بيز عشان هى ارتبطت بعدد من التاسكات
         public bool IsInService { get; set; }
         public virtual ICollection<TaskCar> TaskCars { get; set; }
         public virtual ICollection<DistrictCar> DistrictCar { get; set; }

@@ -319,7 +319,7 @@ namespace AssetsManagementEG.Presentation.Controllers
             //existingTask.Name = c.Name;
             //existingTask.Description = c.Description;
             //existingTask.StartDate = c.StartDate;
-            existingTask.EndDate = c.EndDate;
+            existingTask.EndDate = DateTime.Now;
             existingTask.IsCompleted = true;
 
                //getting car associative with task

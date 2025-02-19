@@ -69,6 +69,9 @@ namespace AssetsManagementEG.Presentation.Controllers
             return Ok("The car was updated successfully");
         }
 
+        /////////////////////////////// get district (labors- equipments - cars) available To (Create Task)
+        ///
+
         [HttpGet("GetDistrictCars/{Id}")]
         public IActionResult GetDistrictCar( int Id)
         {
@@ -140,7 +143,6 @@ namespace AssetsManagementEG.Presentation.Controllers
         }
 
         [HttpGet("GetDistrictLabors/{Id}")]
-
         public IActionResult GetDistrictLabor(int Id)
         {
             // getting the district
@@ -173,5 +175,120 @@ namespace AssetsManagementEG.Presentation.Controllers
 
             return Ok(Labors) ;
         }
+
+
+        /////////////////////////////// get district (labors- equipments - cars) To Edit District (labors- equipments - cars)
+        ///
+        [HttpGet("GetDistrictCarsForEdit/{Id}")]
+        public IActionResult AONGetDistrictCar(int Id)
+        {
+            var district = DistrictRepository.FindOneForUdpdateOrDelete(Id);
+            if (district == null)
+            {
+                return NotFound("District not found");
+            }
+
+
+            //get all carrecords realted to this district from districtcar table
+            // in shape of carrecords[101,105,107]
+
+            var carrecords = context.DistrictCar
+                .Where(dc => dc.DistrictId == Id)
+                .Select(dc => dc.CarId).ToList();
+
+            if (!carrecords.Any())
+            {
+                return NotFound($"There is no cars assigned to the districtName {district.Name}");
+            }
+            // رجعلى العربيات اللى تابعه ل id  
+            //وكمان تكون متاحه وكمان فى الخدمه!!
+            var cars = context.Car
+                .Where(c => carrecords.Contains(c.CarId) && c.IsInService)
+                .Select(cr => new
+                {
+                    cartype = cr.Type,
+                    carPlateNum = cr.PlateNum,
+                    carId = cr.CarId,
+                    carIsCompanyOwned = cr.IsCompanyOwned,
+                    carIsInService = cr.IsInService
+                }).ToList();
+
+
+            return Ok(cars);
+        }
+
+        [HttpGet("GetDistrictEquipmentsForEdit/{Id}")]
+        public IActionResult AONDistrictEquipment(int Id)
+        {
+            // getting district 
+            var district = DistrictRepository.FindOneForUdpdateOrDelete(Id);
+            if (district == null)
+            {
+                return NotFound("District not found");
+            }
+
+            // get the EquipmentRecords from DisrtictEquipment table 
+            var EquipmentRecords = context.DistrictEquibment
+                .Where(de => de.DistrictId == district.DistrictId)
+                .Select(e => e.EquipmentId).ToList();
+
+            if (!EquipmentRecords.Any())
+            {
+                return NotFound($"There is no Equipment assigned to the districtName {district.Name}");
+            }
+
+            //getting the equipment from Equipment table
+
+            var Equipments = context.Equipment
+                .Where(e => EquipmentRecords.Contains(e.EquipmentId) && e.IsAvailable && e.IsInService)
+                .Select(e => new
+                {
+                    EquipmentIid = e.EquipmentId,
+                    EquipmentName = e.Name,
+                    EquipmentType = e.Type,
+                    EquipmentIsInService= e.IsInService
+                });
+
+            return Ok(Equipments);
+        }
+
+        [HttpGet("GetDistrictLaborsForEdit/{Id}")]
+        public IActionResult AONDistrictLabor(int Id)
+        {
+            // getting the district
+            var district = DistrictRepository.FindOneForUdpdateOrDelete(Id);
+            if (district == null)
+            {
+                return NotFound("District not found");
+            }
+
+            // getting LaborRecords from DistrictLabor table 
+            var LaborRecords = context.DistrictLabors
+                .Where(dl => dl.DistrictId == district.DistrictId)
+                .Select(l => l.LaborsId).ToList();
+
+            if (!LaborRecords.Any())
+            {
+                return NotFound($"There is no Labor assigned to the districtName {district.Name}");
+            }
+
+            // getting Labors from labor table 
+
+            var Labors = context.Labors
+                .Where(l => LaborRecords.Contains(l.LaborsId) && l.IsAvailable && l.IsInService)
+                .Select(l => new
+                {
+                    LaborId = l.LaborsId,
+                    LaborFullName = l.FullName,
+                    LaborPhoneNumber = l.PhoneNumber,
+                    LaborPostion = l.Position,
+                    LaborIsInservice = l.IsInService
+                });
+
+            return Ok(Labors);
+        }
+
+
+
     }
 }
