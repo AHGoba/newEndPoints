@@ -108,6 +108,9 @@ namespace ECommerce.Presentation.Controllers
                 return BadRequest("this user has no district (not assigned)");
             }
 
+            var district = context.District.FirstOrDefault(d=> d.DistrictId == _UserDistrict.DistrictId);
+
+
             
             
             return Ok(new
@@ -117,6 +120,7 @@ namespace ECommerce.Presentation.Controllers
                 Username = ExistingUserLog.UserName,
                 UserId= ExistingUserLog.Id,
                 DistrictID = _UserDistrict.DistrictId,
+                DistrictName = district.Name
             });
         }
 
