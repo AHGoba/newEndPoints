@@ -59,7 +59,6 @@ namespace AssetsManagementEG.Presentation.Controllers
                 Type = c.Type,
                 IsAvailable = true,
                 IsInService=true,
-
             };
 
             var result = EquipmentRepository.Create(equipment);
@@ -92,7 +91,36 @@ namespace AssetsManagementEG.Presentation.Controllers
             existingEquipment.Name = c.Name;
             existingEquipment.Type = c.Type;
             existingEquipment.IsAvailable = c.IsAvailable;
-            existingEquipment.IsInService = c.IsInService;
+           
+
+            // هنا لو الشخص دخل قيمه بتفيد ان الشخص فى الخدمه او لاء 
+            if (c.IsInService != null)
+            {
+                // here if he send an value it will assign it 
+                // but if he send like space or somthing else it will put it false 
+                existingEquipment.IsInService = c.IsInService ?? true;
+
+            }
+            // طيب لو هوا بعت منطقه جديدة ساعتها  
+            if (c.DistrictName != null)
+            {
+                if (DistrictRepository.DistrictExists(c.DistrictName))
+                {
+                    var district = DistrictRepository.districts().FirstOrDefault(d => d.Name == c.DistrictName);
+                    DistrictEquibment districtEquibment = new DistrictEquibment()
+                    {
+                        DistrictId = district.DistrictId,
+                        EquipmentId= existingEquipment.EquipmentId,
+                        StartDate = DateTime.Now
+                    };
+
+                }
+                else
+                {
+                    return BadRequest($"the distrcit {c.DistrictName} doesn't exist");
+                }
+
+            }
 
             EquipmentRepository.Update(existingEquipment);
             return Ok("The equipment was updated successfully");

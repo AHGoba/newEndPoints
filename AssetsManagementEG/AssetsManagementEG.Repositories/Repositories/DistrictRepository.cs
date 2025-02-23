@@ -20,6 +20,9 @@ namespace AssetsManagementEG.Repositories.Repositories
         {
             return context.District.Any(d => d.Name == name);
         }
+
+        
+
         public IQueryable<District> districts()
         {
             return context.District;

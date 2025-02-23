@@ -108,6 +108,8 @@ namespace ECommerce.Presentation.Controllers
                 return BadRequest("this user has no district (not assigned)");
             }
 
+
+            //get distrcit so i can send it to the User
             var district = context.District.FirstOrDefault(d=> d.DistrictId == _UserDistrict.DistrictId);
 
 

@@ -91,7 +91,32 @@ namespace AssetsManagementEG.Presentation.Controllers
             existingWorker.FullName = c.FullName;
             existingWorker.PhoneNumber = c.PhoneNumber;
             existingWorker.Position = c.Position;
-            existingWorker.IsInService = c.IsInService;
+
+            // هنا لو الشخص دخل قيمه بتفيد ان الشخص فى الخدمه او لاء 
+            if (c.IsInService != null)
+            {
+                // here if he send an value it will assign it 
+                // but if he send like space or somthing else it will put it false 
+                existingWorker.IsInService = c.IsInService??true ;
+
+            }
+            // طيب لو هوا بعت منطقه جديدة ساعتها  
+            if ( c.DistrictName != null)
+            {
+                if (DistrictRepository.DistrictExists(c.DistrictName))
+                {
+                    var district = DistrictRepository.districts().FirstOrDefault(d=> d.Name == c.DistrictName);
+                    DistrictLabors districtLabors = new DistrictLabors()
+                    {
+                        DistrictId = district.DistrictId,
+                        LaborsId = existingWorker.LaborsId,
+                        StartDate = DateTime.Now
+                    };
+
+                }
+                
+            }
+
 
             LaborsRepository.Update(existingWorker);
             return Ok("The Worker was updated successfully");

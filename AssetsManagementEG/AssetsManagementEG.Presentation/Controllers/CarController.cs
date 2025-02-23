@@ -61,7 +61,7 @@ namespace AssetsManagementEG.Presentation.Controllers
                 PlateNum = c.PlateNum,
                 IsAvailable = true,
                 IsCompanyOwned = c.IsCompanyOwned,
-                IsInService = c.IsInService,
+                IsInService = true,
             };
 
             var result = CarRepository.Create(car);
@@ -98,7 +98,32 @@ namespace AssetsManagementEG.Presentation.Controllers
             existingCar.PlateNum = c.PlateNum;
             existingCar.IsAvailable = c.IsAvailable;
             existingCar.IsCompanyOwned = c.IsCompanyOwned;
-            existingCar.IsInService = c.IsInService;
+           
+
+            // هنا لو الشخص دخل قيمه بتفيد ان الشخص فى الخدمه او لاء 
+            if (c.IsInService != null)
+            {
+                // here if he send an value it will assign it 
+                // but if he send like space or somthing else it will put it false 
+                existingCar.IsInService = c.IsInService ?? true;
+
+            }
+            // طيب لو هوا بعت منطقه جديدة ساعتها  
+            if (c.DistrictName != null)
+            {
+                if (DistrictRepository.DistrictExists(c.DistrictName))
+                {
+                    var district = DistrictRepository.districts().FirstOrDefault(d => d.Name == c.DistrictName);
+                    DistrictCar districtCar = new DistrictCar()
+                    {
+                        DistrictId = district.DistrictId,
+                        CarId = existingCar.CarId,
+                        StartDate = DateTime.Now
+                    };
+
+                }
+
+            }
 
             CarRepository.Update(existingCar);
 
@@ -107,7 +132,7 @@ namespace AssetsManagementEG.Presentation.Controllers
 
         [HttpDelete]
         [Route("{Id}")]
-        public IActionResult Delete(int Id)
+        public IActionResult ChangeServiceState(int Id)
         {
             var existingCar = CarRepository.FindOneForUdpdateOrDelete(Id);
             if (existingCar == null)
