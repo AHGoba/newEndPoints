@@ -84,6 +84,11 @@ namespace AssetsManagementEG.Presentation.Controllers
         }
 
 
+
+        // فى الابديت دا فى 3 حاجات 
+        // اول حاجه ان الشخص يغير فى حاجات عاديه زى الاسم وهكذا 
+        // تانى حاجه ان هوا لو عايز يغير حالته من فى الخدمه الى خارج الخدمه
+        // تالت حاجه انى اغير منطقه العربيه
         [HttpPut]
         [Route("{Id}")]
         public IActionResult Update(CreateOrUpdateCarsDTO c, int Id)
@@ -94,11 +99,27 @@ namespace AssetsManagementEG.Presentation.Controllers
                 return NotFound("Car not found");
             }
 
-            existingCar.Type = c.Type;
-            existingCar.PlateNum = c.PlateNum;
-            existingCar.IsAvailable = c.IsAvailable;
-            existingCar.IsCompanyOwned = c.IsCompanyOwned;
-           
+            // Update only the properties that are provided in the request
+            if (!string.IsNullOrEmpty(c.Type))
+            {
+                existingCar.Type = c.Type;
+            }
+
+            if (!string.IsNullOrEmpty(c.PlateNum))
+            {
+                existingCar.PlateNum = c.PlateNum; // Update PlateNum only if it's provided
+            }
+
+            if (c.IsAvailable != null)
+            {
+                existingCar.IsAvailable = c.IsAvailable;
+            }
+
+            if (c.IsCompanyOwned != null)
+            {
+                existingCar.IsCompanyOwned = c.IsCompanyOwned;
+            }
+
 
             // هنا لو الشخص دخل قيمه بتفيد ان الشخص فى الخدمه او لاء 
             if (c.IsInService != null)
@@ -132,6 +153,10 @@ namespace AssetsManagementEG.Presentation.Controllers
 
         [HttpDelete]
         [Route("{Id}")]
+
+
+
+
         public IActionResult ChangeServiceState(int Id)
         {
             var existingCar = CarRepository.FindOneForUdpdateOrDelete(Id);
