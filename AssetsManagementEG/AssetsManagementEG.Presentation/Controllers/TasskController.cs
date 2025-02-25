@@ -81,6 +81,7 @@ namespace AssetsManagementEG.Presentation.Controllers
         //    return Ok(query);
         //}
 
+        #region GetAll() for Admin
         // this end point is for the (Admin)  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
         [HttpGet]
         public IActionResult GetAll()
@@ -132,8 +133,9 @@ namespace AssetsManagementEG.Presentation.Controllers
 
             return Ok(query);
         }
+        #endregion
 
-
+        #region GetOnGoingTasks/{Id} EndPoint
         // this end point is for the SuperUsers >>>> get the tasks related to specific (district) with it's (state)
         [HttpGet("GetDistrictTasks/{Id}")]
         public IActionResult GetSuper(int Id)
@@ -193,8 +195,10 @@ namespace AssetsManagementEG.Presentation.Controllers
 
             return Ok(query);
         }
+        #endregion
 
 
+        #region GetOnGoingTasks/{Id} EndPoint
         // this end point is for the Users >>>>get the tasks with state >>is (ongoing) and related to (districtId)<<<<<<<<<<<<<<
         [HttpGet("GetOnGoingTasks/{Id}")]
         public IActionResult Get(int Id)
@@ -212,14 +216,15 @@ namespace AssetsManagementEG.Presentation.Controllers
                 .Select( t=> new
                 {
                     taskId= t.TaskId,
-                    taskName = t.Name,
-                    taskStartDate = t.StartDate
+                    name = t.Name,
+                    startDate = t.StartDate
                 })
                 .ToList();                     
             return Ok(tasks);
         }
+        #endregion
 
-
+        #region CreateTask EndPoint
         [HttpPost]
         public IActionResult Create(CreateTasksDTO c)
         {
@@ -306,7 +311,9 @@ namespace AssetsManagementEG.Presentation.Controllers
             return Ok("The Task was created successfully with it's cars,equipments and labors");
 
         }
+        #endregion
 
+        #region UpdatTask EndPoint
         [HttpPut("{Id}")]
         public IActionResult Update( UpdateTaskDTO c, int Id)
         {
@@ -372,5 +379,6 @@ namespace AssetsManagementEG.Presentation.Controllers
             return Ok("The Task was updated successfully");
 
         }
+        #endregion
     }
 }

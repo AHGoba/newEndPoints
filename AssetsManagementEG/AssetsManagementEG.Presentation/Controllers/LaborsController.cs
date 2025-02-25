@@ -88,9 +88,23 @@ namespace AssetsManagementEG.Presentation.Controllers
                 return NotFound("Equipment not found");
             }
 
-            existingWorker.FullName = c.FullName;
-            existingWorker.PhoneNumber = c.PhoneNumber;
-            existingWorker.Position = c.Position;
+
+            // Update only the properties that are provided in the request
+            if (!string.IsNullOrEmpty(c.FullName))
+            {
+                existingWorker.FullName = c.FullName;
+            }
+
+            if (!string.IsNullOrEmpty(c.PhoneNumber))
+            {
+                existingWorker.PhoneNumber = c.PhoneNumber; 
+            }
+
+            if (!string.IsNullOrEmpty(c.Position))
+            {
+                existingWorker.Position = c.Position;
+            }
+
 
             // هنا لو الشخص دخل قيمه بتفيد ان الشخص فى الخدمه او لاء 
             if (c.IsInService != null)

@@ -86,7 +86,7 @@ namespace AssetsManagementEG.Presentation.Controllers
             // in shape of carrecords[101,105,107]
 
             var carrecords = context.DistrictCar
-                .Where(dc => dc.DistrictId == Id)
+                .Where(dc => dc.DistrictId == Id )
                 .Select(dc=> dc.CarId).ToList() ;
 
             if (!carrecords.Any())

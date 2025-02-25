@@ -109,25 +109,13 @@ namespace AssetsManagementEG.Presentation.Controllers
             {
                 existingCar.PlateNum = c.PlateNum; // Update PlateNum only if it's provided
             }
-
-            if (c.IsAvailable != null)
-            {
-                existingCar.IsAvailable = c.IsAvailable;
-            }
-
-            if (c.IsCompanyOwned != null)
-            {
-                existingCar.IsCompanyOwned = c.IsCompanyOwned;
-            }
-
-
+          
             // هنا لو الشخص دخل قيمه بتفيد ان الشخص فى الخدمه او لاء 
             if (c.IsInService != null)
             {
                 // here if he send an value it will assign it 
                 // but if he send like space or somthing else it will put it false 
                 existingCar.IsInService = c.IsInService ?? true;
-
             }
             // طيب لو هوا بعت منطقه جديدة ساعتها  
             if (c.DistrictName != null)
@@ -141,6 +129,7 @@ namespace AssetsManagementEG.Presentation.Controllers
                         CarId = existingCar.CarId,
                         StartDate = DateTime.Now
                     };
+                    mDistrictCarRepo.Create(districtCar);
 
                 }
 

@@ -88,11 +88,16 @@ namespace AssetsManagementEG.Presentation.Controllers
                 return NotFound("Equipment not found");
             }
 
-            existingEquipment.Name = c.Name;
-            existingEquipment.Type = c.Type;
-            existingEquipment.IsAvailable = c.IsAvailable;
-           
+            // Update only the properties that are provided in the request
+            if (!string.IsNullOrEmpty(c.Name))
+            {
+                existingEquipment.Name = c.Name;
+            }
 
+            if (!string.IsNullOrEmpty(c.Type))
+            {
+                existingEquipment.Type = c.Type; 
+            }
             // هنا لو الشخص دخل قيمه بتفيد ان الشخص فى الخدمه او لاء 
             if (c.IsInService != null)
             {
