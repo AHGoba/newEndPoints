@@ -14,6 +14,7 @@ namespace AssetsManagementEG.Models.Models
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public bool IsCompleted { get; set; }
+        public string Comment { get; set; }
         public virtual ICollection<TaskCar> TaskCars { get; set; } = new List<TaskCar>();
         public virtual ICollection<TaskEquipment> TaskEquipment { get; set; } =new List<TaskEquipment>();
         public virtual ICollection<TaskLabors> TaskLabors { get; set; } = new List<TaskLabors>();

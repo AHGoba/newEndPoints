@@ -135,7 +135,7 @@ namespace AssetsManagementEG.Presentation.Controllers
         }
         #endregion
 
-        #region GetOnGoingTasks/{Id} EndPoint
+        #region GetOnDistrictTasks/{Id} EndPoint
         // this end point is for the SuperUsers >>>> get the tasks related to specific (district) with it's (state)
         [HttpGet("GetDistrictTasks/{Id}")]
         public IActionResult GetSuper(int Id)
@@ -197,7 +197,6 @@ namespace AssetsManagementEG.Presentation.Controllers
         }
         #endregion
 
-
         #region GetOnGoingTasks/{Id} EndPoint
         // this end point is for the Users >>>>get the tasks with state >>is (ongoing) and related to (districtId)<<<<<<<<<<<<<<
         [HttpGet("GetOnGoingTasks/{Id}")]
@@ -217,6 +216,7 @@ namespace AssetsManagementEG.Presentation.Controllers
                 {
                     taskId= t.TaskId,
                     name = t.Name,
+                    describtion = t.Description,
                     startDate = t.StartDate
                 })
                 .ToList();                     
@@ -262,6 +262,7 @@ namespace AssetsManagementEG.Presentation.Controllers
                     {
                         car.IsAvailable = false;
                     }
+
                 }
             }
 

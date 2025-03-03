@@ -118,6 +118,7 @@ namespace AssetsManagementEG.Presentation.Controllers
                         EquipmentId= existingEquipment.EquipmentId,
                         StartDate = DateTime.Now
                     };
+                    mDistrictEquipmentRepo.Create(districtEquibment);
 
                 }
                 else

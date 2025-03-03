@@ -11,6 +11,7 @@ namespace AssetsManagementEG.Models.Models
         public int CarId { get; set; }
         public string Type { get; set; }
         public string PlateNum { get; set; }
+        public string PlateNum2  { get; set; }
         public bool IsAvailable { get; set; }
         // تبع الشركه ولا ايجار
         public bool IsCompanyOwned { get; set; }

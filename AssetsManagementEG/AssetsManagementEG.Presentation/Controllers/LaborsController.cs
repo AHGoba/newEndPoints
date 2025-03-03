@@ -126,6 +126,7 @@ namespace AssetsManagementEG.Presentation.Controllers
                         LaborsId = existingWorker.LaborsId,
                         StartDate = DateTime.Now
                     };
+                    mDistrictLaborsRepo.Create( districtLabors );
 
                 }
                 
