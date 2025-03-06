@@ -1,29 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 24-2-2025\\newEndPoints\\AssetsManagementEG\\",
+  "WorkspaceRootPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 05-3-2025\\newEndPoints\\AssetsManagementEG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D501F360-8D37-4682-BA49-39198631BC0B}|AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 24-2-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.context\\migrations\\20250303120004_thirdmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D501F360-8D37-4682-BA49-39198631BC0B}|AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj|solutionrelative:assetsmanagementeg.context\\migrations\\20250303120004_thirdmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 24-2-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.presentation\\controllers\\districtcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 05-3-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.presentation\\controllers\\districtcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|solutionrelative:assetsmanagementeg.presentation\\controllers\\districtcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC94791E-BF70-4485-B30B-D85F87EAC2BE}|AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 24-2-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.models\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC94791E-BF70-4485-B30B-D85F87EAC2BE}|AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj|solutionrelative:assetsmanagementeg.models\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 24-2-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.presentation\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 05-3-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.presentation\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|solutionrelative:assetsmanagementeg.presentation\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC94791E-BF70-4485-B30B-D85F87EAC2BE}|AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 24-2-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.models\\models\\labors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DC94791E-BF70-4485-B30B-D85F87EAC2BE}|AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 05-3-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.models\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC94791E-BF70-4485-B30B-D85F87EAC2BE}|AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj|solutionrelative:assetsmanagementeg.models\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC94791E-BF70-4485-B30B-D85F87EAC2BE}|AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 05-3-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.models\\models\\labors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DC94791E-BF70-4485-B30B-D85F87EAC2BE}|AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj|solutionrelative:assetsmanagementeg.models\\models\\labors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC94791E-BF70-4485-B30B-D85F87EAC2BE}|AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 24-2-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.models\\models\\tassk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DC94791E-BF70-4485-B30B-D85F87EAC2BE}|AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 05-3-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.models\\models\\tassk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DC94791E-BF70-4485-B30B-D85F87EAC2BE}|AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj|solutionrelative:assetsmanagementeg.models\\models\\tassk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -39,49 +35,35 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20250303120004_Thirdmigration.cs",
-              "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 24-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\Migrations\\20250303120004_Thirdmigration.cs",
-              "RelativeDocumentMoniker": "AssetsManagementEG.Context\\Migrations\\20250303120004_Thirdmigration.cs",
-              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 24-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\Migrations\\20250303120004_Thirdmigration.cs",
-              "RelativeToolTip": "AssetsManagementEG.Context\\Migrations\\20250303120004_Thirdmigration.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T12:00:05.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "DistrictController.cs",
-              "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 24-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\DistrictController.cs",
+              "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 05-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\DistrictController.cs",
               "RelativeDocumentMoniker": "AssetsManagementEG.Presentation\\Controllers\\DistrictController.cs",
-              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 24-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\DistrictController.cs",
+              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 05-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\DistrictController.cs",
               "RelativeToolTip": "AssetsManagementEG.Presentation\\Controllers\\DistrictController.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAqwG0AAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAGsAAAAAAAAAAADwv2YAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-03T11:59:18.455Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "CarController.cs",
-              "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 24-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\CarController.cs",
+              "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 05-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\CarController.cs",
               "RelativeDocumentMoniker": "AssetsManagementEG.Presentation\\Controllers\\CarController.cs",
-              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 24-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\CarController.cs",
+              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 05-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\CarController.cs",
               "RelativeToolTip": "AssetsManagementEG.Presentation\\Controllers\\CarController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAqwCQAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAgwG8AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T11:58:45.049Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T11:58:45.049Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Tassk.cs",
-              "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 24-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\Models\\Tassk.cs",
+              "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 05-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\Models\\Tassk.cs",
               "RelativeDocumentMoniker": "AssetsManagementEG.Models\\Models\\Tassk.cs",
-              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 24-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\Models\\Tassk.cs",
+              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 05-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\Models\\Tassk.cs",
               "RelativeToolTip": "AssetsManagementEG.Models\\Models\\Tassk.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwBAAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -89,11 +71,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Labors.cs",
-              "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 24-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\Models\\Labors.cs",
+              "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 05-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\Models\\Labors.cs",
               "RelativeDocumentMoniker": "AssetsManagementEG.Models\\Models\\Labors.cs",
-              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 24-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\Models\\Labors.cs",
+              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 05-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\Models\\Labors.cs",
               "RelativeToolTip": "AssetsManagementEG.Models\\Models\\Labors.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAuwA0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -103,14 +85,13 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Car.cs",
-              "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 24-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\Models\\Car.cs",
+              "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 05-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\Models\\Car.cs",
               "RelativeDocumentMoniker": "AssetsManagementEG.Models\\Models\\Car.cs",
-              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 24-2-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\Models\\Car.cs",
+              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 05-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\Models\\Car.cs",
               "RelativeToolTip": "AssetsManagementEG.Models\\Models\\Car.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T08:53:46.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T08:53:46.75Z"
             }
           ]
         }
