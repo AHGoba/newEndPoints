@@ -38,6 +38,8 @@ namespace AssetsManagementEG.Repositories.Repositories
             dbset.Remove(Entity);
             context.SaveChanges();
         }
+
+        //get it according to it's id
         public T FindOneForUdpdateOrDelete(int entity) 
         {
             return dbset.Find(entity);        

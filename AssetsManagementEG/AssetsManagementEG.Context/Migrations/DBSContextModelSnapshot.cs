@@ -114,6 +114,42 @@ namespace AssetsManagementEG.Context.Migrations
                     b.ToTable("Car");
                 });
 
+            modelBuilder.Entity("AssetsManagementEG.Models.Models.CompanyL", b =>
+                {
+                    b.Property<int>("CompanyID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Location")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CompanyID");
+
+                    b.ToTable("CompanyL");
+                });
+
+            modelBuilder.Entity("AssetsManagementEG.Models.Models.CompanyLabors", b =>
+                {
+                    b.Property<int>("LaborsID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ComapanyID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("LaborsID", "ComapanyID");
+
+                    b.HasIndex("ComapanyID");
+
+                    b.ToTable("CompanyLabors");
+                });
+
             modelBuilder.Entity("AssetsManagementEG.Models.Models.District", b =>
                 {
                     b.Property<int>("DistrictId")
@@ -213,9 +249,6 @@ namespace AssetsManagementEG.Context.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CompanyName")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FullName")
                         .HasColumnType("nvarchar(max)");
@@ -461,6 +494,21 @@ namespace AssetsManagementEG.Context.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("AssetsManagementEG.Models.Models.CompanyLabors", b =>
+                {
+                    b.HasOne("AssetsManagementEG.Models.Models.CompanyL", "CompanyL")
+                        .WithMany("CompanyLabors")
+                        .HasForeignKey("ComapanyID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AssetsManagementEG.Models.Models.Labors", "Labors")
+                        .WithMany("CompanyLabors")
+                        .HasForeignKey("LaborsID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("AssetsManagementEG.Models.Models.DistrictCar", b =>

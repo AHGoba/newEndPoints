@@ -42,6 +42,8 @@ namespace AssetsManagementEG.Presentation
             services.AddScoped<CarRepository>();
             services.AddScoped<EquipmentRepository>();
             services.AddScoped<LaborsRepository>();
+            services.AddScoped<CompanyLRepository>();
+
 
             services.AddScoped<MDistrictCarRepo>();
             services.AddScoped<MDistrictEquipmentRepo>();

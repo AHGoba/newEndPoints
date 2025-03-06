@@ -29,6 +29,10 @@ namespace AssetsManagementEG.Context.Context
             public DbSet<DistrictLabors> DistrictLabors { get; set; }
             public DbSet<UsersDistrict> UsersDistrict { get; set; }
 
+            // company with labors 
+            public DbSet<CompanyL> CompanyL { get; set; }
+            public DbSet<CompanyLabors> CompanyLabors { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
             {
                 base.OnModelCreating(modelBuilder);
@@ -144,6 +148,26 @@ namespace AssetsManagementEG.Context.Context
                .HasOne(tc => tc.applicationUser)
                .WithMany(c => c.UsersDistricts)
                .HasForeignKey(tc => tc.ApplicationUserId);
-            }
+
+                //888888888888888888888888888888888
+                // Configure the many-to-many relationship for CompanyLabors
+                modelBuilder.Entity<CompanyLabors>().HasKey(cl => new { cl.LaborsID, cl.ComapanyID });
+
+                // Configure the relationship between CompanyLabors and Labors
+                modelBuilder.Entity<CompanyLabors>()
+                .HasOne(cl => cl.Labors)
+                .WithMany(l=> l.CompanyLabors)
+                .HasForeignKey(cl=> cl.LaborsID);
+
+                // Configure the relationship between CompanyLabors and Company
+                modelBuilder.Entity<CompanyLabors>()
+                .HasOne(cl=> cl.CompanyL)
+                .WithMany(c=> c.CompanyLabors)
+                .HasForeignKey(cl=> cl.ComapanyID);
+
+
+
+
         }
+    }
 }
