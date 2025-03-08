@@ -1,9 +1,11 @@
 ﻿using AssetsManagementEG.Context.Context;
 using AssetsManagementEG.Models.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace AssetsManagementEG.Repositories.Repositories
 {
@@ -18,6 +20,10 @@ namespace AssetsManagementEG.Repositories.Repositories
         public bool CompanyLExists(string companyName)
         {
             return context.CompanyL.Any(c=> c.Name==companyName);
+        }
+        public CompanyL FindCompany(string companyName)
+        {
+            return context.CompanyL.FirstOrDefault(d => d.Name == companyName);
         }
     }
 }

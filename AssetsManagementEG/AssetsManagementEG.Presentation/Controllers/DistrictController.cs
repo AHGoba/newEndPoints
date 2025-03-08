@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.AspNetCore.Routing;
 using System.Linq;
 using AssetsManagementEG.Context.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace AssetsManagementEG.Presentation.Controllers
 {
@@ -275,17 +276,22 @@ namespace AssetsManagementEG.Presentation.Controllers
             }
 
             // getting Labors from labor table 
-
             var Labors = context.Labors
-                .Where(l => LaborRecords.Contains(l.LaborsId) && l.IsAvailable && l.IsInService)
-                .Select(l => new
-                {
-                    LaborId = l.LaborsId,
-                    LaborFullName = l.FullName,
-                    LaborPhoneNumber = l.PhoneNumber,
-                    LaborPostion = l.Position,
-                    LaborIsInservice = l.IsInService
-                });
+        .Where(l => LaborRecords.Contains(l.LaborsId) && l.IsAvailable && l.IsInService)
+        .Include(l => l.CompanyLabors)  // Include CompanyLabors
+        .ThenInclude(cl => cl.CompanyL)  // Include Company
+        .Select(l => new
+        {
+            LaborId = l.LaborsId,
+            LaborFullName = l.FullName,
+            LaborPosition = l.Position,
+            LaborIsInservice = l.IsInService,
+            LaborPhoneNumber = l.PhoneNumber,
+            companyName = l.CompanyLabors
+                .OrderByDescending(cl => cl.StartDate) // Get latest company
+                .Select(cl => cl.CompanyL.Name)
+                .FirstOrDefault()
+        });
 
             return Ok(Labors);
         }

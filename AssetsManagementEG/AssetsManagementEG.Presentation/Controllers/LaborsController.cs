@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace AssetsManagementEG.Presentation.Controllers
 {
@@ -17,25 +18,34 @@ namespace AssetsManagementEG.Presentation.Controllers
         LaborsRepository LaborsRepository;
         DistrictRepository DistrictRepository;
         MDistrictLaborsRepo mDistrictLaborsRepo;
-        public LaborsController(LaborsRepository laborsRepository, 
-            DistrictRepository _districtRepository, MDistrictLaborsRepo _mDistrictLaborsRepo)
+        CompanyLRepository companyLRepository;
+        MCompanyLaborsRepo mCompanyLaborsRepo;
+        public LaborsController(LaborsRepository laborsRepository, DistrictRepository _districtRepository, 
+            MDistrictLaborsRepo _mDistrictLaborsRepo, CompanyLRepository _companyLRepository, MCompanyLaborsRepo _mCompanyLaborsRepo)
         {
             LaborsRepository = laborsRepository;
             DistrictRepository = _districtRepository;
             mDistrictLaborsRepo = _mDistrictLaborsRepo;
-
+            companyLRepository = _companyLRepository;
+            mCompanyLaborsRepo = _mCompanyLaborsRepo;
         }
 
         [HttpGet]
         public IActionResult GetAll()
         {
             var Labors = LaborsRepository.GetAll();
-            var query = Labors.Select(e => new GetAllLaborsDTO
+            var query = Labors.Include(l => l.CompanyLabors)
+            .ThenInclude(cl => cl.CompanyL)
+            .Select(e => new GetAllLaborsDTO
             {
                 Id = e.LaborsId,
                 FullName = e.FullName,
                 PhoneNumber = e.PhoneNumber,
                 Position = e.Position,
+                CompanyName = e.CompanyLabors
+                  .OrderByDescending(cl => cl.StartDate) // Sort by latest StartDate
+                  .Select(cl => cl.CompanyL.Name)        // Select the company name
+                  .FirstOrDefault()                      // Get the latest one in Date
             }).ToList();
             return Ok(query);
         }
@@ -43,12 +53,19 @@ namespace AssetsManagementEG.Presentation.Controllers
         [HttpPost]
         public IActionResult Create(CreateOrUpdateLaborsDTO c)
         {
-            // Step 1: Get District
+            // verify the existence of the District in the request
             var district = DistrictRepository.districts()
                 .FirstOrDefault(d => d.Name == c.DistrictName);
             if (district == null)
             {
-                return BadRequest($"The district with name {c.DistrictName} does not exist.");
+                return BadRequest($"a district with name {c.DistrictName} does not exist.");
+            }
+
+            // verify the existence of the company in the request
+            var company = companyLRepository.FindCompany(c.CompanyName);
+            if (company == null) 
+            {
+                return BadRequest($"a company with name {c.CompanyName} does not exist");
             }
 
             // Step 2: Create labor then save it
@@ -63,7 +80,7 @@ namespace AssetsManagementEG.Presentation.Controllers
             var result = LaborsRepository.Create(labors);
             if (!result)
             {
-                return BadRequest("Failed to create the labor.");
+                return BadRequest("Failed to create the worker.");
             }
 
             // Step 3: Now Create DistrictLabor Using the Saved LaboesId and district 
@@ -75,7 +92,17 @@ namespace AssetsManagementEG.Presentation.Controllers
             };
 
             mDistrictLaborsRepo.Create(districtLabors);
-            return Ok($"The Worker was created successfully and assigned to district {district.Name}");
+
+            // Step 3: Now Create CompanyLabor Using the Saved LaboesId and company 
+            CompanyLabors companyLabors = new CompanyLabors()
+            {
+                ComapanyID = company.CompanyID,
+                LaborsID = labors.LaborsId,
+                StartDate = DateTime.Now
+            };
+
+            mCompanyLaborsRepo.Create(companyLabors);
+            return Ok($"The Worker {labors.FullName} was created successfully and assigned to district {district.Name} and assigned to the company {company.Name}");
         }
 
         [HttpPut]

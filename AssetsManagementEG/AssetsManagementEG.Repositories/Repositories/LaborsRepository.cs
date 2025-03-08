@@ -2,6 +2,7 @@
 using AssetsManagementEG.Models.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace AssetsManagementEG.Repositories.Repositories
@@ -12,6 +13,14 @@ namespace AssetsManagementEG.Repositories.Repositories
         public LaborsRepository(DBSContext _context) : base(_context)
         {
             context = _context;
+        }
+        public bool LaborsExists(string name)
+        {
+            return context.Labors.Any(d => d.FullName == name);
+        }
+        public Labors Labors(string name)
+        {
+            return context.Labors.FirstOrDefault(d => d.FullName == name);
         }
     }
 }
