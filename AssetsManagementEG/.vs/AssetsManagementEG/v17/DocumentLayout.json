@@ -1,14 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\EG AssetsManagement Project\\latest\\newEndPoints\\AssetsManagementEG\\",
+  "WorkspaceRootPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 09-3-2025\\newEndPoints\\AssetsManagementEG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|d:\\eg assetsmanagement project\\latest\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.presentation\\controllers\\laborscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|solutionrelative:assetsmanagementeg.presentation\\controllers\\laborscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 09-3-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.presentation\\controllers\\contractcarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|solutionrelative:assetsmanagementeg.presentation\\controllers\\contractcarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|d:\\eg assetsmanagement project\\latest\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.presentation\\controllers\\districtcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|solutionrelative:assetsmanagementeg.presentation\\controllers\\districtcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7059DF0C-6662-4DBF-B8F9-D31E5B508919}|AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 09-3-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.dtos\\contractcar\\createorupdatecontractsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7059DF0C-6662-4DBF-B8F9-D31E5B508919}|AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj|solutionrelative:assetsmanagementeg.dtos\\contractcar\\createorupdatecontractsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 09-3-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.presentation\\controllers\\companylcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6002257-7FC1-4F06-B777-272D1DC91A3F}|AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj|solutionrelative:assetsmanagementeg.presentation\\controllers\\companylcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12E238A8-71E2-4C5E-A44A-F7E9C0C9E67F}|AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj|c:\\users\\ahmed.hamdy.50117\\desktop\\wpf app\\assetslogin 09-3-2025\\newendpoints\\assetsmanagementeg\\assetsmanagementeg.repositories\\repositories\\contractcarrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12E238A8-71E2-4C5E-A44A-F7E9C0C9E67F}|AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj|solutionrelative:assetsmanagementeg.repositories\\repositories\\contractcarrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,33 +25,59 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 334,
+          "DockedWidth": 910,
           "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DistrictController.cs",
-              "DocumentMoniker": "D:\\EG AssetsManagement Project\\latest\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\DistrictController.cs",
-              "RelativeDocumentMoniker": "AssetsManagementEG.Presentation\\Controllers\\DistrictController.cs",
-              "ToolTip": "D:\\EG AssetsManagement Project\\latest\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\DistrictController.cs",
-              "RelativeToolTip": "AssetsManagementEG.Presentation\\Controllers\\DistrictController.cs",
-              "ViewState": "AQIAALUAAAAAAAAAAAAwwAEBAAAJAAAA",
+              "Title": "CreateOrUpdateContractsDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 09-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\ContractCar\\CreateOrUpdateContractsDTO.cs",
+              "RelativeDocumentMoniker": "AssetsManagementEG.DTOs\\ContractCar\\CreateOrUpdateContractsDTO.cs",
+              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 09-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\ContractCar\\CreateOrUpdateContractsDTO.cs",
+              "RelativeToolTip": "AssetsManagementEG.DTOs\\ContractCar\\CreateOrUpdateContractsDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T12:59:59.991Z",
+              "WhenOpened": "2025-03-09T12:15:28.51Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LaborsController.cs",
-              "DocumentMoniker": "D:\\EG AssetsManagement Project\\latest\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\LaborsController.cs",
-              "RelativeDocumentMoniker": "AssetsManagementEG.Presentation\\Controllers\\LaborsController.cs",
-              "ToolTip": "D:\\EG AssetsManagement Project\\latest\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\LaborsController.cs",
-              "RelativeToolTip": "AssetsManagementEG.Presentation\\Controllers\\LaborsController.cs",
-              "ViewState": "AQIAAH4AAAAAAAAAAAAYwIMAAAANAAAA",
+              "Title": "ContractCarController.cs",
+              "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 09-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\ContractCarController.cs",
+              "RelativeDocumentMoniker": "AssetsManagementEG.Presentation\\Controllers\\ContractCarController.cs",
+              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 09-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\ContractCarController.cs",
+              "RelativeToolTip": "AssetsManagementEG.Presentation\\Controllers\\ContractCarController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAIAwwFIAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T22:30:31.424Z",
+              "WhenOpened": "2025-03-09T11:19:53.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CompanyLController.cs",
+              "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 09-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\CompanyLController.cs",
+              "RelativeDocumentMoniker": "AssetsManagementEG.Presentation\\Controllers\\CompanyLController.cs",
+              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 09-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\Controllers\\CompanyLController.cs",
+              "RelativeToolTip": "AssetsManagementEG.Presentation\\Controllers\\CompanyLController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T12:08:54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ContractCarRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 09-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\Repositories\\ContractCarRepository.cs",
+              "RelativeDocumentMoniker": "AssetsManagementEG.Repositories\\Repositories\\ContractCarRepository.cs",
+              "ToolTip": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 09-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\Repositories\\ContractCarRepository.cs",
+              "RelativeToolTip": "AssetsManagementEG.Repositories\\Repositories\\ContractCarRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T12:09:09.325Z",
               "EditorCaption": ""
             }
           ]

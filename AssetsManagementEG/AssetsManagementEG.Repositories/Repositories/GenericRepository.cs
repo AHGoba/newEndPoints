@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using AssetsManagementEG.Context.Context;
+using AssetsManagementEG.Models.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace AssetsManagementEG.Repositories.Repositories
@@ -42,7 +44,9 @@ namespace AssetsManagementEG.Repositories.Repositories
         //get it according to it's id
         public T FindOneForUdpdateOrDelete(int entity) 
         {
-            return dbset.Find(entity);        
+            return dbset.Find(entity);
         }
+
+        
     }
 }

@@ -150,6 +150,56 @@ namespace AssetsManagementEG.Context.Migrations
                     b.ToTable("CompanyLabors");
                 });
 
+            modelBuilder.Entity("AssetsManagementEG.Models.Models.Contract", b =>
+                {
+                    b.Property<int>("ContractId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ContractDescreption")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ContractName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ContractType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("DistrictId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("ContractId");
+
+                    b.HasIndex("DistrictId");
+
+                    b.ToTable("Contract");
+                });
+
+            modelBuilder.Entity("AssetsManagementEG.Models.Models.ContractsCars", b =>
+                {
+                    b.Property<int>("CarId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ContractId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("CarId", "ContractId");
+
+                    b.HasIndex("ContractId");
+
+                    b.ToTable("ContractsCars");
+                });
+
             modelBuilder.Entity("AssetsManagementEG.Models.Models.District", b =>
                 {
                     b.Property<int>("DistrictId")
@@ -507,6 +557,30 @@ namespace AssetsManagementEG.Context.Migrations
                     b.HasOne("AssetsManagementEG.Models.Models.Labors", "Labors")
                         .WithMany("CompanyLabors")
                         .HasForeignKey("LaborsID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("AssetsManagementEG.Models.Models.Contract", b =>
+                {
+                    b.HasOne("AssetsManagementEG.Models.Models.District", "District")
+                        .WithMany("Contract")
+                        .HasForeignKey("DistrictId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("AssetsManagementEG.Models.Models.ContractsCars", b =>
+                {
+                    b.HasOne("AssetsManagementEG.Models.Models.Car", "Car")
+                        .WithMany("ContractsCars")
+                        .HasForeignKey("CarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AssetsManagementEG.Models.Models.Contract", "Contract")
+                        .WithMany("ContractsCars")
+                        .HasForeignKey("ContractId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

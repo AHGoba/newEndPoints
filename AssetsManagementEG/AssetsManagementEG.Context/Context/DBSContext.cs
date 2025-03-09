@@ -33,6 +33,10 @@ namespace AssetsManagementEG.Context.Context
             public DbSet<CompanyL> CompanyL { get; set; }
             public DbSet<CompanyLabors> CompanyLabors { get; set; }
 
+            // Contracts with cars 
+            public DbSet<Contract> Contract { get; set; }
+            public DbSet<ContractsCars> ContractsCars { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
             {
                 base.OnModelCreating(modelBuilder);
@@ -165,6 +169,21 @@ namespace AssetsManagementEG.Context.Context
                 .WithMany(c=> c.CompanyLabors)
                 .HasForeignKey(cl=> cl.ComapanyID);
 
+                //99999999999999999999999999999999999999
+                // Configure the many-to-many relationship for ContractsCars
+                modelBuilder.Entity<ContractsCars>().HasKey(cc => new {cc.CarId , cc.ContractId });
+
+                // Configure the relationship between ContractsCars and Cars
+                 modelBuilder.Entity<ContractsCars>()
+                .HasOne(cc=> cc.Car)
+                .WithMany(c=>c.ContractsCars)
+                .HasForeignKey(cc=> cc.CarId);
+
+                // Configure the relationship between ContractsCars and Contract
+                modelBuilder.Entity<ContractsCars>()
+                .HasOne(cc=> cc.Contract)
+                .WithMany(c=>c.ContractsCars)
+                .HasForeignKey(cc=> cc.ContractId);
 
 
 

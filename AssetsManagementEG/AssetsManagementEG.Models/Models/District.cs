@@ -15,6 +15,8 @@ namespace AssetsManagementEG.Models.Models
         public virtual ICollection<DistrictLabors> DistrictLabors { get; set; }
         public virtual ICollection<Tassk> Task { get; set; }
 
+        public virtual ICollection<Contract> Contract { get; set; }
+
         public virtual ICollection<UsersDistrict> UsersDistrict { get; set; }
     }
 }

@@ -19,5 +19,6 @@ namespace AssetsManagementEG.Models.Models
         public bool IsInService { get; set; }
         public virtual ICollection<TaskCar> TaskCars { get; set; }
         public virtual ICollection<DistrictCar> DistrictCar { get; set; }
+        public virtual ICollection<ContractsCars> ContractsCars { get; set; }
     }
 }
