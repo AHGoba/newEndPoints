@@ -112,22 +112,21 @@ namespace AssetsManagementEG.Presentation.Controllers
             var existingWorker = LaborsRepository.FindOneForUdpdateOrDelete(Id);
             if (existingWorker == null)
             {
-                return NotFound("Equipment not found");
+                return NotFound("Employee was not found");
             }
 
-
             // Update only the properties that are provided in the request
-            if (!string.IsNullOrEmpty(c.FullName))
+            if (!string.IsNullOrEmpty(c.FullName) && existingWorker.FullName != c.FullName)
             {
                 existingWorker.FullName = c.FullName;
             }
 
-            if (!string.IsNullOrEmpty(c.PhoneNumber))
+            if (!string.IsNullOrEmpty(c.PhoneNumber) && existingWorker.PhoneNumber != c.PhoneNumber)
             {
                 existingWorker.PhoneNumber = c.PhoneNumber; 
             }
 
-            if (!string.IsNullOrEmpty(c.Position))
+            if (!string.IsNullOrEmpty(c.Position) && existingWorker.Position != c.Position)
             {
                 existingWorker.Position = c.Position;
             }
@@ -154,9 +153,30 @@ namespace AssetsManagementEG.Presentation.Controllers
                         StartDate = DateTime.Now
                     };
                     mDistrictLaborsRepo.Create( districtLabors );
-
                 }
-                
+                else
+                {
+                    return BadRequest($"a district with the name {c.DistrictName} does not exist");
+                }
+            }
+
+            if (c.CompanyName != null)
+            {
+                var company = companyLRepository.FindCompany(c.CompanyName);
+                if (company != null)
+                {
+                    CompanyLabors companyLabors = new CompanyLabors()
+                    {
+                        LaborsID = existingWorker.LaborsId,
+                        ComapanyID = company.CompanyID,
+                        StartDate = DateTime.Now
+                    };
+                    mCompanyLaborsRepo.Create(companyLabors);
+                }
+                else 
+                {
+                  return BadRequest($"a company with the name {c.CompanyName} does not exist");
+                }
             }
 
 

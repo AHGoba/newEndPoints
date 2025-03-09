@@ -18,7 +18,7 @@ namespace AssetsManagementEG.Repositories.Repositories
         {
             return context.Labors.Any(d => d.FullName == name);
         }
-        public Labors Labors(string name)
+        public Labors FindLabors(string name)
         {
             return context.Labors.FirstOrDefault(d => d.FullName == name);
         }

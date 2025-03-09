@@ -84,7 +84,7 @@ namespace AssetsManagementEG.Presentation.Controllers
                     return NotFound("Company not found.");
                 }
                 //get the Labor Info
-                var labors = laborsRepository.Labors(assignCompanyToLaborsDTO.LaborsFullName);
+                var labors = laborsRepository.FindLabors(assignCompanyToLaborsDTO.LaborsFullName);
 
                 if (labors == null)
                 {
