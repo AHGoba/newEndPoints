@@ -14,6 +14,8 @@ namespace AssetsManagementEG.DTOs.Cars
         public bool? IsInService { get; set; }
         public DateTime StartDate { get; set; }
 
+        public int contractId { get; set; }
+
 
     }
 }

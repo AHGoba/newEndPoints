@@ -17,13 +17,16 @@ namespace AssetsManagementEG.Presentation.Controllers
         CarRepository CarRepository;
         DistrictRepository DistrictRepository;
         MDistrictCarRepo mDistrictCarRepo;
+        ContractCarRepository ContractCarRepository;
 
         public CarController(DBSContext _context,CarRepository carRepository,
-            DistrictRepository _districtrepository , MDistrictCarRepo _mDistrictCarRepo)
+            DistrictRepository _districtrepository , MDistrictCarRepo _mDistrictCarRepo,
+            ContractCarRepository _contractCarRepository)
         {
             CarRepository = carRepository;
             DistrictRepository = _districtrepository;
             mDistrictCarRepo = _mDistrictCarRepo;
+            ContractCarRepository = _contractCarRepository;
         }
         
         [HttpGet]
@@ -54,33 +57,72 @@ namespace AssetsManagementEG.Presentation.Controllers
             {
                 return BadRequest($"The district with name {c.DistrictName} does not exist.");
             }
-            // Step 2: Create car then save it
-            Car car = new Car()
-            {
-                Type = c.Type,
-                PlateNum = c.PlateNum,
-                IsAvailable = true,
-                IsCompanyOwned = c.IsCompanyOwned,
-                IsInService = true,
-            };
 
-            var result = CarRepository.Create(car);
-            if (!result)
+            // check the existing of the car 
+            var existingCar = CarRepository.CarExists(c.PlateNum);
+
+            //لو العربية مش موجوده قبل كده 
+            if (existingCar == false)
             {
-                return BadRequest("Failed to create the car.");
+                // Step 2: Create car then save it
+                Car car = new Car()
+                {
+                    Type = c.Type,
+                    PlateNum = c.PlateNum,
+                    IsAvailable = true,
+                    IsCompanyOwned = c.IsCompanyOwned,
+                    IsInService = true,
+                };
+
+                var result = CarRepository.Create(car);
+                if (!result)
+                {
+                    return BadRequest("Failed to create the car.");
+                }
+
+                // relate the car with it's district 
+                // Step 3: Now Create DistrictCar Using the Saved CarId and district 
+                DistrictCar districtCar = new DistrictCar()
+                {
+                    CarId = car.CarId,  // ✅ Now CarId is valid
+                    DistrictId = district.DistrictId,
+                    StartDate = DateTime.Now
+                };
+
+                //step 4: Now create Contractcars using carID - contractId - start date 
+                var contract = ContractCarRepository.FindContract(c.contractId);
+                if (contract == null)
+                {
+                    return BadRequest("Failed to create the car.");
+                }
+                ContractsCars contractsCars = new ContractsCars()
+                {
+                    CarId = car.CarId,
+                    ContractId = c.contractId,
+                    StartDate = DateTime.Now
+                };
+
+                mDistrictCarRepo.Create(districtCar);
+                return Ok($"The car was created successfully and assigned to district {district.Name}");
+
+
             }
 
-            // relate the car with it's district 
-            // Step 3: Now Create DistrictCar Using the Saved CarId and district 
+            //طيب العربية لو موجوده قبل كده ؟ 
+
+            var Car = CarRepository.FindCar(c.PlateNum);
+            Car.IsInService = true;
+
             DistrictCar districtCar = new DistrictCar()
             {
-                CarId = car.CarId,  // ✅ Now CarId is valid
+                CarId = Car.CarId,  // ✅ Now CarId is valid
                 DistrictId = district.DistrictId,
                 StartDate = DateTime.Now
             };
 
-            mDistrictCarRepo.Create(districtCar);
-            return Ok($"The car was created successfully and assigned to district {district.Name}");
+
+            return NotFound("Car not found");
+
         }
 
 

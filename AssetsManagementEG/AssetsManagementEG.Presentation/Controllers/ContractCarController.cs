@@ -49,6 +49,8 @@ namespace AssetsManagementEG.Presentation.Controllers
                 return NotFound("District not found");
             }
 
+            // here in the logic below  i'm sending the id of the district so i can get all contracts related to this id 
+
             var districtContracts = ContractCarRepository.FindContracts(Id).Select(c => new
             {
                 contractId = c.ContractId,
@@ -67,6 +69,11 @@ namespace AssetsManagementEG.Presentation.Controllers
 
         public IActionResult Create(CreateOrUpdateContractsDTO createOrUpdateContractsDTO)
         {
+            var district = DistrictRepository.FindOneForUdpdateOrDelete(createOrUpdateContractsDTO.districtId);
+            if (district == null)
+            {
+                return NotFound("District not found");
+            }
 
             if (ContractCarRepository.ContractCarExists(createOrUpdateContractsDTO.ContractName))
             {
@@ -80,11 +87,13 @@ namespace AssetsManagementEG.Presentation.Controllers
                 ContractDescreption = createOrUpdateContractsDTO.ContractDescreption,
                 StartDate = createOrUpdateContractsDTO.StartDate,
                 EndDate = createOrUpdateContractsDTO.EndDate,
+                DistrictId= createOrUpdateContractsDTO.districtId
            
             };
 
             ContractCarRepository.Create(contract);
-            return Ok("Company was successfully added");
+
+            return Ok("Contract was successfully added");
         }
 
 

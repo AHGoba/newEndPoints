@@ -28,7 +28,7 @@ namespace AssetsManagementEG.Repositories.Repositories
 
         public ICollection<Contract> FindContracts(int id)
         {
-            return context.Contract.Where(c => c.ContractId == id).ToList();
+            return context.Contract.Where(c => c.DistrictId == id).ToList();
         }
     }
 }
