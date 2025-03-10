@@ -68,3 +68,13 @@ C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 09-3-2025\newEndPoints\As
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 09-3-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.sourcelink.json
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 09-3-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.dll
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 09-3-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.pdb
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.deps.json
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.dll
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.pdb
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.csproj.AssemblyReference.cache
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.GeneratedMSBuildEditorConfig.editorconfig
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.AssemblyInfoInputs.cache
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.AssemblyInfo.cs
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.csproj.CoreCompileInputs.cache
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.dll
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.pdb

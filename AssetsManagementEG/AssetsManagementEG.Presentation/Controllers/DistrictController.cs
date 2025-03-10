@@ -213,7 +213,8 @@ namespace AssetsManagementEG.Presentation.Controllers
                     carPlateNum = cr.PlateNum,
                     carId = cr.CarId,
                     carIsCompanyOwned = cr.IsCompanyOwned,
-                    carIsInService = cr.IsInService
+                    carIsInService = cr.IsInService,
+                    contractName = cr.ContractsCars.Select(cc => cc.Contract.ContractName).FirstOrDefault()
                 }).ToList();
 
 

@@ -117,3 +117,19 @@ C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 09-3-2025\newEndPoints\As
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 09-3-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.dll
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 09-3-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.pdb
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 09-3-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.genruntimeconfig.cache
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\bin\Debug\netcoreapp3.0\AssetsManagementEG.Context.deps.json
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\bin\Debug\netcoreapp3.0\AssetsManagementEG.Context.runtimeconfig.json
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\bin\Debug\netcoreapp3.0\AssetsManagementEG.Context.runtimeconfig.dev.json
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\bin\Debug\netcoreapp3.0\AssetsManagementEG.Context.dll
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\bin\Debug\netcoreapp3.0\AssetsManagementEG.Context.pdb
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.dll
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.pdb
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.csproj.AssemblyReference.cache
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.GeneratedMSBuildEditorConfig.editorconfig
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.AssemblyInfoInputs.cache
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.AssemblyInfo.cs
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.csproj.CoreCompileInputs.cache
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.csproj.CopyComplete
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.dll
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.pdb
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.genruntimeconfig.cache

@@ -75,3 +75,13 @@ C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 09-3-2025\newEndPoints\As
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 09-3-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.sourcelink.json
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 09-3-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.dll
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 09-3-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.pdb
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.deps.json
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.dll
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.pdb
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.csproj.AssemblyReference.cache
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.AssemblyInfoInputs.cache
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.AssemblyInfo.cs
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.csproj.CoreCompileInputs.cache
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.dll
+D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.pdb

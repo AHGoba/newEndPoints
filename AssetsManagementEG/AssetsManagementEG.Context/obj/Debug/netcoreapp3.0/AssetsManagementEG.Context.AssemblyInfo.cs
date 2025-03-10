@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AssetsManagementEG.Context")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+530167b7eb189244a5b112a82ac154f085aca2ba")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("AssetsManagementEG.Context")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AssetsManagementEG.Context")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

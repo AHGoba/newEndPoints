@@ -19,5 +19,9 @@ namespace AssetsManagementEG.Repositories.Many_ManyRepo
         {
             return context.DistrictCar;
         }
+        public DistrictCar FindDistrictCar(int carId)
+        {
+            return context.DistrictCar.FirstOrDefault(c => c.CarId == carId);
+        }
     }
 }

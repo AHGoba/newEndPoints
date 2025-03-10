@@ -18,15 +18,17 @@ namespace AssetsManagementEG.Presentation.Controllers
         DistrictRepository DistrictRepository;
         MDistrictCarRepo mDistrictCarRepo;
         ContractCarRepository ContractCarRepository;
+        MContractCarsRepo mContractCarsRepo;
 
         public CarController(DBSContext _context,CarRepository carRepository,
             DistrictRepository _districtrepository , MDistrictCarRepo _mDistrictCarRepo,
-            ContractCarRepository _contractCarRepository)
+            ContractCarRepository _contractCarRepository, MContractCarsRepo _mContractCarsRepo)
         {
             CarRepository = carRepository;
             DistrictRepository = _districtrepository;
             mDistrictCarRepo = _mDistrictCarRepo;
             ContractCarRepository = _contractCarRepository;
+            mContractCarsRepo = _mContractCarsRepo;
         }
         
         [HttpGet]
@@ -82,14 +84,14 @@ namespace AssetsManagementEG.Presentation.Controllers
 
                 // relate the car with it's district 
                 // Step 3: Now Create DistrictCar Using the Saved CarId and district 
-                DistrictCar districtCar = new DistrictCar()
+                var districtCar = new DistrictCar
                 {
-                    CarId = car.CarId,  // ✅ Now CarId is valid
+                    CarId = car.CarId,
                     DistrictId = district.DistrictId,
                     StartDate = DateTime.Now
                 };
-
                 //step 4: Now create Contractcars using carID - contractId - start date 
+                // check the existing contract that was sent in the request
                 var contract = ContractCarRepository.FindContract(c.contractId);
                 if (contract == null)
                 {
@@ -103,28 +105,18 @@ namespace AssetsManagementEG.Presentation.Controllers
                 };
 
                 mDistrictCarRepo.Create(districtCar);
-                return Ok($"The car was created successfully and assigned to district {district.Name}");
-
-
+                mContractCarsRepo.Create(contractsCars);
+                return Ok($"The car was created successfully and assigned to district {district.Name} and added to the contract {contract.ContractName}");
             }
-
-            //طيب العربية لو موجوده قبل كده ؟ 
-
-            var Car = CarRepository.FindCar(c.PlateNum);
-            Car.IsInService = true;
-
-            DistrictCar districtCar = new DistrictCar()
+            else 
             {
-                CarId = Car.CarId,  // ✅ Now CarId is valid
-                DistrictId = district.DistrictId,
-                StartDate = DateTime.Now
-            };
-
-
-            return NotFound("Car not found");
-
+                var car = CarRepository.FindCar(c.PlateNum);
+                car.IsInService = true;
+                CarRepository.Update(car);
+                return Ok($"The car with plate number {car.PlateNum} is now in service.");
+            }
+            //طيب العربية لو موجوده قبل كده ؟ 
         }
-
 
 
         // فى الابديت دا فى 3 حاجات 
@@ -185,10 +177,29 @@ namespace AssetsManagementEG.Presentation.Controllers
         [HttpDelete]
         [Route("{Id}")]
 
-
-
-
         public IActionResult ChangeServiceState(int Id)
+        {
+            var existingCar = CarRepository.FindOneForUdpdateOrDelete(Id);
+            if (existingCar == null)
+            {
+                return NotFound("Car not found");
+            }
+
+            var districtCar = mDistrictCarRepo.FindDistrictCar(Id);
+            if (districtCar != null) 
+            {
+                var archiveRecord = new CarArchive
+                {
+                    CarId = existingCar.CarId,
+                    DistrictId = districtCar.DistrictId,
+                    Type = existingCar.Type,
+                    PlateNum = existingCar.PlateNum,
+                    StartDate = districtCar.StartDate,
+                    EndDate = DateTime.Now 
+                };
+            }
+        }
+        public IActionResult Delete(int Id)
         {
             var existingCar = CarRepository.FindOneForUdpdateOrDelete(Id);
             if (existingCar == null)
