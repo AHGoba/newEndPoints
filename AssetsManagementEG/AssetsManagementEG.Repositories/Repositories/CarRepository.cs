@@ -15,7 +15,7 @@ namespace AssetsManagementEG.Repositories.Repositories
         {
             context = _context;
         }
-
+         
         public bool CarExists(string platenum)
         {
             return context.Car.Any(c=> c.PlateNum == platenum);

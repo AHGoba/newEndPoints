@@ -19,6 +19,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using AssetsManagementEG.Repositories.Repositories;
 using AssetsManagementEG.Repositories.Many_ManyRepo;
+using AssetsManagementEG.Repositories.ArchiveRepo;
 
 namespace AssetsManagementEG.Presentation
 {
@@ -51,6 +52,8 @@ namespace AssetsManagementEG.Presentation
             services.AddScoped<MDistrictLaborsRepo>();
             services.AddScoped<MCompanyLaborsRepo>();
             services.AddScoped<MContractCarsRepo>();
+
+            services.AddScoped<CarArchiveRepo>();
 
             services.AddAuthentication(op =>
             {

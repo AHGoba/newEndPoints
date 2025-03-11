@@ -1,3 +1,5 @@
 is_global = true
 build_property.RootNamespace = AssetsManagementEG.Models
-build_property.ProjectDir = D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\
+build_property.ProjectDir = D:\EG AssetsManagement Project\latest\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -13,6 +13,7 @@ namespace AssetsManagementEG.Models.Models
         public int CarId { get; set; }
         public Car Car { get; set; }
         public DateTime StartDate { get; set; }
+        public bool IsActive { get; set; }
 
 
     }

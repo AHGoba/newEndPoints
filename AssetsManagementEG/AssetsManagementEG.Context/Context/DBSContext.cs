@@ -37,6 +37,9 @@ namespace AssetsManagementEG.Context.Context
             public DbSet<Contract> Contract { get; set; }
             public DbSet<ContractsCars> ContractsCars { get; set; }
 
+           // Archives
+            public DbSet<CarArchive> CarArchive { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
             {
                 base.OnModelCreating(modelBuilder);

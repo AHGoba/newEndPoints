@@ -24,5 +24,9 @@ namespace AssetsManagementEG.Repositories.Repositories
         {
             return context.District;
         }
+        public District FindDistrict(string name)
+        {
+            return context.District.FirstOrDefault(d => d.Name == name);
+        }
     }
 }
