@@ -36,10 +36,6 @@ namespace AssetsManagementEG.Context.Migrations
         {
             migrationBuilder.DropTable(
                 name: "CarArchive");
-
-            migrationBuilder.DropColumn(
-                name: "IsActive",
-                table: "DistrictCar");
         }
     }
 }

@@ -133,7 +133,6 @@ namespace AssetsManagementEG.Presentation.Controllers
                         DistrictId = FindDistrict.DistrictId,
                         CarId = car.CarId,
                         StartDate = DateTime.Now,
-                        IsActive = true
                     };
                     return Ok($"The car with plate number {car.PlateNum} is now inService and active in District.");
             }
