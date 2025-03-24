@@ -2517,7 +2517,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.32"
         },
         "runtime": {
-          "AssetsManagementEG.Context.dll": {}
+          "AssetsManagementEG.Context.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "AssetsManagementEG.Context.dll": {}
@@ -2525,7 +2528,10 @@
       },
       "AssetsManagementEG.DTOs/1.0.0": {
         "runtime": {
-          "AssetsManagementEG.DTOs.dll": {}
+          "AssetsManagementEG.DTOs.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "AssetsManagementEG.DTOs.dll": {}
@@ -2536,7 +2542,10 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.32"
         },
         "runtime": {
-          "AssetsManagementEG.Models.dll": {}
+          "AssetsManagementEG.Models.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "AssetsManagementEG.Models.dll": {}
@@ -2547,7 +2556,10 @@
           "AssetsManagementEG.Context": "1.0.0"
         },
         "runtime": {
-          "AssetsManagementEG.Repositories.dll": {}
+          "AssetsManagementEG.Repositories.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "AssetsManagementEG.Repositories.dll": {}

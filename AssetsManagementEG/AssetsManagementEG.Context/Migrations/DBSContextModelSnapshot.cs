@@ -91,6 +91,9 @@ namespace AssetsManagementEG.Context.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int?>("CarContractorsId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("IsAvailable")
                         .HasColumnType("bit");
 
@@ -110,6 +113,8 @@ namespace AssetsManagementEG.Context.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CarId");
+
+                    b.HasIndex("CarContractorsId");
 
                     b.ToTable("Car");
                 });
@@ -142,6 +147,24 @@ namespace AssetsManagementEG.Context.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CarArchive");
+                });
+
+            modelBuilder.Entity("AssetsManagementEG.Models.Models.CarContractors", b =>
+                {
+                    b.Property<int>("CarContractorsId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("phoneNum")
+                        .HasColumnType("int");
+
+                    b.HasKey("CarContractorsId");
+
+                    b.ToTable("CarContractors");
                 });
 
             modelBuilder.Entity("AssetsManagementEG.Models.Models.CompanyL", b =>
@@ -201,6 +224,9 @@ namespace AssetsManagementEG.Context.Migrations
 
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAvailable")
+                        .HasColumnType("bit");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
@@ -574,6 +600,13 @@ namespace AssetsManagementEG.Context.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("AssetsManagementEG.Models.Models.Car", b =>
+                {
+                    b.HasOne("AssetsManagementEG.Models.Models.CarContractors", "CarContractors")
+                        .WithMany("cars")
+                        .HasForeignKey("CarContractorsId");
                 });
 
             modelBuilder.Entity("AssetsManagementEG.Models.Models.CompanyLabors", b =>

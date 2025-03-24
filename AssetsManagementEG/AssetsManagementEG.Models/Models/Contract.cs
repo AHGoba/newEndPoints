@@ -13,6 +13,7 @@ namespace AssetsManagementEG.Models.Models
         public string ContractDescreption { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+        public bool IsAvailable { get; set; }
 
         [ForeignKey("District")]
         public int DistrictId { get; set; }

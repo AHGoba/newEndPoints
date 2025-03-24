@@ -28,6 +28,7 @@ namespace AssetsManagementEG.Context.Context
             public DbSet<DistrictEquibment> DistrictEquibment { get; set; }
             public DbSet<DistrictLabors> DistrictLabors { get; set; }
             public DbSet<UsersDistrict> UsersDistrict { get; set; }
+            public DbSet<CarContractors>   CarContractors { get; set; }
 
             // company with labors 
             public DbSet<CompanyL> CompanyL { get; set; }

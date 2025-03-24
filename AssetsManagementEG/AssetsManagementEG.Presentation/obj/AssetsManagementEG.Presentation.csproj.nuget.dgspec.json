@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj": {}
+    "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj": {}
   },
   "projects": {
-    "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj": {
+    "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj",
+        "projectUniqueName": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj",
         "projectName": "AssetsManagementEG.Context",
-        "projectPath": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj",
-        "packagesPath": "C:\\Users\\iman.muhammed.50118\\.nuget\\packages\\",
-        "outputPath": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\obj\\",
+        "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj",
+        "packagesPath": "C:\\Users\\ahmed.hamdy.50117\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\iman.muhammed.50118\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ahmed.hamdy.50117\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "netcoreapp3.0": {
             "targetAlias": "netcoreapp3.0",
             "projectReferences": {
-              "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj": {
-                "projectPath": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj"
+              "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj": {
+                "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj"
               }
             }
           }
@@ -42,7 +42,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "netcoreapp3.0": {
@@ -73,7 +79,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -96,24 +103,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj": {
+    "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj",
+        "projectUniqueName": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj",
         "projectName": "AssetsManagementEG.DTOs",
-        "projectPath": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj",
-        "packagesPath": "C:\\Users\\iman.muhammed.50118\\.nuget\\packages\\",
-        "outputPath": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\obj\\",
+        "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj",
+        "packagesPath": "C:\\Users\\ahmed.hamdy.50117\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\iman.muhammed.50118\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ahmed.hamdy.50117\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -134,7 +141,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "netcoreapp3.0": {
@@ -145,7 +158,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -168,24 +182,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj": {
+    "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj",
+        "projectUniqueName": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj",
         "projectName": "AssetsManagementEG.Models",
-        "projectPath": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj",
-        "packagesPath": "C:\\Users\\iman.muhammed.50118\\.nuget\\packages\\",
-        "outputPath": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\obj\\",
+        "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj",
+        "packagesPath": "C:\\Users\\ahmed.hamdy.50117\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\iman.muhammed.50118\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ahmed.hamdy.50117\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -206,7 +220,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "netcoreapp3.0": {
@@ -223,7 +243,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -246,24 +267,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj": {
+    "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj",
+        "projectUniqueName": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj",
         "projectName": "AssetsManagementEG.Presentation",
-        "projectPath": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj",
-        "packagesPath": "C:\\Users\\iman.muhammed.50118\\.nuget\\packages\\",
-        "outputPath": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\obj\\",
+        "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj",
+        "packagesPath": "C:\\Users\\ahmed.hamdy.50117\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\iman.muhammed.50118\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ahmed.hamdy.50117\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -278,17 +299,17 @@
           "netcoreapp3.0": {
             "targetAlias": "netcoreapp3.0",
             "projectReferences": {
-              "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj": {
-                "projectPath": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj"
+              "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj": {
+                "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj"
               },
-              "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj": {
-                "projectPath": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj"
+              "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj": {
+                "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj"
               },
-              "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj": {
-                "projectPath": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj"
+              "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj": {
+                "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj"
               },
-              "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj": {
-                "projectPath": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj"
+              "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj": {
+                "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj"
               }
             }
           }
@@ -297,7 +318,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "netcoreapp3.0": {
@@ -344,7 +371,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -374,24 +402,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj": {
+    "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj",
         "projectName": "AssetsManagementEG.Repositories",
-        "projectPath": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj",
-        "packagesPath": "C:\\Users\\iman.muhammed.50118\\.nuget\\packages\\",
-        "outputPath": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\obj\\",
+        "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj",
+        "packagesPath": "C:\\Users\\ahmed.hamdy.50117\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\iman.muhammed.50118\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ahmed.hamdy.50117\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -406,8 +434,8 @@
           "netcoreapp3.0": {
             "targetAlias": "netcoreapp3.0",
             "projectReferences": {
-              "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj": {
-                "projectPath": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj"
+              "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj": {
+                "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj"
               }
             }
           }
@@ -416,7 +444,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "netcoreapp3.0": {
@@ -427,7 +461,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -450,7 +485,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

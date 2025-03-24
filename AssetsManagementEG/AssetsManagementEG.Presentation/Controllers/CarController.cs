@@ -192,45 +192,96 @@ namespace AssetsManagementEG.Presentation.Controllers
         }
 
         // change the inservice of the car as if we deleted it and add its history in the archive table
-        [HttpPost]
-        [Route("Archive/{Id}")]
-
-        public IActionResult ChangeServiceState(int Id)
+        [HttpDelete]
+        [Route("ArchiveCar/{carId}")]
+        public IActionResult ArchiveCar(int carId)
         {
-            try
+            var existingCar = CarRepository.FindOneForUdpdateOrDelete(carId);
+            if (existingCar == null)
             {
-                var existingCar = CarRepository.FindOneForUdpdateOrDelete(Id);
-                if (existingCar == null)
-                {
-                    return NotFound("Car was not found");
-                }
-
-                var districtCar = mDistrictCarRepo.FindDistrictCar(Id);
-                if (districtCar == null)
-                {
-                    return BadRequest("DistrictCar not found, cannot archive the car.");
-                }
-                var archiveRecord = new CarArchive
-                {
-                    CarId = existingCar.CarId,
-                    DistrictId = districtCar.DistrictId,
-                    Type = existingCar.Type,
-                    PlateNum = existingCar.PlateNum,
-                    StartDate = districtCar.StartDate,
-                    EndDate = DateTime.Now
-                };
-                existingCar.IsInService = false;
-
-                carArchiveRepo.Create(archiveRecord);
-                CarRepository.Update(existingCar);
-                mDistrictCarRepo.Delete(districtCar);
-                return Ok("the car was archived successfully");
+                return NotFound("Car was not found");
             }
-            catch (Exception ex)
+
+            var districtCar = mDistrictCarRepo.FindDistrictCar(carId);
+            if (districtCar == null)
             {
-                return StatusCode(500, $"Error: {ex.Message}");
+                return BadRequest("DistrictCar not found, cannot archive the car.");
             }
+
+            var archiveRecord = new CarArchive
+            {
+                CarId = existingCar.CarId,
+                DistrictId = districtCar.DistrictId,
+                Type = existingCar.Type,
+                PlateNum = existingCar.PlateNum,
+                StartDate = districtCar.StartDate,
+                EndDate = DateTime.Now
+            };
+
+            var contractCar = mContractCarsRepo.FindOneForUdpdateOrDelete(carId);
+            if (contractCar == null)
+            {
+                return BadRequest("ContractCar not found, cannot update contract.");
+            }
+
+            var updatedContract = ContractCarRepository.FindContract(contractCar.CarId);
+            updatedContract.IsAvailable = true;
+
+            existingCar.IsInService = false;
+
+            carArchiveRepo.Create(archiveRecord);
+            CarRepository.Update(existingCar);
+            ContractCarRepository.Update(updatedContract);
+            mDistrictCarRepo.Delete(districtCar);
+
+            return Ok("The car was archived successfully.");
         }
+
+
+
+        [HttpPost]
+        [Route("ReactivateCar")]
+        public IActionResult ReactivateCar(ChangeCarStateDTO cDTo)
+        {
+            var existingCar = CarRepository.FindOneForUdpdateOrDelete(cDTo.CarId);
+            if (existingCar == null)
+            {
+                return NotFound("Car was not found");
+            }
+
+            var contract = ContractCarRepository.FindContract(cDTo.ContractId);
+            if (contract == null)
+            {
+                return BadRequest($"The contract with Id {cDTo.ContractId} does not exist.");
+            }
+
+            existingCar.IsInService = true;
+            CarRepository.Update(existingCar);
+
+            var newDistrictCar = new DistrictCar
+            {
+                DistrictId = cDTo.DistrictId,
+                CarId = existingCar.CarId,
+                StartDate = DateTime.Now,
+            };
+
+            var newContractCar = new ContractsCars
+            {
+                CarId = existingCar.CarId,
+                ContractId = cDTo.ContractId,
+                StartDate = DateTime.Now,
+            };
+
+            mDistrictCarRepo.Create(newDistrictCar);
+            mContractCarsRepo.Create(newContractCar);
+
+            return Ok($"The car with plate number {existingCar.PlateNum} is now reactivated and assigned to the district.");
+        }
+
+
+
+    }
+}
 
         //[HttpDelete]
         //[Route("{Id}")]
@@ -245,5 +296,3 @@ namespace AssetsManagementEG.Presentation.Controllers
         //    CarRepository.Delete(existingCar);
         //    return Ok("The car was deleted successfully");
         //}
-    }
-}

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,5 +21,9 @@ namespace AssetsManagementEG.Models.Models
         public virtual ICollection<TaskCar> TaskCars { get; set; }
         public virtual ICollection<DistrictCar> DistrictCar { get; set; }
         public virtual ICollection<ContractsCars> ContractsCars { get; set; }
+
+        [ForeignKey("CarContractors")]
+        public int? CarContractorsId { get; set; } // Foreign key to Car
+        public CarContractors CarContractors { get; set; }
     }
 }

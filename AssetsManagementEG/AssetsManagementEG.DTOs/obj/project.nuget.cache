@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "R8uIBCJ1gok0u490UgQpcFrPReZXzgY4n4VzhvfJK/M6cVn/MWPTzq8sc0gy7fpbcMXpH4z8gwAl6WIUl8C3Hw==",
+  "dgSpecHash": "cLD3Fy8lFOk=",
   "success": true,
-  "projectFilePath": "D:\\goba final login\\New Ened Points\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj",
+  "projectFilePath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\iman.muhammed.50118\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
-    "C:\\Users\\iman.muhammed.50118\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512",
-    "C:\\Users\\iman.muhammed.50118\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512"
+    "C:\\Users\\ahmed.hamdy.50117\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\ahmed.hamdy.50117\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\ahmed.hamdy.50117\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512"
   ],
   "logs": []
 }

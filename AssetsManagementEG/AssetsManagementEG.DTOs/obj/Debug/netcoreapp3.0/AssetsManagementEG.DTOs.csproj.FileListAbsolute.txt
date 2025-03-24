@@ -79,3 +79,13 @@ D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManage
 D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.dll
 D:\goba final login\New Ened Points\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.pdb
 D:\EG AssetsManagement Project\latest\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.csproj.AssemblyReference.cache
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 23-3-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.deps.json
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 23-3-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.dll
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 23-3-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.pdb
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 23-3-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 23-3-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.AssemblyInfoInputs.cache
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 23-3-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.AssemblyInfo.cs
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 23-3-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.csproj.CoreCompileInputs.cache
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 23-3-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.sourcelink.json
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 23-3-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.dll
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 23-3-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Debug\netcoreapp3.0\AssetsManagementEG.DTOs.pdb
