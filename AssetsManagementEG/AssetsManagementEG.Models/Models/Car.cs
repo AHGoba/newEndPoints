@@ -22,8 +22,6 @@ namespace AssetsManagementEG.Models.Models
         public virtual ICollection<DistrictCar> DistrictCar { get; set; }
         public virtual ICollection<ContractsCars> ContractsCars { get; set; }
 
-        [ForeignKey("CarContractors")]
-        public int? CarContractorsId { get; set; } // Foreign key to Car
-        public CarContractors CarContractors { get; set; }
+        
     }
 }

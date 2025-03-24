@@ -11,7 +11,11 @@ namespace AssetsManagementEG.Models.Models
         [Key]
         public int CarContractorsId { get; set; }
         public string Name { get; set; }
-        public int phoneNum { get; set; }
-        public ICollection<Car> cars { get; set; }
+        public string phoneNum { get; set; }
+        
+
+        // ربط مقاول العربيات ب أكثر من عربية
+
+        public ICollection<Contract> contracts { get; set; }
     }
 }

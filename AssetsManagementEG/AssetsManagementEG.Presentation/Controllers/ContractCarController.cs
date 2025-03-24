@@ -59,6 +59,8 @@ namespace AssetsManagementEG.Presentation.Controllers
                 contractDescribtion = c.ContractDescreption,
                 startDate = c.StartDate,
                 endDate = c.EndDate,
+                districtId = c.DistrictId,
+                contractorId = c.CarContractorsId
             });
 
             return Ok(districtContracts);
@@ -87,8 +89,9 @@ namespace AssetsManagementEG.Presentation.Controllers
                 ContractDescreption = createOrUpdateContractsDTO.ContractDescreption,
                 StartDate = createOrUpdateContractsDTO.StartDate,
                 EndDate = createOrUpdateContractsDTO.EndDate,
-                DistrictId= createOrUpdateContractsDTO.districtId
-           
+                DistrictId= createOrUpdateContractsDTO.districtId,
+                CarContractorsId = createOrUpdateContractsDTO.carContractorsId
+
             };
 
             ContractCarRepository.Create(contract);

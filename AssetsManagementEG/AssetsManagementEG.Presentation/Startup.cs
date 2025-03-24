@@ -52,8 +52,10 @@ namespace AssetsManagementEG.Presentation
             services.AddScoped<MDistrictLaborsRepo>();
             services.AddScoped<MCompanyLaborsRepo>();
             services.AddScoped<MContractCarsRepo>();
-
+            
             services.AddScoped<CarArchiveRepo>();
+
+            services.AddScoped<CarContractorsRepository>();
 
             services.AddAuthentication(op =>
             {
