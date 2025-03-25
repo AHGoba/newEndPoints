@@ -10,6 +10,7 @@ using System;
 using System.Linq;
 using System.Runtime.ConstrainedExecution;
 using AssetsManagementEG.Repositories.ArchiveRepo;
+using System.Diagnostics.Contracts;
 
 namespace AssetsManagementEG.Presentation.Controllers
 {
@@ -63,12 +64,18 @@ namespace AssetsManagementEG.Presentation.Controllers
             {
                 return BadRequest($"The district with name {c.DistrictName} does not exist.");
             }
-
+            // check the existing contract that was sent in the request
+            var contract = ContractCarRepository.FindContract(c.contractId);
+            if (contract == null)
+            {
+                return BadRequest($"The contract with Id {c.contractId} does not exist.");
+            }
+          
             // check the existing of the car 
             var existingCar = CarRepository.CarExists(c.PlateNum);
 
             //لو العربية مش موجوده قبل كده 
-            if (existingCar == false)
+            if (!existingCar)
             {
                 // Step 2: Create car then save it
                 Car car = new Car()
@@ -95,16 +102,11 @@ namespace AssetsManagementEG.Presentation.Controllers
                     StartDate = DateTime.Now
                 };
                 //step 4: Now create Contractcars using carID - contractId - start date 
-                // check the existing contract that was sent in the request
-                var contract = ContractCarRepository.FindContract(c.contractId);
-                if (contract == null)
-                {
-                    return BadRequest($"The contract with Id {c.contractId} does not exist.");
-                }
+                // and assigning a fixed contract to the cars that IsCompanyOwned to avoid nullable values in the ContractCars (not best practice)
                 ContractsCars contractsCars = new ContractsCars()
                 {
                     CarId = car.CarId,
-                    ContractId = c.contractId,
+                    ContractId = c.IsCompanyOwned ? 1 : c.contractId,
                     StartDate = DateTime.Now
                 };
 
