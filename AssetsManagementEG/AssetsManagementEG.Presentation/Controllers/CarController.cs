@@ -106,10 +106,16 @@ namespace AssetsManagementEG.Presentation.Controllers
                 ContractsCars contractsCars = new ContractsCars()
                 {
                     CarId = car.CarId,
-                    ContractId = c.IsCompanyOwned ? 1 : c.contractId,
+                    //لو العربية ملك الشركه حط العربية ل عقد رقم 1 
+                    // لو لا يبقا خد بقا رقم العقد اللى هتضاف ليه 
+                    ContractId = c.IsCompanyOwned ? 3 : c.contractId, 
                     StartDate = DateTime.Now
                 };
 
+                // update the contract so it became not availble 
+                contract.IsAvailable = false;
+
+                ContractCarRepository.Update(contract);
                 mDistrictCarRepo.Create(districtCar);
                 mContractCarsRepo.Create(contractsCars);
                 return Ok($"The car was created successfully assigned to district {district.Name} and added to the contract {contract.ContractName}");
@@ -120,24 +126,45 @@ namespace AssetsManagementEG.Presentation.Controllers
                 //get the existing car
                 var car = CarRepository.FindCar(c.PlateNum);
 
-                if (car.IsInService==true)
+                if (car.IsInService == true)
                 {
-                    return BadRequest("this car is already assigned to a district ");
+                    return BadRequest("This car is already assigned to a district.");
                 }
-                // and make it inservice to be shown for the end-user to assign it in tasks
+
+                // 1. make it in service
                 car.IsInService = true;
                 CarRepository.Update(car);
-           
-                // reassigning the car to the district
-                    var FindDistrict = DistrictRepository.FindDistrict(c.DistrictName);
-                    var newDistrictCar = new DistrictCar()
-                    {
-                        DistrictId = FindDistrict.DistrictId,
-                        CarId = car.CarId,
-                        StartDate = DateTime.Now,
-                    };
-                    return Ok($"The car with plate number {car.PlateNum} is now inService and active in District.");
+
+                // 2. reassign to district
+                var FindDistrict = DistrictRepository.FindDistrict(c.DistrictName);
+                var newDistrictCar = new DistrictCar()
+                {
+                    DistrictId = FindDistrict.DistrictId,
+                    CarId = car.CarId,
+                    StartDate = DateTime.Now,
+                };
+                mDistrictCarRepo.Create(newDistrictCar);
+
+                // 3. relate to new contract
+                var newContractCar = new ContractsCars()
+                {
+                    CarId = car.CarId,
+                    ContractId = c.contractId,
+                    StartDate = DateTime.Now
+                };
+                mContractCarsRepo.Create(newContractCar);
+
+                // 4. update contract to be unavailable
+                var assignedContract = ContractCarRepository.FindContract(c.contractId);
+                if (assignedContract != null)
+                {
+                    assignedContract.IsAvailable = false;
+                    ContractCarRepository.Update(assignedContract);
+                }
+
+                return Ok($"The car with plate number {car.PlateNum} is now inService, added to district and contract.");
             }
+
         }
 
 
@@ -220,13 +247,18 @@ namespace AssetsManagementEG.Presentation.Controllers
                 EndDate = DateTime.Now
             };
 
-            var contractCar = mContractCarsRepo.FindOneForUdpdateOrDelete(carId);
+            var contractCar = mContractCarsRepo.FindOneForUpdateOrDelete(carId);
             if (contractCar == null)
             {
                 return BadRequest("ContractCar not found, cannot update contract.");
             }
 
-            var updatedContract = ContractCarRepository.FindContract(contractCar.CarId);
+            //then from table of contract get the contract
+            var updatedContract = ContractCarRepository.FindContract(contractCar.ContractId);
+            if (updatedContract == null)
+            {
+                return BadRequest("not found this contract");
+            }
             updatedContract.IsAvailable = true;
 
             existingCar.IsInService = false;

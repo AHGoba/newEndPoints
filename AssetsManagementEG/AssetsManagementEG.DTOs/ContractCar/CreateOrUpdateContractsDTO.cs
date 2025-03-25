@@ -13,5 +13,6 @@ namespace AssetsManagementEG.DTOs.ContractCar
         public DateTime EndDate { get; set; }
         public int districtId { get; set; }
         public int carContractorsId { get; set; }
+        public bool IsAvailable { get ; set; }
     }
 }

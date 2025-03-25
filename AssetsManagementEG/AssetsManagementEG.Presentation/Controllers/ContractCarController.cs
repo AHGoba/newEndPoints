@@ -34,6 +34,8 @@ namespace AssetsManagementEG.Presentation.Controllers
                 contractDescribtion = c.ContractDescreption,
                 startDate = c.StartDate,
                 endDate = c.EndDate,
+                IsAvailable = c.IsAvailable
+                
             });
 
             return Ok(query);
@@ -60,7 +62,9 @@ namespace AssetsManagementEG.Presentation.Controllers
                 startDate = c.StartDate,
                 endDate = c.EndDate,
                 districtId = c.DistrictId,
-                contractorId = c.CarContractorsId
+                contractorId = c.CarContractorsId,
+                IsAvailable = c.IsAvailable
+
             });
 
             return Ok(districtContracts);
@@ -90,7 +94,8 @@ namespace AssetsManagementEG.Presentation.Controllers
                 StartDate = createOrUpdateContractsDTO.StartDate,
                 EndDate = createOrUpdateContractsDTO.EndDate,
                 DistrictId= createOrUpdateContractsDTO.districtId,
-                CarContractorsId = createOrUpdateContractsDTO.carContractorsId
+                CarContractorsId = createOrUpdateContractsDTO.carContractorsId,
+                IsAvailable = true
 
             };
 
