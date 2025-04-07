@@ -3,6 +3,7 @@ using AssetsManagementEG.Models.Models;
 using AssetsManagementEG.Repositories.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Linq;
 
 namespace AssetsManagementEG.Presentation.Controllers
@@ -33,27 +34,37 @@ namespace AssetsManagementEG.Presentation.Controllers
 
 
         [HttpPost]
-        public IActionResult Create (CreateCarContractorsDTO createCarContractorsDTO)
+        public IActionResult Create(CreateCarContractorsDTO createCarContractorsDTO)
         {
-            // check the existing of the car 
-            var existingContractores = CarContractorsRepository.CheckContractorsExcisting(createCarContractorsDTO.Name);
-            if (existingContractores == true) {
-                return BadRequest($"The contractors with name {createCarContractorsDTO.Name} does not exist.");
-            }
-
-            CarContractors carContractors = new CarContractors()
+            try
             {
-                Name = createCarContractorsDTO.Name,
-                phoneNum = createCarContractorsDTO.phoneNum,
-            };
+                // Check if contractor already exists
+                var existingContractor = CarContractorsRepository.CheckContractorsExcisting(createCarContractorsDTO.Name);
+                if (existingContractor)
+                {
+                    return BadRequest($"Contractor with name {createCarContractorsDTO.Name} already exists.");
+                }
 
-            var result = CarContractorsRepository.Create(carContractors);
-            if (!result)
-            {
-                return BadRequest("Failed to create the car.");
+                var carContractors = new CarContractors()
+                {
+                    Name = createCarContractorsDTO.Name,
+                    phoneNum = createCarContractorsDTO.phoneNum
+                };
+
+                var result = CarContractorsRepository.Create(carContractors);
+                if (!result)
+                {
+                    return BadRequest("Failed to create the contractor.");
+                }
+
+                return Ok("Contractor was added successfully.");
             }
-
-            return Ok("Contractors was added");
+            catch (Exception ex)
+            {
+                // Log the error if needed
+                return StatusCode(500, $"Internal Server Error: {ex.Message}");
+            }
         }
+
     }
 }

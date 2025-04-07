@@ -64,21 +64,14 @@ namespace AssetsManagementEG.Presentation.Controllers
             {
                 return BadRequest($"The district with name {c.DistrictName} does not exist.");
             }
-            // check the existing contract that was sent in the request
-            var contract = ContractCarRepository.FindContract(c.contractId);
-            if (contract == null)
-            {
-                return BadRequest($"The contract with Id {c.contractId} does not exist.");
-            }
-          
-            // check the existing of the car 
+
             var existingCar = CarRepository.CarExists(c.PlateNum);
 
-            //لو العربية مش موجوده قبل كده 
+            // لو العربية مش موجودة
             if (!existingCar)
             {
-                // Step 2: Create car then save it
-                Car car = new Car()
+                //create car 
+                var car = new Car()
                 {
                     Type = c.Type,
                     PlateNum = c.PlateNum,
@@ -92,38 +85,42 @@ namespace AssetsManagementEG.Presentation.Controllers
                 {
                     return BadRequest("Failed to create the car.");
                 }
-
-                // relate the car with it's district 
-                // Step 3: Now Create DistrictCar Using the Saved CarId and district 
+                
+                //adding car to district 
                 var districtCar = new DistrictCar
                 {
                     CarId = car.CarId,
                     DistrictId = district.DistrictId,
                     StartDate = DateTime.Now
                 };
-                //step 4: Now create Contractcars using carID - contractId - start date 
-                // and assigning a fixed contract to the cars that IsCompanyOwned to avoid nullable values in the ContractCars (not best practice)
-                ContractsCars contractsCars = new ContractsCars()
-                {
-                    CarId = car.CarId,
-                    //لو العربية ملك الشركه حط العربية ل عقد رقم 1 
-                    // لو لا يبقا خد بقا رقم العقد اللى هتضاف ليه 
-                    ContractId = c.IsCompanyOwned ? 3 : c.contractId, 
-                    StartDate = DateTime.Now
-                };
-
-                // update the contract so it became not availble 
-                contract.IsAvailable = false;
-
-                ContractCarRepository.Update(contract);
                 mDistrictCarRepo.Create(districtCar);
-                mContractCarsRepo.Create(contractsCars);
-                return Ok($"The car was created successfully assigned to district {district.Name} and added to the contract {contract.ContractName}");
+
+                if (!c.IsCompanyOwned)
+                {
+                    // دا معناه ان العربية دى هتكون ايجار وهضيفها لعقد معين 
+                    var contract = ContractCarRepository.FindContract(c.contractId);
+                    if (contract == null)
+                        return BadRequest($"Contract with ID {c.contractId} does not exist.");
+
+                    contract.IsAvailable = false;
+                    ContractCarRepository.Update(contract);
+
+                    var contractsCars = new ContractsCars()
+                    {
+                        CarId = car.CarId,
+                        ContractId = c.contractId,
+                        StartDate = DateTime.Now
+                    };
+                    mContractCarsRepo.Create(contractsCars);
+
+                    return Ok($"The car was created successfully, assigned to district {district.Name}, and added to contract {contract.ContractName}");
+                }
+
+                return Ok($"The car was created successfully and assigned to district {district.Name} (company-owned, no contract needed).");
             }
-            //طيب العربية لو موجوده قبل كده ؟
+            // لو العربية موجودة بالفعل
             else
             {
-                //get the existing car
                 var car = CarRepository.FindCar(c.PlateNum);
 
                 if (car.IsInService == true)
@@ -131,41 +128,41 @@ namespace AssetsManagementEG.Presentation.Controllers
                     return BadRequest("This car is already assigned to a district.");
                 }
 
-                // 1. make it in service
                 car.IsInService = true;
                 CarRepository.Update(car);
 
-                // 2. reassign to district
-                var FindDistrict = DistrictRepository.FindDistrict(c.DistrictName);
                 var newDistrictCar = new DistrictCar()
                 {
-                    DistrictId = FindDistrict.DistrictId,
+                    DistrictId = district.DistrictId,
                     CarId = car.CarId,
                     StartDate = DateTime.Now,
                 };
                 mDistrictCarRepo.Create(newDistrictCar);
 
-                // 3. relate to new contract
-                var newContractCar = new ContractsCars()
+                if (!c.IsCompanyOwned)
                 {
-                    CarId = car.CarId,
-                    ContractId = c.contractId,
-                    StartDate = DateTime.Now
-                };
-                mContractCarsRepo.Create(newContractCar);
+                    var assignedContract = ContractCarRepository.FindContract(c.contractId);
+                    if (assignedContract == null)
+                        return BadRequest($"Contract with ID {c.contractId} does not exist.");
 
-                // 4. update contract to be unavailable
-                var assignedContract = ContractCarRepository.FindContract(c.contractId);
-                if (assignedContract != null)
-                {
                     assignedContract.IsAvailable = false;
                     ContractCarRepository.Update(assignedContract);
+
+                    var newContractCar = new ContractsCars()
+                    {
+                        CarId = car.CarId,
+                        ContractId = c.contractId,
+                        StartDate = DateTime.Now
+                    };
+                    mContractCarsRepo.Create(newContractCar);
+
+                    return Ok($"The car with plate number {car.PlateNum} is now in service, assigned to district {district.Name}, and added to contract {assignedContract.ContractName}.");
                 }
 
-                return Ok($"The car with plate number {car.PlateNum} is now inService, added to district and contract.");
+                return Ok($"The car with plate number {car.PlateNum} is now in service and assigned to district {district.Name} (company-owned, no contract needed).");
             }
-
         }
+
 
 
         // فى الابديت دا فى 3 حاجات 
@@ -257,7 +254,7 @@ namespace AssetsManagementEG.Presentation.Controllers
             var updatedContract = ContractCarRepository.FindContract(contractCar.ContractId);
             if (updatedContract == null)
             {
-                return BadRequest("not found this contract");
+                return BadRequest("not found this contract or this car is owned by company ");
             }
             updatedContract.IsAvailable = true;
 

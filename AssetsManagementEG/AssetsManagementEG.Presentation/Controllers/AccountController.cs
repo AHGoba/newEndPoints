@@ -100,8 +100,12 @@ namespace ECommerce.Presentation.Controllers
 
             
             var Token = new JwtSecurityTokenHandler().WriteToken(SetToken);
-            //getting district id 
-            UsersDistrict _UserDistrict = context.UsersDistrict.FirstOrDefault(ud => ud.ApplicationUserId == ExistingUserLog.ID);
+
+            //getting userDistricts Records 
+
+            var _UserDistrict = context.UsersDistrict
+                .Where(ud => ud.ApplicationUserId == ExistingUserLog.ID)
+                .ToList();
 
             if (_UserDistrict == null)
             {
@@ -109,8 +113,15 @@ namespace ECommerce.Presentation.Controllers
             }
 
 
-            //get distrcit so i can send it to the User
-            var district = context.District.FirstOrDefault(d=> d.DistrictId == _UserDistrict.DistrictId);
+            //get distrcit id and name 
+            var districtId = _UserDistrict.Select(ud=> ud.DistrictId).ToList();
+
+            var districts = context.District.
+                Where(d=> districtId.Contains(d.DistrictId))
+                .Select(ud=> new { 
+                    ud.DistrictId,
+                    ud.Name      
+                }).ToList();
 
 
             
@@ -121,8 +132,7 @@ namespace ECommerce.Presentation.Controllers
                 role = userRole,
                 Username = ExistingUserLog.UserName,
                 UserId= ExistingUserLog.Id,
-                DistrictID = _UserDistrict.DistrictId,
-                DistrictName = district.Name
+                Districts = districts,
             });
         }
 

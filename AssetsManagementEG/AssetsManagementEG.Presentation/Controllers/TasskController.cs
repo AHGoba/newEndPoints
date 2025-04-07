@@ -107,7 +107,7 @@ namespace AssetsManagementEG.Presentation.Controllers
             {
                 TaskId = task.TaskId,
                 DistrictId = task.DistrictId,
-                Name = task.Name,
+                TaskName = task.Name,
                 Description = task.Description,
                 IsCompleted = task.IsCompleted,
                 StartDate = task.StartDate,
@@ -137,17 +137,17 @@ namespace AssetsManagementEG.Presentation.Controllers
 
         #region GetOnDistrictTasks/{Id} EndPoint
         // this end point is for the SuperUsers >>>> get the tasks related to specific (district) with it's (state)
-        [HttpGet("GetDistrictTasks/{Id}")]
-        public IActionResult GetSuper(int Id)
+        [HttpPost("GetAllDistrictsTasks")]
+        public IActionResult GetDistrictTasks(   List<int> districtIds)
         {
             //Get the district 
-            var district = context.District.FirstOrDefault(d => d.DistrictId == Id);
+            var district = context.District.Where(d => districtIds.Contains(d.DistrictId)).ToList();
             if (district == null)
             {
                 return NotFound("District not found");
             }
 
-            var tasks = context.Tassk?.Where(t=> t.DistrictId== district.DistrictId)
+            var tasks = context.Tassk?.Where(t => districtIds.Contains(t.DistrictId))
                 .ToList() ?? new List<Tassk>();
 
 
@@ -155,21 +155,24 @@ namespace AssetsManagementEG.Presentation.Controllers
             // ودا عن طريق ان لو مرجعش حاجه من الداتا بيز فى اى مرحله 
             // اديله حاجه فاضيه 
             //
-            var taskCars = context.TaskCar.ToList() ?? new List<TaskCar>();
-            var cars = context.Car.ToList() ?? new List<Car>();
+            var taskCars = context.TaskCar.ToList();
+            var cars = context.Car.ToList();
 
-            var taskEquipments = context.TaskEquipment.ToList() ?? new List<TaskEquipment>();
-            var equipments = context.Equipment.ToList() ?? new List<Equipment>();
+            var taskEquipments = context.TaskEquipment.ToList();
+            var equipments = context.Equipment.ToList();
 
-            var taskLabors = context.TaskLabors.ToList() ?? new List<TaskLabors>();
-            var labors = context.Labors.ToList() ?? new List<Labors>();
+            var taskLabors = context.TaskLabors.ToList();
+            var labors = context.Labors.ToList();
 
 
-            var query = tasks.Where(task => task != null).Select(task => new GetAllTasksDTO
+            var query = tasks
+                .Where(task => task != null && task.IsCompleted == true)
+                .Select(task => new GetAllTasksDTO
             {
                 TaskId = task.TaskId,
+                TaskName = task.Name,
                 DistrictId = task.DistrictId,
-                Name = task.Name,
+                DistrictName = district.FirstOrDefault(d=> d.DistrictId == task.DistrictId).Name,
                 Description = task.Description,
                 IsCompleted = task.IsCompleted,
                 StartDate = task.StartDate,

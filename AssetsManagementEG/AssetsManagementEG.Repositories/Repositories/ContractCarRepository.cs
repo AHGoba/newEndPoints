@@ -21,7 +21,7 @@ namespace AssetsManagementEG.Repositories.Repositories
             return context.Contract.Any(c=> c.ContractName == contractName);
         }
 
-        public Contract FindContract( int contractId)
+        public Contract FindContract( int? contractId)
         {
             return context.Contract.FirstOrDefault(c=> c.ContractId == contractId); 
         }
