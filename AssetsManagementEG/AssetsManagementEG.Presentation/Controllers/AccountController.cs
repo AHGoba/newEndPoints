@@ -114,7 +114,7 @@ namespace ECommerce.Presentation.Controllers
 
 
             //get distrcit id and name 
-            var districtId = _UserDistrict.Select(ud=> ud.DistrictId).ToList();
+            var districtId = _UserDistrict.Select(ud=> ud.DistrictId).ToList(); // return district ids 
 
             var districts = context.District.
                 Where(d=> districtId.Contains(d.DistrictId))

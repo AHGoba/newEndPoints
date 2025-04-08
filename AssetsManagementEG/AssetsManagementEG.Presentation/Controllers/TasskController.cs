@@ -135,10 +135,11 @@ namespace AssetsManagementEG.Presentation.Controllers
         }
         #endregion
 
-        #region GetOnDistrictTasks/{Id} EndPoint
+        //super user
+        #region GetOnGoingDistrictTasks/{Id} EndPoint
         // this end point is for the SuperUsers >>>> get the tasks related to specific (district) with it's (state)
-        [HttpPost("GetAllDistrictsTasks")]
-        public IActionResult GetDistrictTasks(   List<int> districtIds)
+        [HttpPost("GetOnGoingDistrictsTasks")]
+        public IActionResult GetOnGoingDistrictsTasks(   List<int> districtIds)
         {
             //Get the district 
             var district = context.District.Where(d => districtIds.Contains(d.DistrictId)).ToList();
@@ -199,7 +200,72 @@ namespace AssetsManagementEG.Presentation.Controllers
             return Ok(query);
         }
         #endregion
+        #region GetEndedDistrictTasks/{Id} EndPoint
+        // this end point is for the SuperUsers >>>> get the tasks related to specific (district) with it's (state)
+        [HttpPost("GetEndedDistrictsTasks")]
+        public IActionResult GetEndedDistrictsTasks(List<int> districtIds)
+        {
+            //Get the district 
+            var district = context.District.Where(d => districtIds.Contains(d.DistrictId)).ToList();
+            if (district == null)
+            {
+                return NotFound("District not found");
+            }
 
+            var tasks = context.Tassk?.Where(t => districtIds.Contains(t.DistrictId))
+                .ToList() ?? new List<Tassk>();
+
+
+            // Load all related data safely                 
+            // ودا عن طريق ان لو مرجعش حاجه من الداتا بيز فى اى مرحله 
+            // اديله حاجه فاضيه 
+            //
+            var taskCars = context.TaskCar.ToList();
+            var cars = context.Car.ToList();
+
+            var taskEquipments = context.TaskEquipment.ToList();
+            var equipments = context.Equipment.ToList();
+
+            var taskLabors = context.TaskLabors.ToList();
+            var labors = context.Labors.ToList();
+
+
+            var query = tasks
+                .Where(task => task != null && task.IsCompleted == true)
+                .Select(task => new GetAllTasksDTO
+                {
+                    TaskId = task.TaskId,
+                    TaskName = task.Name,
+                    DistrictId = task.DistrictId,
+                    DistrictName = district.FirstOrDefault(d => d.DistrictId == task.DistrictId).Name,
+                    Description = task.Description,
+                    IsCompleted = task.IsCompleted,
+                    StartDate = task.StartDate,
+                    EndDate = task.EndDate,
+
+
+                    // Get cars related to this task
+                    carsNames = taskCars.Where(tc => tc.TaskId == task.TaskId)
+                                    .Join(cars, tc => tc.CarId, c => c.CarId, (tc, c) => c.PlateNum)
+                                    .ToList() ?? new List<string>(),
+
+                    // Get equipment related to this task
+                    equipmentsNames = taskEquipments.Where(te => te.TaskId == task.TaskId)
+                                                .Join(equipments, te => te.EquipmentId, e => e.EquipmentId, (te, e) => e.Name)
+                                                .ToList() ?? new List<string>(),
+
+                    // Get labors related to this task
+                    laborsNames = taskLabors.Where(tl => tl.TaskId == task.TaskId)
+                                        .Join(labors, tl => tl.LaborsId, l => l.LaborsId, (tl, l) => l.FullName)
+                                        .ToList() ?? new List<string>()
+
+                }).ToList();
+
+            return Ok(query);
+        }
+        #endregion
+
+        //user
         #region GetOnGoingTasks/{Id} EndPoint
         // this end point is for the Users >>>>get the tasks with state >>is (ongoing) and related to (districtId)<<<<<<<<<<<<<<
         [HttpGet("GetOnGoingTasks/{Id}")]
@@ -317,6 +383,8 @@ namespace AssetsManagementEG.Presentation.Controllers
         }
         #endregion
 
+
+        //user
         #region UpdatTask EndPoint
         [HttpPut("{Id}")]
         public IActionResult Update( UpdateTaskDTO c, int Id)

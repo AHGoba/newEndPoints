@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AssetsManagementEG.DTOs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e33bec1e68528cd04eefa2b935d675bbfee52b5e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+922773cbf2ba55d24c3701338d9f7b14c4cbf94d")]
 [assembly: System.Reflection.AssemblyProductAttribute("AssetsManagementEG.DTOs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AssetsManagementEG.DTOs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

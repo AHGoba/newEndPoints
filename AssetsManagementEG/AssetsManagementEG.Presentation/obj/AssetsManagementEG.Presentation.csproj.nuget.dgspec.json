@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj": {}
+    "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj": {
+    "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj",
+        "projectUniqueName": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj",
         "projectName": "AssetsManagementEG.Context",
-        "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj",
+        "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj",
         "packagesPath": "C:\\Users\\ahmed.hamdy.50117\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\obj\\",
+        "outputPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "netcoreapp3.0": {
             "targetAlias": "netcoreapp3.0",
             "projectReferences": {
-              "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj": {
-                "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj"
+              "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj": {
+                "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj"
               }
             }
           }
@@ -107,14 +107,14 @@
         }
       }
     },
-    "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj": {
+    "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj",
+        "projectUniqueName": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj",
         "projectName": "AssetsManagementEG.DTOs",
-        "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj",
+        "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj",
         "packagesPath": "C:\\Users\\ahmed.hamdy.50117\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\obj\\",
+        "outputPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -186,14 +186,14 @@
         }
       }
     },
-    "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj": {
+    "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj",
+        "projectUniqueName": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj",
         "projectName": "AssetsManagementEG.Models",
-        "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj",
+        "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj",
         "packagesPath": "C:\\Users\\ahmed.hamdy.50117\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\obj\\",
+        "outputPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -271,14 +271,14 @@
         }
       }
     },
-    "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj": {
+    "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj",
+        "projectUniqueName": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj",
         "projectName": "AssetsManagementEG.Presentation",
-        "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj",
+        "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj",
         "packagesPath": "C:\\Users\\ahmed.hamdy.50117\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\obj\\",
+        "outputPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -299,17 +299,17 @@
           "netcoreapp3.0": {
             "targetAlias": "netcoreapp3.0",
             "projectReferences": {
-              "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj": {
-                "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj"
+              "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj": {
+                "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj"
               },
-              "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj": {
-                "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj"
+              "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj": {
+                "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj"
               },
-              "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj": {
-                "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj"
+              "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj": {
+                "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Models\\AssetsManagementEG.Models.csproj"
               },
-              "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj": {
-                "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj"
+              "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj": {
+                "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj"
               }
             }
           }
@@ -406,14 +406,14 @@
         }
       }
     },
-    "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj": {
+    "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj",
         "projectName": "AssetsManagementEG.Repositories",
-        "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj",
+        "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\AssetsManagementEG.Repositories.csproj",
         "packagesPath": "C:\\Users\\ahmed.hamdy.50117\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\obj\\",
+        "outputPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -434,8 +434,8 @@
           "netcoreapp3.0": {
             "targetAlias": "netcoreapp3.0",
             "projectReferences": {
-              "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj": {
-                "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 25-3-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj"
+              "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj": {
+                "projectPath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj"
               }
             }
           }
