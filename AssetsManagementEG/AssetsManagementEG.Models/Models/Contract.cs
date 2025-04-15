@@ -23,7 +23,7 @@ namespace AssetsManagementEG.Models.Models
         public  ICollection<ContractsCars> ContractsCars { get; set; }
 
         // ربط العقود بالمقاولين
-
+        // ان كل مقاول مربوط بأكتر من عقد
         [ForeignKey("CarContractors")]
         public int? CarContractorsId { get; set; }
         public CarContractors CarContractors { get; set; }

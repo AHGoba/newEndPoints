@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AssetsManagementEG.Models.Models
 {
-    public class CarArchive
+    public class CarArchieve
     {
         public int Id { get; set; }
         public int CarId { get; set; }

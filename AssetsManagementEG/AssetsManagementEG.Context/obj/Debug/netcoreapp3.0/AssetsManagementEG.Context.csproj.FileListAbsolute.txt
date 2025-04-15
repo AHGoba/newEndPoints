@@ -179,8 +179,7 @@ C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 08-04-2025\newEndPoints\A
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 08-04-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.AssemblyInfoInputs.cache
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 08-04-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.AssemblyInfo.cs
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 08-04-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.csproj.CoreCompileInputs.cache
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 08-04-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.sourcelink.json
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 08-04-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsMa.6C096F7C.Up2Date
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 08-04-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.dll
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 08-04-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.pdb
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 08-04-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.genruntimeconfig.cache
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 08-04-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Context\obj\Debug\netcoreapp3.0\AssetsManagementEG.Context.csproj.CopyComplete

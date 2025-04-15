@@ -283,10 +283,10 @@ namespace AssetsManagementEG.Presentation.Controllers
                 .Where(t => t.DistrictId == district.DistrictId && t.IsCompleted == false)
                 .Select( t=> new
                 {
-                    taskId= t.TaskId,
-                    name = t.Name,
-                    describtion = t.Description,
-                    startDate = t.StartDate
+                    TaskId = t.TaskId,
+                    TaskName = t.Name,
+                    Description = t.Description,
+                    StartDate = t.StartDate
                 })
                 .ToList();                     
             return Ok(tasks);
@@ -383,8 +383,6 @@ namespace AssetsManagementEG.Presentation.Controllers
         }
         #endregion
 
-
-        //user
         #region UpdatTask EndPoint
         [HttpPut("{Id}")]
         public IActionResult Update( UpdateTaskDTO c, int Id)

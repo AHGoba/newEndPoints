@@ -1,4 +1,5 @@
 ﻿using AssetsManagementEG.Models.Models;
+using AssetsManagementEG.Models.Models.Archive;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -29,6 +30,7 @@ namespace AssetsManagementEG.Context.Context
             public DbSet<DistrictLabors> DistrictLabors { get; set; }
             public DbSet<UsersDistrict> UsersDistrict { get; set; }
             public DbSet<CarContractors>   CarContractors { get; set; }
+            
 
             // company with labors 
             public DbSet<CompanyL> CompanyL { get; set; }
@@ -39,7 +41,10 @@ namespace AssetsManagementEG.Context.Context
             public DbSet<ContractsCars> ContractsCars { get; set; }
 
            // Archives
-            public DbSet<CarArchive> CarArchive { get; set; }
+            public DbSet<CarArchieve> CarArchive { get; set; }
+            public DbSet<EquipmentArchieve> equipmentArchieves { get; set; }
+            public DbSet<LaborArchieve> laborArchieves { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
             {

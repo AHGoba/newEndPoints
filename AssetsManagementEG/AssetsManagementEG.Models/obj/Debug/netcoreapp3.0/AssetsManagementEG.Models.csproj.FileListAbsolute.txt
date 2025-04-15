@@ -115,6 +115,5 @@ C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 08-04-2025\newEndPoints\A
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 08-04-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.AssemblyInfoInputs.cache
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 08-04-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.AssemblyInfo.cs
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 08-04-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.csproj.CoreCompileInputs.cache
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 08-04-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.sourcelink.json
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 08-04-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.dll
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 08-04-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.pdb

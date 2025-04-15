@@ -104,7 +104,15 @@ namespace AssetsManagementEG.Presentation.Controllers
                 {
                     cartype = cr.Type,
                     carPlateNum = cr.PlateNum,
-                    carId = cr.CarId
+                    carId = cr.CarId,
+
+                    districtName = cr.DistrictCar
+                    .Select(dc => context.District
+                    .Where(d => d.DistrictId == dc.DistrictId)
+                    .Select(d => d.Name)
+                    .FirstOrDefault())
+                    // عايزين نرجع اسم المقاول 
+                     //districtName = cr.DistrictCar.Where(dc => dc.CarId == cr.CarId).Select(d => d.DistrictId).FirstOrDefault()
                 }).ToList() ;
 
 

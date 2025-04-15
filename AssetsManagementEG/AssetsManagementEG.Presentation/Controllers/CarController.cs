@@ -234,7 +234,7 @@ namespace AssetsManagementEG.Presentation.Controllers
                 return BadRequest("DistrictCar not found, cannot archive the car.");
             }
 
-            var archiveRecord = new CarArchive
+            var archiveRecord = new CarArchieve
             {
                 CarId = existingCar.CarId,
                 DistrictId = districtCar.DistrictId,
@@ -264,6 +264,8 @@ namespace AssetsManagementEG.Presentation.Controllers
             CarRepository.Update(existingCar);
             ContractCarRepository.Update(updatedContract);
             mDistrictCarRepo.Delete(districtCar);
+            //اضافه الريكورد بتاع ال عربية والعقد الى الارشيف 
+            //mContractCarsRepo.Delete(contractCar);
 
             return Ok("The car was archived successfully.");
         }
