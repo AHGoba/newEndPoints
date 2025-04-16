@@ -106,13 +106,19 @@ namespace AssetsManagementEG.Presentation.Controllers
                     carPlateNum = cr.PlateNum,
                     carId = cr.CarId,
 
-                    districtName = cr.DistrictCar
-                    .Select(dc => context.District
-                    .Where(d => d.DistrictId == dc.DistrictId)
-                    .Select(d => d.Name)
-                    .FirstOrDefault())
+                    contractorName = cr.ContractsCars
+                    .Select(cc => cc.Contract.CarContractors.Name)
+                    .FirstOrDefault()
+
+                    //contractorName = cr.ContractsCars
+                    //.Select(cc => context.Contract
+                    //.Where(c => c.ContractId  == cc.ContractId)
+                    ////.Select(d => d.CarContractorsId)
+                    //.Select(ccon=> context.CarContractors
+                    //.Where(cC=> cC.CarContractorsId ==ccon.CarContractorsId ))).FirstOrDefault()
+
                     // عايزين نرجع اسم المقاول 
-                     //districtName = cr.DistrictCar.Where(dc => dc.CarId == cr.CarId).Select(d => d.DistrictId).FirstOrDefault()
+                    //districtName = cr.DistrictCar.Where(dc => dc.CarId == cr.CarId).Select(d => d.DistrictId).FirstOrDefault()
                 }).ToList() ;
 
 
