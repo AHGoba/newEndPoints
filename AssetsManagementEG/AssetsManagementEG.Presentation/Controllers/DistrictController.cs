@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Routing;
 using System.Linq;
 using AssetsManagementEG.Context.Context;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace AssetsManagementEG.Presentation.Controllers
 {
@@ -310,6 +311,68 @@ namespace AssetsManagementEG.Presentation.Controllers
 
             return Ok(Labors);
         }
+
+
+        [HttpPost("GetDistrictCarsForSuperUser")]
+        public IActionResult GetDistrictCarsForSuperUser([FromBody] List<int> districtIds)
+        {
+            if (districtIds == null || !districtIds.Any())
+            {
+                return BadRequest("يرجى تحديد رقم منطقة واحدة على الأقل.");
+            }
+
+            // تحقق من أن كل DistrictId موجود فعلاً في قاعدة البيانات
+            var existingDistricts = context.District
+                .Where(d => districtIds.Contains(d.DistrictId))
+                .Select(d => d.DistrictId)
+                .ToList();
+
+            var notFoundIds = districtIds.Except(existingDistricts).ToList();
+
+            if (notFoundIds.Any())
+            {
+                return NotFound($"بعض المناطق غير موجودة: {string.Join(", ", notFoundIds)}");
+            }
+
+            // Get all car IDs linked to these districts
+            var carIds = context.DistrictCar
+                .Where(dc => districtIds.Contains(dc.DistrictId))
+                .Select(dc => dc.CarId)
+                .Distinct()
+                .ToList();
+
+            if (!carIds.Any())
+            {
+                return NotFound("لا توجد سيارات مرتبطة بهذه المناطق.");
+            }
+
+            // استرجاع بيانات السيارات
+            var cars = context.Car
+                .Where(c => carIds.Contains(c.CarId))
+                .Select(cr => new
+                {
+                    carId = cr.CarId,
+                    carPlatenum = cr.PlateNum,
+                    Type = cr.Type,
+                    IsAvailable = cr.IsAvailable,
+                    IsCompanyOwned = cr.IsCompanyOwned,
+                    IsInService = cr.IsInService,
+                    contractName = cr.ContractsCars
+                        .Select(cc => cc.Contract.ContractName)
+                        .FirstOrDefault(),
+                    contractorName = cr.ContractsCars
+                        .Select(cc => cc.Contract.CarContractors.Name)
+                        .FirstOrDefault(),
+                    districtName = cr.DistrictCar
+                        .Select(dc => dc.District.Name)
+                        .FirstOrDefault()
+                }).ToList();
+
+            return Ok(cars);
+        }
+
+
+        
 
 
 

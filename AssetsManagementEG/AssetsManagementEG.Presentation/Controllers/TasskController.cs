@@ -139,7 +139,7 @@ namespace AssetsManagementEG.Presentation.Controllers
         #region GetOnGoingDistrictTasks/{Id} EndPoint
         // this end point is for the SuperUsers >>>> get the tasks related to specific (district) with it's (state)
         [HttpPost("GetOnGoingDistrictsTasks")]
-        public IActionResult GetOnGoingDistrictsTasks(   List<int> districtIds)
+        public IActionResult GetOnGoingDistrictsTasks( List<int> districtIds)
         {
             //Get the district 
             var district = context.District.Where(d => districtIds.Contains(d.DistrictId)).ToList();

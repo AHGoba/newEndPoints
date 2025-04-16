@@ -265,6 +265,7 @@ namespace AssetsManagementEG.Presentation.Controllers
             ContractCarRepository.Update(updatedContract);
             mDistrictCarRepo.Delete(districtCar);
             //اضافه الريكورد بتاع ال عربية والعقد الى الارشيف 
+            // وكمان ازاله الريكورد من ال contractCar
             //mContractCarsRepo.Delete(contractCar);
 
             return Ok("The car was archived successfully.");
