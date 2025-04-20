@@ -2,6 +2,7 @@
 using AssetsManagementEG.Models.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace AssetsManagementEG.Repositories.Many_ManyRepo
@@ -12,6 +13,11 @@ namespace AssetsManagementEG.Repositories.Many_ManyRepo
         public MCompanyLaborsRepo(DBSContext _context) : base(_context)
         {
             context = _context;
+        }
+
+        public CompanyLabors FindCompanyLaborsRecord(int companyId)
+        {
+            return context.CompanyLabors.FirstOrDefault(d => d.ComapanyID == companyId);
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AssetsManagementEG.Models.Models.Archive
 {
-    public class LaborArchieve
+    public class DistLaborArchieve
     {
         public int Id { get; set; }
         public int LaborId { get; set; }
@@ -12,6 +12,7 @@ namespace AssetsManagementEG.Models.Models.Archive
         public string FullName { get; set; }
         public string PhoneNumber { get; set; }
         public string Position { get; set; }
+        public string companyName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
 

@@ -11,6 +11,7 @@ using System.Linq;
 using System.Runtime.ConstrainedExecution;
 using AssetsManagementEG.Repositories.ArchiveRepo;
 using System.Diagnostics.Contracts;
+using AssetsManagementEG.Models.Models.Archive;
 
 namespace AssetsManagementEG.Presentation.Controllers
 {
@@ -24,11 +25,12 @@ namespace AssetsManagementEG.Presentation.Controllers
         ContractCarRepository ContractCarRepository;
         MContractCarsRepo mContractCarsRepo;
         CarArchiveRepo carArchiveRepo;
+        CarContractsArchieveRepo carContractsArchieveRepo;
 
         public CarController(DBSContext _context, CarRepository carRepository,
             DistrictRepository _districtrepository, MDistrictCarRepo _mDistrictCarRepo,
             ContractCarRepository _contractCarRepository, MContractCarsRepo _mContractCarsRepo,
-            CarArchiveRepo _carArchiveRepo)
+            CarArchiveRepo _carArchiveRepo, CarContractsArchieveRepo _carContractsArchieveRepo)
         {
             CarRepository = carRepository;
             DistrictRepository = _districtrepository;
@@ -36,6 +38,7 @@ namespace AssetsManagementEG.Presentation.Controllers
             ContractCarRepository = _contractCarRepository;
             mContractCarsRepo = _mContractCarsRepo;
             carArchiveRepo = _carArchiveRepo;
+            carContractsArchieveRepo = _carContractsArchieveRepo;
         }
 
         [HttpGet]
@@ -223,9 +226,10 @@ namespace AssetsManagementEG.Presentation.Controllers
         public IActionResult ArchiveCar(int carId)
         {
             var existingCar = CarRepository.FindOneForUdpdateOrDelete(carId);
-            if (existingCar == null)
+            //انا هنا بهندل ان العربية دى لازم تكون متاحه مش فى تاسك معين عشان اعرف انقلها 
+            if (existingCar == null || !existingCar.IsAvailable)
             {
-                return NotFound("Car was not found");
+                return NotFound("Car was not found or not availabel : assigned to another task");
             }
 
             var districtCar = mDistrictCarRepo.FindDistrictCar(carId);
@@ -244,14 +248,22 @@ namespace AssetsManagementEG.Presentation.Controllers
                 EndDate = DateTime.Now
             };
 
-            var contractCar = mContractCarsRepo.FindOneForUpdateOrDelete(carId);
-            if (contractCar == null)
+            var oldcontractCar = mContractCarsRepo.FindOneForUpdateOrDelete(carId);
+            if (oldcontractCar == null)
             {
                 return BadRequest("ContractCar not found, cannot update contract.");
             }
 
+            // adding this new contractCar To Archieve 
+            var archieveContarctCar = new CarContractsArchieve()
+            {
+                CarId = existingCar.CarId,
+                ContractId = oldcontractCar.ContractId,
+                StartDate = DateTime.Now
+            };
+
             //then from table of contract get the contract
-            var updatedContract = ContractCarRepository.FindContract(contractCar.ContractId);
+            var updatedContract = ContractCarRepository.FindContract(oldcontractCar.ContractId);
             if (updatedContract == null)
             {
                 return BadRequest("not found this contract or this car is owned by company ");
@@ -260,18 +272,25 @@ namespace AssetsManagementEG.Presentation.Controllers
 
             existingCar.IsInService = false;
 
+
+            // يبقا اول حاجه بعملها هى ارشيف للعربيات 
+
             carArchiveRepo.Create(archiveRecord);
             CarRepository.Update(existingCar);
             ContractCarRepository.Update(updatedContract);
             mDistrictCarRepo.Delete(districtCar);
+
+            // برضوا بحتاج اعمل ارشيف للعقود 
+
             //اضافه الريكورد بتاع ال عربية والعقد الى الارشيف 
             // وكمان ازاله الريكورد من ال contractCar
-            //mContractCarsRepo.Delete(contractCar);
+            carContractsArchieveRepo.Create(archieveContarctCar);
+            mContractCarsRepo.Delete(oldcontractCar);
 
             return Ok("The car was archived successfully.");
         }
 
-
+        
 
         [HttpPost]
         [Route("ReactivateCar")]

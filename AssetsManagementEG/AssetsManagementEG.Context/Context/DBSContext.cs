@@ -43,7 +43,9 @@ namespace AssetsManagementEG.Context.Context
            // Archives
             public DbSet<CarArchieve> CarArchive { get; set; }
             public DbSet<EquipmentArchieve> equipmentArchieves { get; set; }
-            public DbSet<LaborArchieve> laborArchieves { get; set; }
+            public DbSet<DistLaborArchieve> laborArchieves { get; set; }
+            public DbSet<CarContractsArchieve> carContractsArchieves { get; set; }
+            public DbSet<CompLaborArchieve> compLaborArchieves { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

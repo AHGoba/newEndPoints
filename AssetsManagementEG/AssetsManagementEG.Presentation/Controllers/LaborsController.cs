@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using AssetsManagementEG.Repositories.ArchiveRepo;
+using AssetsManagementEG.Models.Models.Archive;
 
 namespace AssetsManagementEG.Presentation.Controllers
 {
@@ -20,14 +22,17 @@ namespace AssetsManagementEG.Presentation.Controllers
         MDistrictLaborsRepo mDistrictLaborsRepo;
         CompanyLRepository companyLRepository;
         MCompanyLaborsRepo mCompanyLaborsRepo;
+        compLaborArchieveRepo compLaborArchieveRepo;
         public LaborsController(LaborsRepository laborsRepository, DistrictRepository _districtRepository, 
-            MDistrictLaborsRepo _mDistrictLaborsRepo, CompanyLRepository _companyLRepository, MCompanyLaborsRepo _mCompanyLaborsRepo)
+            MDistrictLaborsRepo _mDistrictLaborsRepo, CompanyLRepository _companyLRepository, MCompanyLaborsRepo _mCompanyLaborsRepo
+           , compLaborArchieveRepo _compLaborArchieveRepo)
         {
             LaborsRepository = laborsRepository;
             DistrictRepository = _districtRepository;
             mDistrictLaborsRepo = _mDistrictLaborsRepo;
             companyLRepository = _companyLRepository;
             mCompanyLaborsRepo = _mCompanyLaborsRepo;
+            compLaborArchieveRepo = _compLaborArchieveRepo;
         }
 
         [HttpGet]
@@ -105,6 +110,7 @@ namespace AssetsManagementEG.Presentation.Controllers
             return Ok($"The Worker {labors.FullName} was created successfully and assigned to district {district.Name} and assigned to the company {company.Name}");
         }
 
+
         [HttpPut]
         [Route("{Id}")]
         public IActionResult Update(CreateOrUpdateLaborsDTO c, int Id)
@@ -140,38 +146,58 @@ namespace AssetsManagementEG.Presentation.Controllers
                 existingWorker.IsInService = c.IsInService??true ;
 
             }
-            // طيب لو هوا بعت منطقه جديدة ساعتها  
-            if ( c.DistrictName != null)
-            {
-                if (DistrictRepository.DistrictExists(c.DistrictName))
-                {
-                    var district = DistrictRepository.districts().FirstOrDefault(d=> d.Name == c.DistrictName);
-                    DistrictLabors districtLabors = new DistrictLabors()
-                    {
-                        DistrictId = district.DistrictId,
-                        LaborsId = existingWorker.LaborsId,
-                        StartDate = DateTime.Now
-                    };
-                    mDistrictLaborsRepo.Create( districtLabors );
-                }
-                else
-                {
-                    return BadRequest($"a district with the name {c.DistrictName} does not exist");
-                }
-            }
+            //// طيب لو هوا بعت منطقه جديدة ساعتها  
+            //if ( c.DistrictName != null)
+            //{
+            //    if (DistrictRepository.DistrictExists(c.DistrictName))
+            //    {
+            //        var district = DistrictRepository.districts().FirstOrDefault(d=> d.Name == c.DistrictName);
+            //        DistrictLabors districtLabors = new DistrictLabors()
+            //        {
+            //            DistrictId = district.DistrictId,
+            //            LaborsId = existingWorker.LaborsId,
+            //            StartDate = DateTime.Now
+            //        };
+            //        mDistrictLaborsRepo.Create( districtLabors );
+            //    }
+            //    else
+            //    {
+            //        return BadRequest($"a district with the name {c.DistrictName} does not exist");
+            //    }
+            //}
 
             if (c.CompanyName != null)
             {
+
+                // getting company and companyLabor Recored 
                 var company = companyLRepository.FindCompany(c.CompanyName);
-                if (company != null)
+                var oldcompanyLaborsRecord = mCompanyLaborsRepo.FindCompanyLaborsRecord(company.CompanyID);
+                if (company != null && oldcompanyLaborsRecord != null)
                 {
-                    CompanyLabors companyLabors = new CompanyLabors()
+                    // adding record to archieve 
+                    var complaborarchieveRecord = new CompLaborArchieve()
+                    {
+                        CompanyId = company.CompanyID,
+                        CompanyName = company.Name,
+                        LaborId = existingWorker.LaborsId,
+                        FullName = existingWorker.FullName,
+                        PhoneNumber = existingWorker.PhoneNumber,
+                        Position = existingWorker.Position,
+                        StartDate = oldcompanyLaborsRecord.StartDate,
+                        EndDate = DateTime.Now
+                    };
+
+
+                    CompanyLabors newcompanyLabors = new CompanyLabors()
                     {
                         LaborsID = existingWorker.LaborsId,
                         ComapanyID = company.CompanyID,
                         StartDate = DateTime.Now
                     };
-                    mCompanyLaborsRepo.Create(companyLabors);
+
+                    compLaborArchieveRepo.Create(complaborarchieveRecord);
+                    mCompanyLaborsRepo.Delete(oldcompanyLaborsRecord);
+                    mCompanyLaborsRepo.Create(newcompanyLabors);
                 }
                 else 
                 {
@@ -197,5 +223,10 @@ namespace AssetsManagementEG.Presentation.Controllers
             LaborsRepository.Delete(existingWorker);
             return Ok("The Worker was deleted successfully");
         }
+
+
+
+
+        ////////////////////////// Super User to move from one district to another 
     }
 }

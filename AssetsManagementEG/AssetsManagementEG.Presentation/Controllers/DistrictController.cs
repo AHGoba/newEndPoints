@@ -195,6 +195,8 @@ namespace AssetsManagementEG.Presentation.Controllers
         }
 
 
+
+
         /////////////////////////////// get district (labors- equipments - cars) To Edit District (labors- equipments - cars)
         ///
         [HttpGet("GetDistrictCarsForEdit/{Id}")]
@@ -313,6 +315,9 @@ namespace AssetsManagementEG.Presentation.Controllers
         }
 
 
+
+
+        /////////////////////////////// get district (labors- equipments - cars) for Super Userrrrrrrr
         [HttpPost("GetDistrictCarsForSuperUser")]
         public IActionResult GetDistrictCarsForSuperUser([FromBody] List<int> districtIds)
         {
@@ -327,6 +332,8 @@ namespace AssetsManagementEG.Presentation.Controllers
                 .Select(d => d.DistrictId)
                 .ToList();
 
+            // هاتلي العناصر اللي في districtIds
+            // ومش موجودة في existingDistricts
             var notFoundIds = districtIds.Except(existingDistricts).ToList();
 
             if (notFoundIds.Any())
@@ -353,10 +360,10 @@ namespace AssetsManagementEG.Presentation.Controllers
                 {
                     carId = cr.CarId,
                     carPlatenum = cr.PlateNum,
-                    Type = cr.Type,
+                    cartype = cr.Type,
                     IsAvailable = cr.IsAvailable,
-                    IsCompanyOwned = cr.IsCompanyOwned,
-                    IsInService = cr.IsInService,
+                    carIsCompanyOwned = cr.IsCompanyOwned,
+                    carIsInService = cr.IsInService,
                     contractName = cr.ContractsCars
                         .Select(cc => cc.Contract.ContractName)
                         .FirstOrDefault(),
@@ -372,7 +379,102 @@ namespace AssetsManagementEG.Presentation.Controllers
         }
 
 
-        
+        [HttpPost("GetDistrictLaborsForSuperUser")]
+        public IActionResult GetDistrictLaborsForSuperUser([FromBody] List<int> districtIds)
+        {
+            if (districtIds == null || !districtIds.Any())
+            {
+                return BadRequest("يرجى تحديد رقم منطقة واحدة على الأقل.");
+            }
+
+            // تحقق من أن كل DistrictId موجود فعلاً في قاعدة البيانات
+            var existingDistricts = context.District
+                .Where(d => districtIds.Contains(d.DistrictId))
+                .Select(d => d.DistrictId)
+                .ToList();
+
+            // هاتلي العناصر اللي في districtIds
+            // ومش موجودة في existingDistricts
+            var notFoundIds = districtIds.Except(existingDistricts).ToList();
+
+            if (notFoundIds.Any())
+            {
+                return NotFound($"بعض المناطق غير موجودة: {string.Join(", ", notFoundIds)}");
+            }
+
+            // getting labors ids 
+            var laborsIds = context.DistrictLabors
+                 .Where(dl => districtIds.Contains(dl.DistrictId))
+                 .Select(l => l.LaborsId)
+                 .ToList();
+
+            var labors = context.Labors
+                .Where(l => laborsIds.Contains(l.LaborsId))
+                .Select(l => new
+                {
+                    LaborId = l.LaborsId,
+                    LaborFullName = l.FullName,
+                    LaborPosition = l.Position,
+                    isAvailable = l.IsAvailable,
+                    LaborIsInservice = l.IsInService,
+                    LaborPhoneNumber = l.PhoneNumber,
+                    companyName = l.CompanyLabors
+                    .OrderByDescending(cl => cl.StartDate) // Get latest company
+                    .Select(cl => cl.CompanyL.Name)
+                    .FirstOrDefault(),
+                    districtName = l.DistrictLabors
+                    .Select(l=> l.District.Name)
+                });
+
+            return Ok(labors);
+        }
+
+        [HttpPost("GetDistrictEquipmentForSuperUser")]
+        public IActionResult GetDistrictEquipmentForSuperUser([FromBody] List<int> districtIds)
+        {
+            if (districtIds == null || !districtIds.Any())
+            {
+                return BadRequest("يرجى تحديد رقم منطقة واحدة على الأقل.");
+            }
+
+            // تحقق من أن كل DistrictId موجود فعلاً في قاعدة البيانات
+            var existingDistricts = context.District
+                .Where(d => districtIds.Contains(d.DistrictId))
+                .Select(d => d.DistrictId)
+                .ToList();
+
+            // هاتلي العناصر اللي في districtIds
+            // ومش موجودة في existingDistricts
+            var notFoundIds = districtIds.Except(existingDistricts).ToList();
+
+            if (notFoundIds.Any())
+            {
+                return NotFound($"بعض المناطق غير موجودة: {string.Join(", ", notFoundIds)}");
+            }
+
+
+            // get equipment ids
+            var equipIds = context.DistrictEquibment
+                .Where(de => districtIds.Contains(de.DistrictId))
+                .Select(e => e.EquipmentId).ToList();
+
+            var Equipments = context.Equipment
+                .Where(e => equipIds.Contains(e.EquipmentId))
+                .Select(e => new
+                {
+                    EquipmentIid = e.EquipmentId,
+                    EquipmentName = e.Name,
+                    EquipmentType = e.Type,
+                    EquipmentIsInService = e.IsInService,
+                    EquipmentIsAvailable = e.IsAvailable
+                });
+
+            return Ok(Equipments);
+
+
+
+        }
+
 
 
 
