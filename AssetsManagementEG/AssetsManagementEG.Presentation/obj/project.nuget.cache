@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GahKkh3HadHLMq5GuggGDU8qJFCDuQTI47quj6EJlvxjvcC2FbNDGfeT7Q3ijuL9P1f/wjeiuGi7I6KL3KSvmg==",
+  "dgSpecHash": "kpe1laaZA6o0z4N2LK/b83lxTwy/khljhCsQag/kED4BshZ/Qp2R9oNoyq2b5QLQFdZEOMI1T+rBqH/JI/4HFQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj",
+  "projectFilePath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Presentation\\AssetsManagementEG.Presentation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ahmed.hamdy.50117\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.1.2\\microsoft.aspnetcore.authentication.2.1.2.nupkg.sha512",
     "C:\\Users\\ahmed.hamdy.50117\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.1.1\\microsoft.aspnetcore.authentication.abstractions.2.1.1.nupkg.sha512",

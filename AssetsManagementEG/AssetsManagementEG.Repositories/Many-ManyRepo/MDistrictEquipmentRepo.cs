@@ -19,5 +19,10 @@ namespace AssetsManagementEG.Repositories.Many_ManyRepo
         {
             return context.DistrictEquibment;
         }
+
+        public DistrictEquibment FindDistrictEquipment(int equipId )
+        {
+            return context.DistrictEquibment.FirstOrDefault(de => de.EquipmentId == equipId);
+        }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using AssetsManagementEG.DTOs.Cars;
 using AssetsManagementEG.DTOs.Equipment;
 using AssetsManagementEG.Models.Models;
+using AssetsManagementEG.Models.Models.Archive;
+using AssetsManagementEG.Repositories.ArchiveRepo;
 using AssetsManagementEG.Repositories.Many_ManyRepo;
 using AssetsManagementEG.Repositories.Repositories;
 using Microsoft.AspNetCore.Http;
@@ -17,12 +19,16 @@ namespace AssetsManagementEG.Presentation.Controllers
         EquipmentRepository EquipmentRepository;
         DistrictRepository DistrictRepository;
         MDistrictEquipmentRepo mDistrictEquipmentRepo;
+        EquipmentArchieveRepo equipmentArchieveRepo;
         public EquipmentController(EquipmentRepository equipmentRepository,
-            DistrictRepository _districtRepository, MDistrictEquipmentRepo _mDistrictEquipmentRepo)
+            DistrictRepository _districtRepository, 
+            MDistrictEquipmentRepo _mDistrictEquipmentRepo,
+            EquipmentArchieveRepo _equipmentArchieveRepo)
         {
             EquipmentRepository = equipmentRepository;
             DistrictRepository = _districtRepository;
             mDistrictEquipmentRepo = _mDistrictEquipmentRepo;
+            equipmentArchieveRepo = _equipmentArchieveRepo;
         }
 
         [HttpGet]
@@ -145,5 +151,60 @@ namespace AssetsManagementEG.Presentation.Controllers
             EquipmentRepository.Delete(existingEquipment);
             return Ok("The car was deleted successfully");
         }
+
+
+        // Super User EndPoint
+
+        [HttpPost ("ChangeEquipmentDistrict")]
+        public IActionResult ChangeEquipmentDistrict (ChangeEquipmentLocationDTO equipDto)
+        {
+            var existingEquipment = EquipmentRepository.FindOneForUdpdateOrDelete(equipDto.EquipmentId);
+            if (existingEquipment == null || !existingEquipment.IsAvailable)
+            {
+                return NotFound("Equipment was not found or not available");
+            }
+
+            var districtEquipment = mDistrictEquipmentRepo.FindDistrictEquipment(existingEquipment.EquipmentId);
+            if (districtEquipment == null)
+            {
+                return BadRequest("districtEquipment not found, cannot archive the Equipment.");
+            }
+            var district = DistrictRepository.FindOneForUdpdateOrDelete(equipDto.DistrictId);
+
+            // adding old record to EquipmentArchieve
+            var archiveRecord = new EquipmentArchieve
+            {
+                EquipmentId = existingEquipment.EquipmentId,
+                Name = existingEquipment.Name,
+                DistrcitId = districtEquipment.DistrictId,
+                Type = existingEquipment.Type,
+                StartDate = districtEquipment.StartDate,
+                EndDate = DateTime.Now,
+            };
+
+            equipmentArchieveRepo.Create(archiveRecord);
+
+            //remove old record from districtEquipment as it will be double complex primaryKey
+            mDistrictEquipmentRepo.Delete(districtEquipment);
+
+            //adding a new districtEquipment record with new district location
+            var newdistrictEquipment = new DistrictEquibment
+            {
+                DistrictId = equipDto.DistrictId,
+                EquipmentId = equipDto.EquipmentId,
+                StartDate = DateTime.Now
+            };
+
+            mDistrictEquipmentRepo.Create(newdistrictEquipment);
+
+
+
+            return Ok($"Equipment '{existingEquipment.Name}' assigned to district '{district.Name}'.");
+
+
+
+        }
+
+
     }
 }

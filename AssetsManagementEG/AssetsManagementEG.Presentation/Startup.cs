@@ -46,7 +46,7 @@ namespace AssetsManagementEG.Presentation
             services.AddScoped<CompanyLRepository>();
             services.AddScoped<ContractCarRepository>();
 
-
+            // Many-Many Repo
             services.AddScoped<MDistrictCarRepo>();
             services.AddScoped<MDistrictEquipmentRepo>();
             services.AddScoped<MDistrictLaborsRepo>();
@@ -56,6 +56,12 @@ namespace AssetsManagementEG.Presentation
             services.AddScoped<CarArchiveRepo>();
 
             services.AddScoped<CarContractorsRepository>();
+
+            // archieved scoped 
+            services.AddScoped<CarContractsArchieveRepo>();
+            services.AddScoped<compLaborArchieveRepo>();
+            services.AddScoped<distLaborArchieveRepo>();
+            services.AddScoped<EquipmentArchieveRepo>();
 
             services.AddAuthentication(op =>
             {

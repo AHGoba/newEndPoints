@@ -19,5 +19,10 @@ namespace AssetsManagementEG.Repositories.Many_ManyRepo
         {
             return context.DistrictLabors;
         }
+
+        public DistrictLabors FindDistrictLabor (int laborId)
+        {
+            return context.DistrictLabors.FirstOrDefault(dl => dl.LaborsId == laborId);
+        }
     }
 }

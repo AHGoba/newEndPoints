@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zEOWhKpkbJgQxsb28jWLDYYS8hr+MrlJBJxZoRLJqQEWStVaAdlVrDUlJkX6TniQrd2rr6b1FUeTovnsmm/7Cw==",
+  "dgSpecHash": "vLwoW3GOIKp3ChS0ReFbWopaBv0FjEE2xILHft8EUiOYQrNTmBwJp3SQLcLwGziHEislAWD/66OjqOPiM1m0tw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 08-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj",
+  "projectFilePath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 23-04-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.Context\\AssetsManagementEG.Context.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ahmed.hamdy.50117\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.32\\microsoft.aspnetcore.cryptography.internal.3.1.32.nupkg.sha512",
     "C:\\Users\\ahmed.hamdy.50117\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.32\\microsoft.aspnetcore.cryptography.keyderivation.3.1.32.nupkg.sha512",

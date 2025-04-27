@@ -19,5 +19,10 @@ namespace AssetsManagementEG.Repositories.Many_ManyRepo
         {
             return context.CompanyLabors.FirstOrDefault(d => d.ComapanyID == companyId);
         }
+
+        public CompanyLabors FindCompanyLaborsRecordByLaobr(int laborId)
+        {
+            return context.CompanyLabors.FirstOrDefault(d => d.ComapanyID == laborId);
+        }
     }
 }

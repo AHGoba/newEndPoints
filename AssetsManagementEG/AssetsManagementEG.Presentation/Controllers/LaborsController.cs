@@ -10,6 +10,8 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using AssetsManagementEG.Repositories.ArchiveRepo;
 using AssetsManagementEG.Models.Models.Archive;
+using AssetsManagementEG.Context.Context;
+using AssetsManagementEG.DTOs.Cars;
 
 namespace AssetsManagementEG.Presentation.Controllers
 {
@@ -23,9 +25,11 @@ namespace AssetsManagementEG.Presentation.Controllers
         CompanyLRepository companyLRepository;
         MCompanyLaborsRepo mCompanyLaborsRepo;
         compLaborArchieveRepo compLaborArchieveRepo;
+        distLaborArchieveRepo DistLaborArchieveRepo;
         public LaborsController(LaborsRepository laborsRepository, DistrictRepository _districtRepository, 
             MDistrictLaborsRepo _mDistrictLaborsRepo, CompanyLRepository _companyLRepository, MCompanyLaborsRepo _mCompanyLaborsRepo
-           , compLaborArchieveRepo _compLaborArchieveRepo)
+           , compLaborArchieveRepo _compLaborArchieveRepo
+            , distLaborArchieveRepo _DistLaborArchieveRepo)
         {
             LaborsRepository = laborsRepository;
             DistrictRepository = _districtRepository;
@@ -33,6 +37,8 @@ namespace AssetsManagementEG.Presentation.Controllers
             companyLRepository = _companyLRepository;
             mCompanyLaborsRepo = _mCompanyLaborsRepo;
             compLaborArchieveRepo = _compLaborArchieveRepo;
+            DistLaborArchieveRepo = _DistLaborArchieveRepo;
+
         }
 
         [HttpGet]
@@ -210,19 +216,150 @@ namespace AssetsManagementEG.Presentation.Controllers
             return Ok("The Worker was updated successfully");
         }
 
+        //[HttpDelete]
+        //[Route("{Id}")]
+        //public IActionResult Delete(int Id)
+        //{
+        //    var existingWorker = LaborsRepository.FindOneForUdpdateOrDelete(Id);
+        //    if (existingWorker == null)
+        //    {
+        //        return NotFound("Car not found");
+        //    }
+
+        //    LaborsRepository.Delete(existingWorker);
+        //    return Ok("The Worker was deleted successfully");
+        //}
+
+
         [HttpDelete]
-        [Route("{Id}")]
-        public IActionResult Delete(int Id)
+        [Route ("ArchiveLabor/{laborId}")]
+        public IActionResult ArchiveLabor (int laborId)
         {
-            var existingWorker = LaborsRepository.FindOneForUdpdateOrDelete(Id);
-            if (existingWorker == null)
+            var existingLabor = LaborsRepository.FindOneForUdpdateOrDelete(laborId);
+            if (existingLabor == null || !existingLabor.IsAvailable)
             {
-                return NotFound("Car not found");
+                return NotFound("Labor was not found or not available"); 
             }
 
-            LaborsRepository.Delete(existingWorker);
-            return Ok("The Worker was deleted successfully");
+            var districtLabor = mDistrictLaborsRepo.FindDistrictLabor(laborId);
+            if (districtLabor == null)
+            {
+                return BadRequest("DistrictCar not found, cannot archive the Labor.");
+            }
+
+
+
+            //get company name related to this labor 
+            var companylaborRecord = mCompanyLaborsRepo.FindCompanyLaborsRecordByLaobr(existingLabor.LaborsId);
+            if (companylaborRecord == null)
+            {
+                return BadRequest("CompanyLabor record not found for this labor.");
+            }
+            var company = companyLRepository.FindOneForUdpdateOrDelete(companylaborRecord.ComapanyID);
+
+            //adding old record to DistLaborArchieve 
+            var archiveRecord = new DistLaborArchieve
+            {
+                LaborId = existingLabor.LaborsId,
+                FullName = existingLabor.FullName,
+                PhoneNumber = existingLabor.PhoneNumber,
+                Position = existingLabor.Position,
+                companyName = company.Name,
+                DistrictId = districtLabor.DistrictId,
+                StartDate = districtLabor.StartDate,
+                EndDate = DateTime.Now
+            };
+
+
+            existingLabor.IsInService = false;
+
+            DistLaborArchieveRepo.Create(archiveRecord);
+            mDistrictLaborsRepo.Delete(districtLabor);
+            LaborsRepository.Update(existingLabor);
+
+            return Ok("The Labor was archived successfully.");
         }
+
+
+        [HttpPost("ReturnLaborToService")]
+        public IActionResult ReturnLaborToService(ChangeLaborStateDTO dto)
+        {
+            // 1. التحقق من وجود العامل
+
+            var existingLabor = LaborsRepository.FindOneForUdpdateOrDelete(dto.LaborId);
+            if (existingLabor == null)
+            {
+                return NotFound("The specified labor was not found.");
+            }
+
+            if (existingLabor.IsInService == true)
+            {
+                return BadRequest("This labor is already in service.");
+            }
+
+            // 2. التحقق من أن الدستركت اللي هيترجع ليه موجود
+            var district = DistrictRepository.FindOneForUdpdateOrDelete(dto.DistrictId);
+            if (district == null)
+            {
+                return NotFound("The specified district was not found.");
+            }
+
+            // 3. تغيير حالة العامل إلى "في الخدمة"
+            existingLabor.IsInService = true;
+            LaborsRepository.Update(existingLabor);
+
+            // 4. إضافة سجل جديد للعامل في DistrictLabors
+            var newDistrictRecord = new DistrictLabors
+            {
+                LaborsId = dto.LaborId,
+                DistrictId = dto.DistrictId,
+                StartDate = DateTime.Now
+            };
+            mDistrictLaborsRepo.Create(newDistrictRecord);
+
+            // 5. ✅ لو بعت شركة جديدة يتم تحديثها كمان
+            if (!string.IsNullOrEmpty(dto.CompanyName))
+            {
+                var company = companyLRepository.FindCompany(dto.CompanyName);
+                if (company == null)
+                {
+                    return BadRequest($"Company with name {dto.CompanyName} does not exist.");
+                }
+
+                var oldCompanyLaborRecord = mCompanyLaborsRepo.FindCompanyLaborsRecordByLaobr(existingLabor.LaborsId);
+                if (oldCompanyLaborRecord != null)
+                {
+                    // أرشفة السجل القديم
+                    var compLaborArchive = new CompLaborArchieve()
+                    {
+                        CompanyId = oldCompanyLaborRecord.ComapanyID,
+                        LaborId = existingLabor.LaborsId,
+                        FullName = existingLabor.FullName,
+                        PhoneNumber = existingLabor.PhoneNumber,
+                        Position = existingLabor.Position,
+                        CompanyName = company.Name,
+                        StartDate = oldCompanyLaborRecord.StartDate,
+                        EndDate = DateTime.Now
+                    };
+                    compLaborArchieveRepo.Create(compLaborArchive);
+
+                    // حذف السجل القديم
+                    mCompanyLaborsRepo.Delete(oldCompanyLaborRecord);
+                }
+
+                // إضافة سجل جديد للشركة الجديدة
+                var newCompanyLabor = new CompanyLabors()
+                {
+                    ComapanyID = company.CompanyID,
+                    LaborsID = existingLabor.LaborsId,
+                    StartDate = DateTime.Now
+                };
+                mCompanyLaborsRepo.Create(newCompanyLabor);
+            }
+
+            return Ok($"Labor '{existingLabor.FullName}' has been returned to service and assigned to district '{district.Name}'.");
+        }
+
 
 
 
