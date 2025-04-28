@@ -10,5 +10,6 @@ namespace AssetsManagementEG.DTOs.Cars
         public int DistrictId   { get; set; }   
         public int ContractId   { get; set; }
         //public bool IsInService { get; set; }
+        public bool isUser { get; set; }
     }
 }

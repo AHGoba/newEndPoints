@@ -221,24 +221,24 @@ namespace AssetsManagementEG.Presentation.Controllers
         }
 
         // change the inservice of the car as if we deleted it and add its history in the archive table
-        [HttpDelete]
-        [Route("ArchiveCar/{carId}")]
-        public IActionResult ArchiveCar(int carId)
+        [HttpPost]
+        [Route("ArchiveCar")]
+        public IActionResult ArchiveCar(ChangeCarStateDTO cDTo)
         {
-            var existingCar = CarRepository.FindOneForUdpdateOrDelete(carId);
-            //انا هنا بهندل ان العربية دى لازم تكون متاحه مش فى تاسك معين عشان اعرف انقلها 
+            var existingCar = CarRepository.FindOneForUdpdateOrDelete(cDTo.CarId);
             if (existingCar == null || !existingCar.IsAvailable)
             {
-                return NotFound("Car was not found or not availabel : assigned to another task");
+                return NotFound("Car was not found or not available: assigned to another task.");
             }
 
-            var districtCar = mDistrictCarRepo.FindDistrictCar(carId);
+            var districtCar = mDistrictCarRepo.FindDistrictCar(cDTo.CarId);
             if (districtCar == null)
             {
                 return BadRequest("DistrictCar not found, cannot archive the car.");
             }
 
-            var archiveRecord = new CarArchieve
+            // Create archive record for the car
+            var archiveRecord = new CarArchieve 
             {
                 CarId = existingCar.CarId,
                 DistrictId = districtCar.DistrictId,
@@ -247,50 +247,45 @@ namespace AssetsManagementEG.Presentation.Controllers
                 StartDate = districtCar.StartDate,
                 EndDate = DateTime.Now
             };
-
-            var oldcontractCar = mContractCarsRepo.FindOneForUpdateOrDelete(carId);
-            if (oldcontractCar == null)
-            {
-                return BadRequest("ContractCar not found, cannot update contract.");
-            }
-
-            // adding this new contractCar To Archieve 
-            var archieveContarctCar = new CarContractsArchieve()
-            {
-                CarId = existingCar.CarId,
-                ContractId = oldcontractCar.ContractId,
-                StartDate = DateTime.Now
-            };
-
-            //then from table of contract get the contract
-            var updatedContract = ContractCarRepository.FindContract(oldcontractCar.ContractId);
-            if (updatedContract == null)
-            {
-                return BadRequest("not found this contract or this car is owned by company ");
-            }
-            updatedContract.IsAvailable = true;
-
-            existingCar.IsInService = false;
-
-
-            // يبقا اول حاجه بعملها هى ارشيف للعربيات 
-
             carArchiveRepo.Create(archiveRecord);
+
+            // لو بعث ContractId نأرشف العقد القديم
+            if ( cDTo.ContractId != 0 || cDTo.isUser == true )  
+            {
+                var oldContractCar = mContractCarsRepo.FindOneForUpdateOrDelete(cDTo.CarId);
+                if (oldContractCar != null)
+                {
+                    var archiveContractCar = new CarContractsArchieve
+                    {
+                        CarId = existingCar.CarId,
+                        ContractId = oldContractCar.ContractId,
+                        StartDate = oldContractCar.StartDate,
+                        EndDate = DateTime.Now
+                    };
+                    carContractsArchieveRepo.Create(archiveContractCar);
+
+                    // حذف ربط العربية بالعقد القديم
+                    mContractCarsRepo.Delete(oldContractCar);
+
+                    var contract = ContractCarRepository.FindContract(oldContractCar.ContractId);
+                    if (contract != null)
+                    {
+                        contract.IsAvailable = true;
+                        ContractCarRepository.Update(contract);
+                    }
+                }
+            }
+
+            // Set car out of service and remove from district
+            existingCar.IsInService = false;
             CarRepository.Update(existingCar);
-            ContractCarRepository.Update(updatedContract);
             mDistrictCarRepo.Delete(districtCar);
-
-            // برضوا بحتاج اعمل ارشيف للعقود 
-
-            //اضافه الريكورد بتاع ال عربية والعقد الى الارشيف 
-            // وكمان ازاله الريكورد من ال contractCar
-            carContractsArchieveRepo.Create(archieveContarctCar);
-            mContractCarsRepo.Delete(oldcontractCar);
 
             return Ok("The car was archived successfully.");
         }
 
-        
+
+
 
         [HttpPost]
         [Route("ReactivateCar")]
@@ -299,13 +294,13 @@ namespace AssetsManagementEG.Presentation.Controllers
             var existingCar = CarRepository.FindOneForUdpdateOrDelete(cDTo.CarId);
             if (existingCar == null)
             {
-                return NotFound("Car was not found");
+                return NotFound("Car was not found.");
             }
 
-            var contract = ContractCarRepository.FindContract(cDTo.ContractId);
-            if (contract == null)
+            var district = DistrictRepository.FindOneForUdpdateOrDelete(cDTo.DistrictId);
+            if (district == null)
             {
-                return BadRequest($"The contract with Id {cDTo.ContractId} does not exist.");
+                return NotFound("District not found.");
             }
 
             existingCar.IsInService = true;
@@ -317,18 +312,31 @@ namespace AssetsManagementEG.Presentation.Controllers
                 CarId = existingCar.CarId,
                 StartDate = DateTime.Now,
             };
-
-            var newContractCar = new ContractsCars
-            {
-                CarId = existingCar.CarId,
-                ContractId = cDTo.ContractId,
-                StartDate = DateTime.Now,
-            };
-
             mDistrictCarRepo.Create(newDistrictCar);
-            mContractCarsRepo.Create(newContractCar);
 
-            return Ok($"The car with plate number {existingCar.PlateNum} is now reactivated and assigned to the district.");
+            if ( cDTo.ContractId != 0)
+            {
+                // لو بعت عقد جديد اربط العربية بيه
+                var contract = ContractCarRepository.FindContract(cDTo.ContractId);
+                if (contract == null)
+                {
+                    return BadRequest($"The contract with Id {cDTo.ContractId} does not exist.");
+                }
+
+                contract.IsAvailable = false;
+                ContractCarRepository.Update(contract);
+
+                var newContractCar = new ContractsCars
+                {
+                    CarId = existingCar.CarId,
+                    ContractId = cDTo.ContractId,
+                    StartDate = DateTime.Now,
+                };
+                mContractCarsRepo.Create(newContractCar);
+            }
+            // لو ما بعتش حاجة ➔ يفضل مرتبط بالعقد القديم تلقائي بدون تغيير.
+
+            return Ok($"The car with plate number {existingCar.PlateNum} is now reactivated and assigned to district '{district.Name}'.");
         }
 
 

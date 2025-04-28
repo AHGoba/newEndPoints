@@ -317,7 +317,7 @@ namespace AssetsManagementEG.Presentation.Controllers
 
 
 
-        /////////////////////////////// get district (labors- equipments - cars) for Super Userrrrrrrr
+        ///////////////////////////////////////////////// get district (labors- equipments - cars) for Super Userrrrrrrr
         [HttpPost("GetDistrictCarsForSuperUser")]
         public IActionResult GetDistrictCarsForSuperUser([FromBody] List<int> districtIds)
         {
@@ -364,6 +364,8 @@ namespace AssetsManagementEG.Presentation.Controllers
                     IsAvailable = cr.IsAvailable,
                     carIsCompanyOwned = cr.IsCompanyOwned,
                     carIsInService = cr.IsInService,
+                    contractId = cr.ContractsCars
+                    .Select(cc => cc.ContractId).FirstOrDefault(),
                     contractName = cr.ContractsCars
                         .Select(cc => cc.Contract.ContractName)
                         .FirstOrDefault(),
@@ -372,7 +374,9 @@ namespace AssetsManagementEG.Presentation.Controllers
                         .FirstOrDefault(),
                     districtName = cr.DistrictCar
                         .Select(dc => dc.District.Name)
-                        .FirstOrDefault()
+                        .FirstOrDefault(),
+                        districtIds = cr.DistrictCar
+                        .Select(d=> d.DistrictId).FirstOrDefault()
                 }).ToList();
 
             return Ok(cars);

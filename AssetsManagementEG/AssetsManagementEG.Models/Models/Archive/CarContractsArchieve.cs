@@ -8,9 +8,10 @@ namespace AssetsManagementEG.Models.Models.Archive
     {
         public int Id { get; set; }
         public int CarId { get; set; }
-        public int CarPlateNume { get; set; }
+        public string CarPlateNume { get; set; }
         public int? ContractId { get; set; }
         public string ContractName { get; set; }
+        public string DistrictName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
     }
