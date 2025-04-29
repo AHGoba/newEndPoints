@@ -129,7 +129,7 @@ namespace AssetsManagementEG.Presentation.Controllers
                 ContractId = c.ContractId,
                 ContractName = c.ContractName,
                 IsAvailable = c.IsAvailable,
-                CarContractorsName = c.CarContractors != null ? c.CarContractors.Name : null
+                CarContractorsName = c.ContractName
             }).ToList();
 
             return Ok(result);
