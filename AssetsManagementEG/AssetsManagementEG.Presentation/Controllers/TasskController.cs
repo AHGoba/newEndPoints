@@ -450,5 +450,89 @@ namespace AssetsManagementEG.Presentation.Controllers
 
         }
         #endregion
+
+
+
+        //Get Tasks for Dashboard ( superUser and Admin ) 
+
+        [HttpPost("GetOldestOnGoingTasksWithDetailsForDistricts")]
+        public IActionResult GetOldestOnGoingTasksWithDetailsForDistricts(List<int> districtIds)
+        {
+            // تحقق إن المناطق موجودة
+            var districts = context.District
+                .Where(d => districtIds.Contains(d.DistrictId))
+                .ToList();
+
+            if (!districts.Any())
+            {
+                return NotFound("No districts found for the provided IDs.");
+            }
+
+            // نجيب كل التاسكات الغير مكتملة
+            var tasks = context.Tassk
+                .Where(t => districtIds.Contains(t.DistrictId) && t.IsCompleted == false)
+                .OrderBy(t => t.StartDate)
+                .ToList();
+
+            if (!tasks.Any())
+            {
+                return NotFound("No ongoing tasks found for the provided districts.");
+            }
+
+            // نجهز الجداول المساعدة (عشان نربط المهمات بالعمال والعربيات والمعدات)
+            var taskCars = context.TaskCar.ToList();
+            var cars = context.Car.ToList();
+            var taskEquipments = context.TaskEquipment.ToList();
+            var equipments = context.Equipment.ToList();
+            var taskLabors = context.TaskLabors.ToList();
+            var labors = context.Labors.ToList();
+
+            // نرجع أول تاسك لكل دستركت بكل التفاصيل
+            var oldestTasksPerDistrict = tasks
+                .GroupBy(t => t.DistrictId)
+                .Select(g => g.OrderBy(t => t.StartDate).First())
+                .Select(task => new
+                {
+                    TaskId = task.TaskId,
+                    TaskName = task.Name,
+                    DistrictId = task.DistrictId,
+                    DistrictName = districts.FirstOrDefault(d => d.DistrictId == task.DistrictId)?.Name,
+                    StartDate = task.StartDate,
+
+            // ✅ نرجع العربيات المرتبطة
+            Cars = taskCars.Where(tc => tc.TaskId == task.TaskId)
+                                   .Join(cars,
+                                   tc => tc.CarId,
+                                   c => c.CarId,
+                                   (tc, c) => c.PlateNum)
+                                   .ToList(),
+
+                    // شرح للحوار اللى فوق دا 
+                    //var result =
+                    //table1
+                    //.Where(condition_on_table1) // فلترة مبدئية (اختياري)
+                    //.Join(
+                    //table2,                  // التابل التاني اللي عايز أربطه
+                    //table1KeySelector,        // المفتاح الأساسي من الجدول الأول
+                    // table2KeySelector,        // المفتاح الأساسي من الجدول التاني
+                    //(t1, t2) => whatYouWant    // النتيجة اللي عايز ترجعها
+                    //    )
+                    //.ToList();                     // رجّعهم كلهم في List
+
+            // ✅ نرجع المعدات المرتبطة
+            Equipments = taskEquipments.Where(te => te.TaskId == task.TaskId)
+                                               .Join(equipments, te => te.EquipmentId, e => e.EquipmentId, (te, e) => e.Name)
+                                               .ToList(),
+
+            // ✅ نرجع العمال المرتبطين
+            Labors = taskLabors.Where(tl => tl.TaskId == task.TaskId)
+                                       .Join(labors, tl => tl.LaborsId, l => l.LaborsId, (tl, l) => l.FullName)
+                                       .ToList()
+                })
+                .ToList();
+
+            return Ok(oldestTasksPerDistrict);
+        }
+
     }
 }

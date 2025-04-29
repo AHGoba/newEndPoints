@@ -5,6 +5,7 @@ using AssetsManagementEG.Repositories.Many_ManyRepo;
 using AssetsManagementEG.Repositories.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -58,7 +59,7 @@ namespace AssetsManagementEG.Presentation.Controllers
 
             // here in the logic below  i'm sending the id of the district so i can get all contracts related to this id 
 
-            var districtContracts = ContractCarRepository.FindContracts(Id).Select(c => new
+            var districtContracts = ContractCarRepository.FindContracts(Id).Where(c=> c.EndDate> DateTime.Now).Select(c => new
             {
                 contractId = c.ContractId,
                 contractName = c.ContractName,
@@ -129,7 +130,9 @@ namespace AssetsManagementEG.Presentation.Controllers
                 ContractId = c.ContractId,
                 ContractName = c.ContractName,
                 IsAvailable = c.IsAvailable,
-                CarContractorsName = c.ContractName
+                CarContractorsName = c.ContractName,
+                startDate = c.StartDate
+
             }).ToList();
 
             return Ok(result);
