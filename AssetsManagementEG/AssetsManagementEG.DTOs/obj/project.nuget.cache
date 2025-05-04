@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "KDKxfw+AnZg=",
+  "dgSpecHash": "ACb7V7CLmO4F1tLLTmzK+U9eYH0eHUkbMxQz4Pg7VL+txZGJwl0VDo/86DVxs1i2dAD1HSfqEViXehYgT1cjXQ==",
   "success": true,
-  "projectFilePath": "D:\\EG AssetsManagement Project\\latest\\newEndPoints\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\ahmed.hamdy.50117\\Desktop\\wpf app\\AssetsLogin 05-05-2025\\newEndPoints\\AssetsManagementEG\\AssetsManagementEG.DTOs\\AssetsManagementEG.DTOs.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ahmed.hamdy.50117\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\ahmed.hamdy.50117\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\ahmed.hamdy.50117\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

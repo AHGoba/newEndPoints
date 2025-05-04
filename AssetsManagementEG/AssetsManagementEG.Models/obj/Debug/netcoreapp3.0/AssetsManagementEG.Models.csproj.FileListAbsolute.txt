@@ -138,3 +138,13 @@ D:\EG AssetsManagement Project\latest\newEndPoints\newEndPoints\AssetsManagement
 D:\EG AssetsManagement Project\latest\newEndPoints\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.sourcelink.json
 D:\EG AssetsManagement Project\latest\newEndPoints\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.dll
 D:\EG AssetsManagement Project\latest\newEndPoints\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.pdb
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.deps.json
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.dll
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\bin\Debug\netcoreapp3.0\AssetsManagementEG.Models.pdb
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.csproj.AssemblyReference.cache
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.AssemblyInfoInputs.cache
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.AssemblyInfo.cs
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.csproj.CoreCompileInputs.cache
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.dll
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Models\obj\Debug\netcoreapp3.0\AssetsManagementEG.Models.pdb

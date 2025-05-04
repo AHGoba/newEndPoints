@@ -495,6 +495,7 @@ namespace AssetsManagementEG.Presentation.Controllers
                 {
                     TaskId = task.TaskId,
                     TaskName = task.Name,
+                    Description = task.Description,
                     DistrictId = task.DistrictId,
                     DistrictName = districts.FirstOrDefault(d => d.DistrictId == task.DistrictId)?.Name,
                     StartDate = task.StartDate,

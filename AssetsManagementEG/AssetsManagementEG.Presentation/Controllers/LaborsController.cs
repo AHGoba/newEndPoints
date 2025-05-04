@@ -360,6 +360,30 @@ namespace AssetsManagementEG.Presentation.Controllers
             return Ok($"Labor '{existingLabor.FullName}' has been returned to service and assigned to district '{district.Name}'.");
         }
 
+        ///////////// get labors out of service 
+        [HttpGet("OutOfService")]
+        public IActionResult GetLaborsOutOfService()
+        {
+        var labors = LaborsRepository.GetAll()
+        .Where(l => l.IsInService == false)
+        .Include(l => l.CompanyLabors)
+        .ThenInclude(cl => cl.CompanyL)
+        .Select(l => new
+        {
+        laborId = l.LaborsId,
+        laborFullName = l.FullName,
+        laborPhoneNumber = l.PhoneNumber,
+        laborPosition = l.Position,
+        CompanyName = l.CompanyLabors
+                        .OrderByDescending(cl => cl.StartDate)
+                        .Select(cl => cl.CompanyL.Name)
+                        .FirstOrDefault()
+        })
+         .ToList();
+
+            return Ok(labors);
+        }
+
 
 
 
