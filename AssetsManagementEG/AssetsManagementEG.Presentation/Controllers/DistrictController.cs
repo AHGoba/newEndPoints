@@ -427,7 +427,7 @@ namespace AssetsManagementEG.Presentation.Controllers
                     .Select(cl => cl.CompanyL.Name)
                     .FirstOrDefault(),
                     districtName = l.DistrictLabors
-                    .Select(l=> l.District.Name)
+                    .Select(l=> l.District.Name).FirstOrDefault()
                 });
 
             return Ok(labors);
@@ -466,11 +466,14 @@ namespace AssetsManagementEG.Presentation.Controllers
                 .Where(e => equipIds.Contains(e.EquipmentId))
                 .Select(e => new
                 {
-                    EquipmentIid = e.EquipmentId,
+                    EquipmentId = e.EquipmentId,
                     EquipmentName = e.Name,
                     EquipmentType = e.Type,
                     EquipmentIsInService = e.IsInService,
-                    EquipmentIsAvailable = e.IsAvailable
+                    IsAvailable = e.IsAvailable,
+                    districtName = e.DistrictEquibment
+                        .Select(dc => dc.District.Name)
+                        .FirstOrDefault(),
                 });
 
             return Ok(Equipments);

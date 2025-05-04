@@ -167,7 +167,7 @@ namespace AssetsManagementEG.Presentation.Controllers
 
 
             var query = tasks
-                .Where(task => task != null && task.IsCompleted == true)
+                .Where(task => task != null && task.IsCompleted == false)
                 .Select(task => new GetAllTasksDTO
             {
                 TaskId = task.TaskId,
@@ -499,8 +499,8 @@ namespace AssetsManagementEG.Presentation.Controllers
                     DistrictName = districts.FirstOrDefault(d => d.DistrictId == task.DistrictId)?.Name,
                     StartDate = task.StartDate,
 
-            // ✅ نرجع العربيات المرتبطة
-            Cars = taskCars.Where(tc => tc.TaskId == task.TaskId)
+                    // ✅ نرجع العربيات المرتبطة
+                    carsNames = taskCars.Where(tc => tc.TaskId == task.TaskId)
                                    .Join(cars,
                                    tc => tc.CarId,
                                    c => c.CarId,
@@ -519,13 +519,13 @@ namespace AssetsManagementEG.Presentation.Controllers
                     //    )
                     //.ToList();                     // رجّعهم كلهم في List
 
-            // ✅ نرجع المعدات المرتبطة
-            Equipments = taskEquipments.Where(te => te.TaskId == task.TaskId)
+                    // ✅ نرجع المعدات المرتبطة
+                    equipmentsNames = taskEquipments.Where(te => te.TaskId == task.TaskId)
                                                .Join(equipments, te => te.EquipmentId, e => e.EquipmentId, (te, e) => e.Name)
                                                .ToList(),
 
-            // ✅ نرجع العمال المرتبطين
-            Labors = taskLabors.Where(tl => tl.TaskId == task.TaskId)
+                    // ✅ نرجع العمال المرتبطين
+                    laborsNames = taskLabors.Where(tl => tl.TaskId == task.TaskId)
                                        .Join(labors, tl => tl.LaborsId, l => l.LaborsId, (tl, l) => l.FullName)
                                        .ToList()
                 })
