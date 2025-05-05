@@ -339,6 +339,27 @@ namespace AssetsManagementEG.Presentation.Controllers
             return Ok($"The car with plate number {existingCar.PlateNum} is now reactivated and assigned to district '{district.Name}'.");
         }
 
+        [HttpGet("OutOfService")]
+        public IActionResult GetOutOfServiceCars()
+        {
+            var cars = CarRepository.GetAll()
+                .Where(car => car.IsInService == false); // Filter out-of-service cars
+
+            var result = cars.Select(car => new GetAllCarsDTO
+            {
+                CarId = car.CarId,
+                Type = car.Type,
+                PlateNum = car.PlateNum,
+                IsAvailable = car.IsAvailable,
+                IsCompanyOwned = car.IsCompanyOwned,
+                IsInService = car.IsInService
+            }).ToList();
+
+            return Ok(result);
+        }
+
+
+
 
 
     }
