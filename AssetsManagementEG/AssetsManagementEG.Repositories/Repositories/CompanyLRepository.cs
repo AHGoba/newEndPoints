@@ -25,5 +25,10 @@ namespace AssetsManagementEG.Repositories.Repositories
         {
             return context.CompanyL.FirstOrDefault(d => d.Name == companyName);
         }
+
+        public CompanyL FindCompanyById(int id)
+        {
+            return context.CompanyL.FirstOrDefault(c => c.CompanyID == id);
+        }
     }
 }

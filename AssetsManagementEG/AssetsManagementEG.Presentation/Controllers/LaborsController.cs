@@ -174,17 +174,18 @@ namespace AssetsManagementEG.Presentation.Controllers
 
             if (c.CompanyName != null)
             {
-
+                
                 // getting company and companyLabor Recored 
                 var company = companyLRepository.FindCompany(c.CompanyName);
-                var oldcompanyLaborsRecord = mCompanyLaborsRepo.FindCompanyLaborsRecord(company.CompanyID);
+                var oldcompanyLaborsRecord = mCompanyLaborsRepo.FindCompanyLaborsRecordByLabor(existingWorker.LaborsId);
+                var oldCompany = companyLRepository.FindCompanyById(oldcompanyLaborsRecord.ComapanyID);
                 if (company != null && oldcompanyLaborsRecord != null)
                 {
                     // adding record to archieve 
                     var complaborarchieveRecord = new CompLaborArchieve()
                     {
                         CompanyId = company.CompanyID,
-                        CompanyName = company.Name,
+                        CompanyName = oldCompany.Name,
                         LaborId = existingWorker.LaborsId,
                         FullName = existingWorker.FullName,
                         PhoneNumber = existingWorker.PhoneNumber,
@@ -230,7 +231,6 @@ namespace AssetsManagementEG.Presentation.Controllers
         //    return Ok("The Worker was deleted successfully");
         //}
 
-
         [HttpDelete]
         [Route ("ArchiveLabor/{laborId}")]
         public IActionResult ArchiveLabor (int laborId)
@@ -250,7 +250,7 @@ namespace AssetsManagementEG.Presentation.Controllers
 
 
             //get company name related to this labor 
-            var companylaborRecord = mCompanyLaborsRepo.FindCompanyLaborsRecordByLaobr(existingLabor.LaborsId);
+            var companylaborRecord = mCompanyLaborsRepo.FindCompanyLaborsRecordByLabor(existingLabor.LaborsId);
             if (companylaborRecord == null)
             {
                 return BadRequest("CompanyLabor record not found for this labor.");
@@ -326,7 +326,7 @@ namespace AssetsManagementEG.Presentation.Controllers
                     return BadRequest($"Company with name {dto.CompanyName} does not exist.");
                 }
 
-                var oldCompanyLaborRecord = mCompanyLaborsRepo.FindCompanyLaborsRecordByLaobr(existingLabor.LaborsId);
+                var oldCompanyLaborRecord = mCompanyLaborsRepo.FindCompanyLaborsRecordByLabor(existingLabor.LaborsId);
                 if (oldCompanyLaborRecord != null)
                 {
                     // أرشفة السجل القديم

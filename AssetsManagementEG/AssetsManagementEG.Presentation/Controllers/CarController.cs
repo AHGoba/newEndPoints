@@ -345,14 +345,14 @@ namespace AssetsManagementEG.Presentation.Controllers
             var cars = CarRepository.GetAll()
                 .Where(car => car.IsInService == false); // Filter out-of-service cars
 
-            var result = cars.Select(car => new GetAllCarsDTO
+            var result = cars.Select(car => new 
             {
                 CarId = car.CarId,
-                Type = car.Type,
-                PlateNum = car.PlateNum,
-                IsAvailable = car.IsAvailable,
-                IsCompanyOwned = car.IsCompanyOwned,
-                IsInService = car.IsInService
+                type = car.Type,
+                carPlateNum = car.PlateNum,
+                isAvailable = car.IsAvailable,
+                carIsCompanyOwned = car.IsCompanyOwned,
+                carIsInService = car.IsInService
             }).ToList();
 
             return Ok(result);
