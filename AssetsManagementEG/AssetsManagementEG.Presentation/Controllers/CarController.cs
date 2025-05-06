@@ -245,7 +245,7 @@ namespace AssetsManagementEG.Presentation.Controllers
                 Type = existingCar.Type,
                 PlateNum = existingCar.PlateNum,
                 StartDate = districtCar.StartDate,
-                EndDate = DateTime.Now
+                EndDate = DateTime.Now,
             };
             carArchiveRepo.Create(archiveRecord);
 
@@ -258,9 +258,13 @@ namespace AssetsManagementEG.Presentation.Controllers
                     var archiveContractCar = new CarContractsArchieve
                     {
                         CarId = existingCar.CarId,
+                        CarPlateNume = existingCar.PlateNum,
                         ContractId = oldContractCar.ContractId,
+                        DistrictName=districtCar.District.Name,
+                        ContractName= oldContractCar.Contract.ContractName,
                         StartDate = oldContractCar.StartDate,
                         EndDate = DateTime.Now
+                        
                     };
                     carContractsArchieveRepo.Create(archiveContractCar);
 
@@ -316,6 +320,10 @@ namespace AssetsManagementEG.Presentation.Controllers
 
             if ( cDTo.ContractId != 0)
             {
+                // هنا انا عايز اجيب العقد القديم عشان اخلى حالته ب isAvaialble >> True 
+                var oldContract = existingCar.ContractsCars.Where(cc => cc.CarId == existingCar.CarId)
+                    .Select(x => x.Contract.ContractName).FirstOrDefault();
+
                 // لو بعت عقد جديد اربط العربية بيه
                 var contract = ContractCarRepository.FindContract(cDTo.ContractId);
                 if (contract == null)
@@ -336,7 +344,7 @@ namespace AssetsManagementEG.Presentation.Controllers
             }
             // لو ما بعتش حاجة ➔ يفضل مرتبط بالعقد القديم تلقائي بدون تغيير.
 
-            return Ok($"The car with plate number {existingCar.PlateNum} is now reactivated and assigned to district '{district.Name}'.");
+            return Ok($"The car with plate number {existingCar.PlateNum} is now reactivated and assigned to tritrict '{district.Name}'.");
         }
 
         [HttpGet("OutOfService")]
@@ -348,7 +356,7 @@ namespace AssetsManagementEG.Presentation.Controllers
             var result = cars.Select(car => new 
             {
                 CarId = car.CarId,
-                type = car.Type,
+                cartype = car.Type,
                 carPlateNum = car.PlateNum,
                 isAvailable = car.IsAvailable,
                 carIsCompanyOwned = car.IsCompanyOwned,

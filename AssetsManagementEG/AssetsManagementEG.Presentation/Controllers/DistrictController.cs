@@ -186,10 +186,14 @@ namespace AssetsManagementEG.Presentation.Controllers
                 .Where(l => LaborRecords.Contains(l.LaborsId) && l.IsAvailable&&l.IsInService)
                 .Select(l =>new
                 {
-                    LaborName = l.FullName,
-                    LaborPostion = l.Position,
-                    LaborId = l.LaborsId
-                });
+                    laborFullName = l.FullName,
+                    laborPosition = l.Position,
+                    LaborId = l.LaborsId,
+                    companyName = l.CompanyLabors
+                    .OrderByDescending(cl => cl.StartDate) // Get latest company
+                    .Select(cl => cl.CompanyL.Name)
+                    .FirstOrDefault()
+                    });
 
             return Ok(Labors) ;
         }
@@ -198,7 +202,7 @@ namespace AssetsManagementEG.Presentation.Controllers
 
 
         /////////////////////////////// get district (labors- equipments - cars) To Edit District (labors- equipments - cars)
-        ///
+        /// for Normal User 
         [HttpGet("GetDistrictCarsForEdit/{Id}")]
         public IActionResult AONGetDistrictCar(int Id)
         {
@@ -231,7 +235,11 @@ namespace AssetsManagementEG.Presentation.Controllers
                     carId = cr.CarId,
                     carIsCompanyOwned = cr.IsCompanyOwned,
                     carIsInService = cr.IsInService,
-                    contractName = cr.ContractsCars.Select(cc => cc.Contract.ContractName).FirstOrDefault()
+                    isAvailable = cr.IsAvailable,
+                    contractName = cr.ContractsCars.Select(cc => cc.Contract.ContractName).FirstOrDefault(),
+                    contractorName = cr.ContractsCars
+                    .Select(cc => cc.Contract.CarContractors.Name)
+                    .FirstOrDefault()
                 }).ToList();
 
 
@@ -261,18 +269,22 @@ namespace AssetsManagementEG.Presentation.Controllers
             //getting the equipment from Equipment table
 
             var Equipments = context.Equipment
-                .Where(e => EquipmentRecords.Contains(e.EquipmentId) && e.IsAvailable && e.IsInService)
+                .Where(e => EquipmentRecords.Contains(e.EquipmentId)  && e.IsInService)
                 .Select(e => new
                 {
                     EquipmentIid = e.EquipmentId,
                     EquipmentName = e.Name,
                     EquipmentType = e.Type,
-                    EquipmentIsInService= e.IsInService
+                    EquipmentIsInService= e.IsInService,
+                     isAvailable = e.IsAvailable,
+
                 });
 
             return Ok(Equipments);
         }
 
+
+        
         [HttpGet("GetDistrictLaborsForEdit/{Id}")]
         public IActionResult AONDistrictLabor(int Id)
         {
@@ -295,7 +307,7 @@ namespace AssetsManagementEG.Presentation.Controllers
 
             // getting Labors from labor table 
             var Labors = context.Labors
-        .Where(l => LaborRecords.Contains(l.LaborsId) && l.IsAvailable && l.IsInService)
+        .Where(l => LaborRecords.Contains(l.LaborsId)  && l.IsInService)
         .Include(l => l.CompanyLabors)  // Include CompanyLabors
         .ThenInclude(cl => cl.CompanyL)  // Include Company
         .Select(l => new
@@ -304,6 +316,7 @@ namespace AssetsManagementEG.Presentation.Controllers
             LaborFullName = l.FullName,
             LaborPosition = l.Position,
             LaborIsInservice = l.IsInService,
+            isAvailable = l.IsAvailable,
             LaborPhoneNumber = l.PhoneNumber,
             companyName = l.CompanyLabors
                 .OrderByDescending(cl => cl.StartDate) // Get latest company
