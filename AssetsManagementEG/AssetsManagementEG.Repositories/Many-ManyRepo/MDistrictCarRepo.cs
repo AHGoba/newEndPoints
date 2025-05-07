@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using AssetsManagementEG.Context.Context;
 using AssetsManagementEG.Models.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace AssetsManagementEG.Repositories.Many_ManyRepo
 {
@@ -21,7 +22,10 @@ namespace AssetsManagementEG.Repositories.Many_ManyRepo
         }
         public DistrictCar FindDistrictCar(int carId)
         {
-            return context.DistrictCar.FirstOrDefault(c => c.CarId == carId);
+            return context.DistrictCar
+            .Include(dc => dc.District) // تحميل District
+            .FirstOrDefault(dc => dc.CarId == carId);
         }
+
     }
 }

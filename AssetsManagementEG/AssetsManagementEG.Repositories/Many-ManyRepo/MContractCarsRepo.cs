@@ -1,5 +1,6 @@
 ﻿using AssetsManagementEG.Context.Context;
 using AssetsManagementEG.Models.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace AssetsManagementEG.Repositories.Many_ManyRepo
         public ContractsCars FindOneForUpdateOrDelete(int carId)
         {
             return context.ContractsCars
+                .Include(cc=> cc.Contract)
                 .Where(c=> c.CarId == carId)
                 .OrderByDescending(c=> c.StartDate) // get latest contract related to this car 
                 .FirstOrDefault(); // return only one record 

@@ -20,13 +20,13 @@ namespace AssetsManagementEG.Models.Models
         public virtual District District { get; set; }
 
         //ربط العربية بالعقود
-        public  ICollection<ContractsCars> ContractsCars { get; set; }
+        public virtual ICollection<ContractsCars> ContractsCars { get; set; }
 
         // ربط العقود بالمقاولين
         // ان كل مقاول مربوط بأكتر من عقد
         [ForeignKey("CarContractors")]
         public int? CarContractorsId { get; set; }
-        public CarContractors CarContractors { get; set; }
+        public virtual CarContractors CarContractors { get; set; }
 
     }
 }

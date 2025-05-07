@@ -255,13 +255,19 @@ namespace AssetsManagementEG.Presentation.Controllers
                 var oldContractCar = mContractCarsRepo.FindOneForUpdateOrDelete(cDTo.CarId);
                 if (oldContractCar != null)
                 {
+                       
+
+                    if (districtCar == null || oldContractCar == null)
+                    {
+                        return BadRequest("Required data not found.");
+                    }
                     var archiveContractCar = new CarContractsArchieve
                     {
                         CarId = existingCar.CarId,
                         CarPlateNume = existingCar.PlateNum,
                         ContractId = oldContractCar.ContractId,
-                        DistrictName=districtCar.District.Name,
-                        ContractName= oldContractCar.Contract.ContractName,
+                        DistrictName=districtCar.District?.Name,
+                        ContractName= oldContractCar.Contract?.ContractName,
                         StartDate = oldContractCar.StartDate,
                         EndDate = DateTime.Now
                         
@@ -320,9 +326,9 @@ namespace AssetsManagementEG.Presentation.Controllers
 
             if ( cDTo.ContractId != 0)
             {
-                // هنا انا عايز اجيب العقد القديم عشان اخلى حالته ب isAvaialble >> True 
-                var oldContract = existingCar.ContractsCars.Where(cc => cc.CarId == existingCar.CarId)
-                    .Select(x => x.Contract.ContractName).FirstOrDefault();
+                //// هنا انا عايز اجيب العقد القديم عشان اخلى حالته ب isAvaialble >> True 
+                //var oldContract = existingCar.ContractsCars.Where(cc => cc.CarId == existingCar.CarId)
+                //    .Select(x => x.Contract.ContractName).FirstOrDefault();
 
                 // لو بعت عقد جديد اربط العربية بيه
                 var contract = ContractCarRepository.FindContract(cDTo.ContractId);
