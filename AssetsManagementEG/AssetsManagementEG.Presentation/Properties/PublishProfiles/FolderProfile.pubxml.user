@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Presentation\bin\Release\netcoreapp3.0\publish\</_PublishTargetUrl>
+    <History>True|2025-05-14T09:35:59.9811281Z;True|2025-05-07T14:45:05.4340867+03:00;</History>
+  </PropertyGroup>
+</Project>

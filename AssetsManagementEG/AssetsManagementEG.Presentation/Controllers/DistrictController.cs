@@ -12,6 +12,7 @@ using System.Linq;
 using AssetsManagementEG.Context.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using AssetsManagementEG.DTOs.Cars;
 
 namespace AssetsManagementEG.Presentation.Controllers
 {
@@ -493,6 +494,57 @@ namespace AssetsManagementEG.Presentation.Controllers
 
 
 
+        }
+
+        [HttpPost("AssignCarToDistricts")]
+        public IActionResult AssignCarToDistricts([FromBody] AssignCarToDistrictsDTO dto)
+        {
+            // التحقق من وجود السيارة
+            var car = context.Car.FirstOrDefault(c => c.CarId == dto.CarId);
+            if (car == null)
+            {
+                return NotFound("Car not found.");
+            }
+
+            // التحقق من وجود المناطق
+            var existingDistricts = context.District
+                .Where(d => dto.DistrictIds.Contains(d.DistrictId))
+                .Select(d => d.DistrictId)
+                .ToList();
+
+            var notFoundDistricts = dto.DistrictIds.Except(existingDistricts).ToList();
+            if (notFoundDistricts.Any())
+            {
+                return NotFound($"Some districts were not found: {string.Join(", ", notFoundDistricts)}");
+            }
+
+            // التحقق من تجنب السجلات المكررة
+            var existingAssignments = context.DistrictCar
+                .Where(dc => dc.CarId == dto.CarId && dto.DistrictIds.Contains(dc.DistrictId))
+                .Select(dc => dc.DistrictId)
+                .ToList();
+
+            var newAssignments = dto.DistrictIds.Except(existingAssignments).ToList();
+
+            if (!newAssignments.Any())
+            {
+                return BadRequest("All districts are already assigned to this car.");
+            }
+
+            // إضافة السجلات الجديدة
+            foreach (var districtId in newAssignments)
+            {
+                var districtCar = new DistrictCar
+                {
+                    CarId = dto.CarId,
+                    DistrictId = districtId
+                };
+                context.DistrictCar.Add(districtCar);
+            }
+
+            context.SaveChanges();
+            
+            return Ok($"Car with ID {dto.CarId} was successfully assigned to  districts.");
         }
 
 

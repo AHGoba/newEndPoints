@@ -1,0 +1,15 @@
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Release\netcoreapp3.0\AssetsManagementEG.Repositories.deps.json
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Release\netcoreapp3.0\AssetsManagementEG.Repositories.dll
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Release\netcoreapp3.0\AssetsManagementEG.Repositories.pdb
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Release\netcoreapp3.0\AssetsManagementEG.Context.dll
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Release\netcoreapp3.0\AssetsManagementEG.Models.dll
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Release\netcoreapp3.0\AssetsManagementEG.Context.pdb
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\bin\Release\netcoreapp3.0\AssetsManagementEG.Models.pdb
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Release\netcoreapp3.0\AssetsManagementEG.Repositories.csproj.AssemblyReference.cache
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Release\netcoreapp3.0\AssetsManagementEG.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Release\netcoreapp3.0\AssetsManagementEG.Repositories.AssemblyInfoInputs.cache
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Release\netcoreapp3.0\AssetsManagementEG.Repositories.AssemblyInfo.cs
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Release\netcoreapp3.0\AssetsManagementEG.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Release\netcoreapp3.0\AssetsManagementEG.Repositories.csproj.CopyComplete
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Release\netcoreapp3.0\AssetsManagementEG.Repositories.dll
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Release\netcoreapp3.0\AssetsManagementEG.Repositories.pdb

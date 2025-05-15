@@ -1,0 +1,10 @@
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Release\netcoreapp3.0\AssetsManagementEG.DTOs.deps.json
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Release\netcoreapp3.0\AssetsManagementEG.DTOs.dll
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\bin\Release\netcoreapp3.0\AssetsManagementEG.DTOs.pdb
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Release\netcoreapp3.0\AssetsManagementEG.DTOs.csproj.AssemblyReference.cache
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Release\netcoreapp3.0\AssetsManagementEG.DTOs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Release\netcoreapp3.0\AssetsManagementEG.DTOs.AssemblyInfoInputs.cache
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Release\netcoreapp3.0\AssetsManagementEG.DTOs.AssemblyInfo.cs
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Release\netcoreapp3.0\AssetsManagementEG.DTOs.csproj.CoreCompileInputs.cache
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Release\netcoreapp3.0\AssetsManagementEG.DTOs.dll
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.DTOs\obj\Release\netcoreapp3.0\AssetsManagementEG.DTOs.pdb

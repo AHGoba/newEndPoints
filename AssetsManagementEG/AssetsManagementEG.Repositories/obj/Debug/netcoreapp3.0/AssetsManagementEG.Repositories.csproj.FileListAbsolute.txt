@@ -215,6 +215,6 @@ C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\A
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.AssemblyInfoInputs.cache
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.AssemblyInfo.cs
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.csproj.CoreCompileInputs.cache
-C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.csproj.CopyComplete
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.dll
 C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.pdb
+C:\Users\ahmed.hamdy.50117\Desktop\wpf app\AssetsLogin 05-05-2025\newEndPoints\AssetsManagementEG\AssetsManagementEG.Repositories\obj\Debug\netcoreapp3.0\AssetsManagementEG.Repositories.csproj.CopyComplete

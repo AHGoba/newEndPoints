@@ -476,7 +476,7 @@ namespace AssetsManagementEG.Presentation.Controllers
 
             if (!tasks.Any())
             {
-                return NotFound("No ongoing tasks found for the provided districts.");
+                return Ok("No ongoing tasks found for the provided districts.");
             }
 
             // نجهز الجداول المساعدة (عشان نربط المهمات بالعمال والعربيات والمعدات)
